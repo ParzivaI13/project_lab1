@@ -16,7 +16,7 @@ body {
 
 header {
     display: flex;
-    padding: 20px 35px 20px 35px;
+    padding: 20px 35px;
     height: 5vh;
     align-items: center;
     justify-content: space-between;
@@ -33,16 +33,121 @@ header {
     align-items: center;
 }
 
+.bell-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
 .bell {
     color: rgb(255, 255, 255);
-    margin-right: 35px;
     font-size: 25px;
+    margin-right: 35px;
+    cursor: pointer;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 2px;
+    right: 35px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 166, 0);
+    border-radius: 50%;
+}
+
+.notification-menu {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    width: 300px;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+.notification-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.notification-item:hover {
+    background: #f0f0f0;
+}
+
+.notification-item-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.notification-item-text h4 {
+    margin: 5px 0;
+}
+
+.notification-item-text p {
+    margin: 0;
+}
+
+.notification-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.bell-container:hover .notification-menu {
+    display: flex;
 }
 
 .personal {
+    position: relative;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    width: 120px;
+    padding: 5px 0;
+    z-index: 10;
+}
+
+.dropdown-item {
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.dropdown-item:hover {
+    background: #f0f0f0;
+}
+
+.personal:hover .dropdown-menu {
+    display: flex;
 }
 
 .avatar {
@@ -75,7 +180,11 @@ header {
     }
 
     header {
-        padding: 12px 20px 12px 20px;
+        padding: 12px 20px;
+    }
+
+    .notification-badge {
+        right: 20px;
     }
 }
 
