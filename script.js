@@ -22,10 +22,17 @@ document.addEventListener("DOMContentLoaded", function () {
         bell.style.transform = "rotate(360deg)";
 
         setTimeout(() => {
-            bell.style.transform = "rotate(0deg)";
+            bell.style.transform = "rotate(360deg)";
         }, 500);
 
-        badge.style.display = "block";
-        localStorage.setItem("notifications", "visible");
+        setTimeout(() => {
+            badge.style.display = "block";
+            localStorage.setItem("notifications", "visible");
+        }, 500);
+
     });
 });
+
+function toggleMenu() {
+    document.querySelector(".sidebar").classList.toggle("open");
+}
