@@ -22,9 +22,10 @@ header {
     justify-content: space-between;
 }
 
-.logo {
+.logo a {
+    text-decoration: none;
+    color: white;
     font-weight: bold;
-    color: rgb(255, 255, 255);
 }
 
 .header-buttons-wrap {
@@ -87,6 +88,7 @@ header {
     display: flex;
     flex-direction: column;
     text-align: left;
+    color: rgb(0, 0, 0);
 }
 
 .notification-item-text h4 {
