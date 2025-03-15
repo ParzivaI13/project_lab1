@@ -236,6 +236,11 @@ header {
 
 }
 
+.sidebar .nav-links li a:hover {
+    text-decoration: underline;
+
+}
+
 .sidebar .nav-links li a.active {
     font-weight: bold;
 }
