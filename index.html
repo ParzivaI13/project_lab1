@@ -70,8 +70,7 @@
             <div class="students-content">
                 <h1 class="color-primary">Студенти</h1>
         
-                <button class="add-student-btn">Додати +</button>
-                <button class="delete-selected-btn" >Видалити</button>
+                <button class="add-student-btn color-primary"><i class="fa-solid fa-plus"></i></button>
         
                 <table class="students-table">
                     <thead>
@@ -113,10 +112,11 @@
         
                     <label>Дата народження:</label>
                     <input type="date" id="dob-input">
-        
-                    <label>Статус онлайн:</label>
-                    <input type="checkbox" id="online-status">
-        
+                    <div class="online-checkbox-wrap">
+                        <label>Статус онлайн:</label>
+                        <input type="checkbox" id="online-status">    
+                    </div>
+                    
                     <div class="modal-buttons">
                         <button class="cancel-btn">Скасувати</button>
                         <button class="save-btn">Зберегти</button>
