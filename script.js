@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     let row = checkbox.closest("tr");
                     studentNames.push(row.cells[2].textContent);
                 });
-                deleteStudentList.innerHTML = "Ви впевнені, що хочете видалити наступних студентів?<br><b>" + studentNames.join(", ") + "</b>?";
+                deleteStudentList.innerHTML = "Ви впевнені, що хочете видалити наступних студентів?<br><b>" + studentNames.join(", ") + "</b>";
                 deleteModal.style.display = "flex";
             };
         });
