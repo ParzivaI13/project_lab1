@@ -128,7 +128,7 @@ header {
     right: 0;
     background: rgb(255, 255, 255);
     border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     display: none;
     flex-direction: column;
@@ -268,7 +268,7 @@ header {
 
     .sidebar.open {
         width: 200px;
-        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     }
 
     .burger-menu {
@@ -413,7 +413,7 @@ header {
 }
 
 .button-styles:hover {
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.2);
 }
 
 .pagination {
