@@ -22,14 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
         bell.style.transform = "rotate(360deg)";
 
         setTimeout(() => {
-            bell.style.transform = "rotate(360deg)";
-        }, 500);
-
-        setTimeout(() => {
             badge.style.display = "block";
             localStorage.setItem("notifications", "visible");
         }, 500);
-
     });
 });
 
@@ -39,34 +34,37 @@ function toggleMenu() {
 
 document.addEventListener("DOMContentLoaded", function () {
     const addButton = document.querySelector(".add-student-btn");
-    const deleteButton = document.querySelector(".delete-selected-btn");
     const modal = document.getElementById("student-modal");
+    const deleteModal = document.getElementById("delete-modal");
     const closeButton = document.querySelector(".close-btn");
+    const closeDeleteButton = document.querySelector(".close-delete-btn");
+    const deleteConfirmButton = document.querySelector(".confirm-delete-btn");
+    const cancelDeleteButton = document.querySelector(".cancel-delete-btn");
     const saveButton = document.querySelector(".save-btn");
     const cancelButton = document.querySelector(".cancel-btn");
     const tableBody = document.querySelector(".students-table tbody");
     const selectAllCheckbox = document.getElementById("select-all");
+    const deleteStudentList = document.getElementById("delete-student-list");
 
     let editingRow = null;
 
-    // додавання
     addButton.addEventListener("click", function () {
         editingRow = null;
         document.getElementById("modal-title").textContent = "Додати студента";
         modal.style.display = "flex";
     });
 
-    // закриття модального вікна
     closeButton.addEventListener("click", () => modal.style.display = "none");
     cancelButton.addEventListener("click", () => modal.style.display = "none");
 
-    // додавання або редагування студента
     saveButton.addEventListener("click", function () {
         let group = document.getElementById("group-select").value;
         let name = document.getElementById("name-input").value;
         let gender = document.getElementById("gender-select").value;
         let dob = document.getElementById("dob-input").value;
-        let onlineStatus = document.getElementById("online-status").checked ? "✅" : "❌";
+        let onlineStatus = document.getElementById("online-status").checked
+            ? '<i class="fa-solid fa-check" style="color: green;"></i>'
+            : '<i class="fa-solid fa-xmark" style="color: red;"></i>';
 
         if (!name || !dob) {
             alert("Будь ласка, заповніть всі поля.");
@@ -74,18 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (editingRow) {
-            editingRow.innerHTML = `
-                <td><input type="checkbox" class="select-row"></td>
-                <td>${group}</td>
-                <td>${name}</td>
-                <td>${gender}</td>
-                <td>${dob}</td>
-                <td>${onlineStatus}</td>
-                <td>
-                    <button class="edit-btn">Редагувати</button>
-                    <button class="delete-btn">Видалити</button>
-                </td>
-            `;
+            editingRow.cells[1].textContent = group;
+            editingRow.cells[2].textContent = name;
+            editingRow.cells[3].textContent = gender;
+            editingRow.cells[4].textContent = dob;
+            editingRow.cells[5].innerHTML = onlineStatus;
             editingRow = null;
         } else {
             let row = document.createElement("tr");
@@ -98,18 +89,89 @@ document.addEventListener("DOMContentLoaded", function () {
                 <td>${onlineStatus}</td>
                 <td>
                     <button class="edit-btn">Редагувати</button>
-                    <button class="delete-selected-btn">Видалити</button>
+                    <button class="delete-btn">Видалити</button>
                 </td>
             `;
             tableBody.appendChild(row);
         }
 
         modal.style.display = "none";
+        updateCheckboxListeners();
+        updateEventListeners();
     });
 
-    deleteButton.addEventListener("click", function () {
+    function updateCheckboxListeners() {
+        const checkboxes = document.querySelectorAll(".select-row");
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", function () {
+                selectAllCheckbox.checked = [...checkboxes].every(cb => cb.checked);
+            });
+        });
+    }
+
+    selectAllCheckbox.addEventListener("change", function () {
+        const checkboxes = document.querySelectorAll(".select-row");
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = selectAllCheckbox.checked;
+        });
+    });
+
+    function updateEventListeners() {
+        document.querySelectorAll(".edit-btn").forEach(button => {
+            button.onclick = function () {
+                let row = this.closest("tr");
+                let selectedRows = document.querySelectorAll(".select-row:checked");
+
+                if (selectedRows.length !== 1) {
+                    alert("Оберіть одного студента для редагування!");
+                    return;
+                }
+
+                editingRow = row;
+                document.getElementById("group-select").value = row.cells[1].textContent;
+                document.getElementById("name-input").value = row.cells[2].textContent;
+                document.getElementById("gender-select").value = row.cells[3].textContent;
+                document.getElementById("dob-input").value = row.cells[4].textContent;
+                document.getElementById("online-status").checked = row.cells[5].innerHTML.includes("fa-check");
+
+                document.getElementById("modal-title").textContent = "Редагувати студента";
+                modal.style.display = "flex";
+            };
+        });
+
+        document.querySelectorAll(".delete-btn").forEach(button => {
+            button.onclick = function () {
+                let selectedRows = document.querySelectorAll(".select-row:checked");
+                if (selectedRows.length === 0) {
+                    alert("Оберіть хоча б одного студента для видалення!");
+                    return;
+                }
+                let studentNames = [];
+                selectedRows.forEach(checkbox => {
+                    let row = checkbox.closest("tr");
+                    studentNames.push(row.cells[2].textContent);
+                });
+                deleteStudentList.innerHTML = "Ви впевнені, що хочете видалити наступних студентів?<br><b>" + studentNames.join(", ") + "</b>?";
+                deleteModal.style.display = "flex";
+            };
+        });
+    }
+
+    deleteConfirmButton.addEventListener("click", function () {
         document.querySelectorAll(".select-row:checked").forEach(checkbox => {
             checkbox.closest("tr").remove();
         });
+        deleteModal.style.display = "none";
     });
+
+    cancelDeleteButton.addEventListener("click", function () {
+        deleteModal.style.display = "none";
+    });
+
+    closeDeleteButton.addEventListener("click", function () {
+        deleteModal.style.display = "none";
+    });
+
+    updateCheckboxListeners();
+    updateEventListeners();
 });

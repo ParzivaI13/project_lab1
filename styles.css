@@ -356,7 +356,7 @@ header {
 }
 
 .modal-content {
-    background: white;
+    background: rgb(255, 255, 255);
     padding: 20px;
     width: 300px;
     border-radius: 5px;
@@ -368,6 +368,10 @@ header {
 
 .modal-content * {
     margin: 5px 0;
+}
+
+.modal-content h2 {
+    margin-bottom: 35px;
 }
 
 .online-checkbox-wrap {
@@ -389,20 +393,18 @@ header {
 
 .modal-buttons {
     margin-top: 10px;
+    margin-left: auto;
 }
 
 .save-btn {
-    background-color: #28a745;
-    color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
 }
 
 .cancel-btn {
-    background-color: #dc3545;
-    color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
 }
+

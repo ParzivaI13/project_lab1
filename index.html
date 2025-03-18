@@ -24,14 +24,14 @@
                         <div class="notification-item">
                             <img src="resources/avatar.jpg" alt="" class="notification-avatar" />
                             <div class="notification-item-text">
-                                <h4>Костюк Богдан</h4>
+                                <h4>Швецова Єлизавета</h4>
                                 <p>Lorem ipsum dolor sit amet...</p>
                             </div>
                         </div>
                         <div class="notification-item">
                             <img src="resources/avatar.jpg" alt="" class="notification-avatar" />
                             <div class="notification-item-text">
-                                <h4>Костюк Богдан</h4>
+                                <h4>Оксана Грицай</h4>
                                 <p>Lorem ipsum dolor sit amet...</p>
                             </div>
                         </div>
@@ -91,7 +91,7 @@
         
             <div id="student-modal" class="modal">
                 <div class="modal-content">
-                    <span class="close-btn">&times;</span>
+                    <span class="close-btn"><i class="fa-solid fa-xmark"></i></span>
                     <h2 id="modal-title">Додати студента</h2>
         
                     <label>Група:</label>
@@ -117,12 +117,25 @@
                         <input type="checkbox" id="online-status">    
                     </div>
                     
-                    <div class="modal-buttons">
+                    <div class="modal-buttons color-primary">
                         <button class="cancel-btn">Скасувати</button>
                         <button class="save-btn">Зберегти</button>
                     </div>
                 </div>
             </div>
+
+            <div id="delete-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-delete-btn"><i class="fa-solid fa-xmark"></i></span>
+                    <h2>Видалити обраних студентів?</h2>
+                    <p id="delete-student-list"></p>
+                    <div class="modal-buttons color-primary">
+                        <button class="cancel-delete-btn">Скасувати</button>
+                        <button class="confirm-delete-btn">Так</button>
+                    </div>
+                </div>
+            </div>            
+            
         <button class="burger-menu color-primary" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>    
     </main>
 
