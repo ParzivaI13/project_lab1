@@ -88,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 <td>${dob}</td>
                 <td>${onlineStatus}</td>
                 <td>
-                    <button class="edit-btn">Редагувати</button>
-                    <button class="delete-btn">Видалити</button>
+                    <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                    <button class="delete-btn"><i class="fa-solid fa-eraser"></i></button>
                 </td>
             `;
             tableBody.appendChild(row);

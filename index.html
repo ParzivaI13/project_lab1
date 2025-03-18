@@ -56,7 +56,7 @@
             </div>
         </div>
     </header>
-    
+
     <main>
         <div class="main-content">
             <nav class="sidebar bg-primary">
@@ -66,13 +66,13 @@
                     <li><a href="tasks.html">Задачі</a></li>
                 </ul>
             </nav>
-            
+
             <div class="students-content">
                 <h1 class="color-primary">Студенти</h1>
-        
+
                 <button class="add-student-btn color-primary"><i class="fa-solid fa-plus"></i></button>
-        
-                <table class="students-table">
+
+                <table class="students-table color-primary">
                     <thead>
                         <tr>
                             <th><input type="checkbox" id="select-all"></th>
@@ -87,39 +87,46 @@
                     <tbody>
                     </tbody>
                 </table>
+                <div class="pagination">
+                    <button class="page-btn prev-btn button-styles"><i class="fa-solid fa-angles-left"></i></button>
+                    <button class="page-btn button-styles">1</button>
+                    <button class="page-btn button-styles">2</button>
+                    <button class="page-btn button-styles">3</button>
+                    <button class="page-btn next-btn button-styles"><i class="fa-solid fa-angles-right"></i></button>
+                </div>
             </div>
-        
+
             <div id="student-modal" class="modal">
                 <div class="modal-content">
                     <span class="close-btn"><i class="fa-solid fa-xmark"></i></span>
                     <h2 id="modal-title">Додати студента</h2>
-        
+
                     <label>Група:</label>
                     <select id="group-select">
                         <option>ПЗ-11</option>
                         <option>ПЗ-12</option>
                         <option>ПЗ-13</option>
                     </select>
-        
+
                     <label>Ім'я:</label>
                     <input type="text" id="name-input">
-        
+
                     <label>Стать:</label>
                     <select id="gender-select">
                         <option>Чоловіча</option>
                         <option>Жіноча</option>
                     </select>
-        
+
                     <label>Дата народження:</label>
                     <input type="date" id="dob-input">
                     <div class="online-checkbox-wrap">
                         <label>Статус онлайн:</label>
-                        <input type="checkbox" id="online-status">    
+                        <input type="checkbox" id="online-status">
                     </div>
-                    
+
                     <div class="modal-buttons color-primary">
-                        <button class="cancel-btn">Скасувати</button>
-                        <button class="save-btn">Зберегти</button>
+                        <button class="cancel-btn button-styles">Скасувати</button>
+                        <button class="save-btn button-styles">Зберегти</button>
                     </div>
                 </div>
             </div>
@@ -130,13 +137,13 @@
                     <h2>Видалити обраних студентів?</h2>
                     <p id="delete-student-list"></p>
                     <div class="modal-buttons color-primary">
-                        <button class="cancel-delete-btn">Скасувати</button>
-                        <button class="confirm-delete-btn">Так</button>
+                        <button class="cancel-delete-btn button-styles">Скасувати</button>
+                        <button class="confirm-delete-btn button-styles">Так</button>
                     </div>
                 </div>
-            </div>            
-            
-        <button class="burger-menu color-primary" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>    
+            </div>
+
+            <button class="burger-menu color-primary" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
     </main>
 
     <script src="script.js"></script>
