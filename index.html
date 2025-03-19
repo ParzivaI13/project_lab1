@@ -70,12 +70,12 @@
             <div class="students-content">
                 <h1 class="color-primary">Студенти</h1>
 
-                <button class="add-student-btn color-primary"><i class="fa-solid fa-plus"></i></button>
+                <button class="add-student-btn color-primary" aria-label="Додати студента"><i class="fa-solid fa-plus"></i></button>
 
                 <table class="students-table color-primary">
                     <thead>
                         <tr>
-                            <th><input type="checkbox" id="select-all"></th>
+                            <td><input type="checkbox" id="select-all" aria-label="Обрати всіх"></th>
                             <th>Група</th>
                             <th>Ім'я</th>
                             <th>Стать</th>
@@ -88,17 +88,17 @@
                     </tbody>
                 </table>
                 <div class="pagination">
-                    <button class="page-btn prev-btn button-styles"><i class="fa-solid fa-angles-left"></i></button>
+                    <button class="page-btn prev-btn button-styles" aria-label="Попередня сторінка"><i class="fa-solid fa-angles-left"></i></button>
                     <button class="page-btn button-styles">1</button>
                     <button class="page-btn button-styles">2</button>
                     <button class="page-btn button-styles">3</button>
-                    <button class="page-btn next-btn button-styles"><i class="fa-solid fa-angles-right"></i></button>
+                    <button class="page-btn next-btn button-styles" aria-label="Наступна сторінка"><i class="fa-solid fa-angles-right"></i></button>
                 </div>
             </div>
 
             <div id="student-modal" class="modal">
                 <div class="modal-content">
-                    <span class="close-btn"><i class="fa-solid fa-xmark"></i></span>
+                    <span class="close-btn" aria-label="Закрити"><i class="fa-solid fa-xmark"></i></span>
                     <h2 id="modal-title">Додати студента</h2>
 
                     <label for="group-select">Група:</label>
@@ -133,7 +133,7 @@
 
             <div id="delete-modal" class="modal">
                 <div class="modal-content">
-                    <span class="close-delete-btn"><i class="fa-solid fa-xmark"></i></span>
+                    <span class="close-delete-btn" aria-label="Закрити"><i class="fa-solid fa-xmark"></i></span>
                     <h2>Видалити обраних студентів?</h2>
                     <p id="delete-student-list"></p>
                     <div class="modal-buttons color-primary">
@@ -143,7 +143,7 @@
                 </div>
             </div>
 
-            <button class="burger-menu color-primary" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+            <button class="burger-menu color-primary" aria-label="Меню навігації" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
         </div>
     </main>
 

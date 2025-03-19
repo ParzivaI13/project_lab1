@@ -3,7 +3,7 @@
 }
 
 .bg-secondary {
-    background-color: #999999;
+    background-color: #595959;
 }
 
 .color-primary {
@@ -253,7 +253,7 @@ header {
     padding: 10px;
     cursor: pointer;
     position: fixed;
-    margin-top: 90vh;
+    bottom: 20px;
     z-index: 12;
     
 }
@@ -273,7 +273,6 @@ header {
 
     .burger-menu {
         display: block;
-        top: 10px;
         left: 10px;
     }
 }
