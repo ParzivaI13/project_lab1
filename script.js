@@ -81,15 +81,15 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             let row = document.createElement("tr");
             row.innerHTML = `
-                <td><input type="checkbox" class="select-row"></td>
+                <td><input type="checkbox" class="select-row" aria-label = "Обрати рядок"></td>
                 <td>${group}</td>
                 <td>${name}</td>
                 <td>${gender}</td>
                 <td>${dob}</td>
                 <td>${onlineStatus}</td>
                 <td>
-                    <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
-                    <button class="delete-btn"><i class="fa-solid fa-eraser"></i></button>
+                    <button class="edit-btn" aria-label="Редагувати студента студента"><i class="fa-solid fa-pen"></i></button>
+                    <button class="delete-btn" aria-label="Видалити студента"><i class="fa-solid fa-eraser"></i></button>
                 </td>
             `;
             tableBody.appendChild(row);
