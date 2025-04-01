@@ -199,3 +199,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
     renderStudents();
 });
+
+function showError(input, message) {
+    input.classList.add("error");
+    input.nextElementSibling.textContent = message;
+    input.setCustomValidity(message);
+}
+
+function clearError(input) {
+    input.classList.remove("error");
+    input.nextElementSibling.textContent = "";
+    input.setCustomValidity("");
+}
+
+function validateInput(event) {
+    let input = event.target;
+    let namePattern = /^[А-ЯІЇЄҐ][а-яіїєґ']+(\s[А-ЯІЇЄҐ][а-яіїєґ']+)*$/;
+    let dobMaxDate = new Date("2024-01-01");
+    let dobValue = new Date(input.value);
+
+    clearError(input);
+
+    if (input.id === "name-input" && !namePattern.test(input.value.trim())) {
+        showError(input, "Ім'я має містити лише українські літери та починатися з великої.");
+    }
+
+    if (input.id === "dob-input" && (dobValue >= dobMaxDate || isNaN(dobValue.getTime()))) {
+        showError(input, "Дата народження має бути до 2025 року.");
+    }
+}
+
+document.getElementById("name-input").addEventListener("input", validateInput);
+document.getElementById("dob-input").addEventListener("input", validateInput);
+
+document.getElementById("saveButton").addEventListener("click", function (event) {
+    if (!document.querySelector(".error")) {
+        modal.style.display = "none";
+    } else {
+        event.preventDefault();
+    }
+});
