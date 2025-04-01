@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/project_lab1/service-worker.js")
+            .then(() => console.log("Service Worker registered"))
+            .catch((error) => console.error("Service Worker registration failed:", error));
+    }
+
     let badge = document.getElementById("notification-badge");
     let bell = document.querySelector(".bell");
 
@@ -47,6 +53,35 @@ document.addEventListener("DOMContentLoaded", function () {
     const deleteStudentList = document.getElementById("delete-student-list");
 
     let editingRow = null;
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+
+    function saveStudentsToCache() {
+        localStorage.setItem("students", JSON.stringify(students));
+    }
+
+    function renderStudents() {
+        tableBody.innerHTML = "";
+        students.forEach(student => {
+            let row = document.createElement("tr");
+            row.dataset.id = student.id; // Зберігаємо ID в атрибуті data-id
+            row.innerHTML = `
+                <td><input type="checkbox" class="select-row" aria-label="Обрати рядок"></td>
+                <td>${student.group}</td>
+                <td>${student.name}</td>
+                <td>${student.gender}</td>
+                <td>${student.dob}</td>
+                <td>${student.onlineStatus}</td>
+                <td>
+                    <button class="edit-btn" aria-label="Редагувати студента"><i class="fa-solid fa-pen"></i></button>
+                    <button class="delete-btn" aria-label="Видалити студента"><i class="fa-solid fa-eraser"></i></button>
+                </td>
+            `;
+            tableBody.appendChild(row);
+        });
+    
+        updateCheckboxListeners();
+        updateEventListeners();
+    }    
 
     addButton.addEventListener("click", function () {
         editingRow = null;
@@ -58,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cancelButton.addEventListener("click", () => modal.style.display = "none");
 
     saveButton.addEventListener("click", function () {
+        let id = editingRow ? editingRow.cells[1].textContent : Date.now().toString();
         let group = document.getElementById("group-select").value;
         let name = document.getElementById("name-input").value;
         let gender = document.getElementById("gender-select").value;
@@ -65,40 +101,26 @@ document.addEventListener("DOMContentLoaded", function () {
         let onlineStatus = document.getElementById("online-status").checked
             ? '<i class="fa-solid fa-check" style="color: green;"></i>'
             : '<i class="fa-solid fa-xmark" style="color: red;"></i>';
-
+    
         if (!name || !dob) {
             alert("Будь ласка, заповніть всі поля.");
             return;
         }
-
+    
+        let student = { id, group, name, gender, dob, onlineStatus };
+        console.log("Змінений/доданий студент:", JSON.stringify(student, null, 2));
+    
         if (editingRow) {
-            editingRow.cells[1].textContent = group;
-            editingRow.cells[2].textContent = name;
-            editingRow.cells[3].textContent = gender;
-            editingRow.cells[4].textContent = dob;
-            editingRow.cells[5].innerHTML = onlineStatus;
-            editingRow = null;
+            let index = students.findIndex(s => s.id === id);
+            students[index] = student;
         } else {
-            let row = document.createElement("tr");
-            row.innerHTML = `
-                <td><input type="checkbox" class="select-row" aria-label = "Обрати рядок"></td>
-                <td>${group}</td>
-                <td>${name}</td>
-                <td>${gender}</td>
-                <td>${dob}</td>
-                <td>${onlineStatus}</td>
-                <td>
-                    <button class="edit-btn" aria-label="Редагувати студента студента"><i class="fa-solid fa-pen"></i></button>
-                    <button class="delete-btn" aria-label="Видалити студента"><i class="fa-solid fa-eraser"></i></button>
-                </td>
-            `;
-            tableBody.appendChild(row);
+            students.push(student);
         }
-
+    
+        saveStudentsToCache();
+        renderStudents();
         modal.style.display = "none";
-        updateCheckboxListeners();
-        updateEventListeners();
-    });
+    });    
 
     function updateCheckboxListeners() {
         const checkboxes = document.querySelectorAll(".select-row");
@@ -120,24 +142,22 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".edit-btn").forEach(button => {
             button.onclick = function () {
                 let row = this.closest("tr");
-                let selectedRows = document.querySelectorAll(".select-row:checked");
-
-                if (selectedRows.length !== 1) {
-                    alert("Оберіть одного студента для редагування!");
-                    return;
-                }
-
+                let id = row.dataset.id; // Отримуємо ID
+                let student = students.find(s => s.id === id);
+        
+                if (!student) return;
+        
                 editingRow = row;
-                document.getElementById("group-select").value = row.cells[1].textContent;
-                document.getElementById("name-input").value = row.cells[2].textContent;
-                document.getElementById("gender-select").value = row.cells[3].textContent;
-                document.getElementById("dob-input").value = row.cells[4].textContent;
-                document.getElementById("online-status").checked = row.cells[5].innerHTML.includes("fa-check");
-
+                document.getElementById("group-select").value = student.group;
+                document.getElementById("name-input").value = student.name;
+                document.getElementById("gender-select").value = student.gender;
+                document.getElementById("dob-input").value = student.dob;
+                document.getElementById("online-status").checked = student.onlineStatus.includes("fa-check");
+        
                 document.getElementById("modal-title").textContent = "Редагувати студента";
                 modal.style.display = "flex";
             };
-        });
+        });        
 
         document.querySelectorAll(".delete-btn").forEach(button => {
             button.onclick = function () {
@@ -146,21 +166,26 @@ document.addEventListener("DOMContentLoaded", function () {
                     alert("Оберіть хоча б одного студента для видалення!");
                     return;
                 }
-                let studentNames = [];
+        
+                let studentIds = [];
                 selectedRows.forEach(checkbox => {
                     let row = checkbox.closest("tr");
-                    studentNames.push(row.cells[2].textContent);
+                    studentIds.push(row.dataset.id); // Отримуємо ID
                 });
-                deleteStudentList.innerHTML = "Ви впевнені, що хочете видалити наступних студентів?<br><b>" + studentNames.join(", ") + "</b>";
+        
+                deleteStudentList.innerHTML = `Ви впевнені, що хочете видалити цих студентів? <br><b>${studentIds.join(", ")}</b>`;
                 deleteModal.style.display = "flex";
             };
-        });
+        });        
     }
 
     deleteConfirmButton.addEventListener("click", function () {
-        document.querySelectorAll(".select-row:checked").forEach(checkbox => {
-            checkbox.closest("tr").remove();
-        });
+        let selectedRows = document.querySelectorAll(".select-row:checked");
+        let idsToDelete = [...selectedRows].map(checkbox => checkbox.closest("tr").cells[1].textContent);
+        
+        students = students.filter(student => !idsToDelete.includes(student.id));
+        saveStudentsToCache();
+        renderStudents();
         deleteModal.style.display = "none";
     });
 
@@ -172,6 +197,5 @@ document.addEventListener("DOMContentLoaded", function () {
         deleteModal.style.display = "none";
     });
 
-    updateCheckboxListeners();
-    updateEventListeners();
+    renderStudents();
 });
