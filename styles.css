@@ -1,445 +1,443 @@
 .bg-primary {
-    background-color: #f4f4f4;
+  background-color: #f4f4f4;
 }
 
 .bg-secondary {
-    background-color: #595959;
+  background-color: #595959;
 }
 
 .color-primary {
-    color: rgb(17, 17, 17) !important;
+  color: rgb(17, 17, 17) !important;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f4f4f4;
 }
 
 header {
-    display: flex;
-    padding: 20px 35px;
-    height: 5vh;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  padding: 20px 35px;
+  height: 5vh;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 .header-buttons-wrap {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .bell-container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .bell {
-    color: rgb(255, 255, 255);
-    font-size: 25px;
-    margin-right: 35px;
-    cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  margin-right: 35px;
+  cursor: pointer;
 }
 
 .notification-badge {
-    position: absolute;
-    top: 2px;
-    right: 35px;
-    width: 10px;
-    height: 10px;
-    background-color: rgb(255, 166, 0);
-    border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  right: 35px;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 166, 0);
+  border-radius: 50%;
 }
 
 .notification-menu {
-    position: absolute;
-    top: 120%;
-    right: 0;
-    background: rgb(255, 255, 255);
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    display: none;
-    flex-direction: column;
-    width: 300px;
-    padding: 10px 0;
-    z-index: 10;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  width: 300px;
+  padding: 10px 0;
+  z-index: 10;
 }
 
 .notification-item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 5px 15px;
-    cursor: pointer;
-    transition: 0.2s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .notification-item:hover {
-    background: #f0f0f0;
+  background: #f0f0f0;
 }
 
 .notification-item-text {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: rgb(0, 0, 0);
 }
 
 .notification-item-text h4 {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .notification-item-text p {
-    margin: 0;
+  margin: 0;
 }
 
 .notification-avatar {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 10px;
-    object-fit: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
 }
 
 .bell-container:hover .notification-menu {
-    display: flex;
+  display: flex;
 }
 
 .personal {
-    position: relative;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: rgb(255, 255, 255);
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    display: none;
-    flex-direction: column;
-    width: 120px;
-    padding: 5px 0;
-    z-index: 10;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  width: 120px;
+  padding: 5px 0;
+  z-index: 10;
 }
 
 .dropdown-item {
-    background: none;
-    border: none;
-    width: 100%;
-    padding: 10px;
-    text-align: left;
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.2s;
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
 }
 
 .dropdown-item:hover {
-    background: #f0f0f0;
+  background: #f0f0f0;
 }
 
 .personal:hover .dropdown-menu {
-    display: flex;
+  display: flex;
 }
 
 .avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid rgb(0, 122, 27);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgb(0, 122, 27);
 }
 
 @media (max-width: 768px) {
-    .avatar {
-        width: 30px;
-        height: 30px;
-    }
+  .avatar {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 @media (max-width: 480px) {
-    .avatar {
-        width: 25px;
-        height: 25px;
-    }
+  .avatar {
+    width: 25px;
+    height: 25px;
+  }
 
-    .bell {
-        margin-right: 20px;
-    }
+  .bell {
+    margin-right: 20px;
+  }
 
-    .name{
-        display: none;
-    }
+  .name {
+    display: none;
+  }
 
-    header {
-        padding: 12px 20px;
-    }
+  header {
+    padding: 12px 20px;
+  }
 
-    .notification-badge {
-        right: 20px;
-    }
+  .notification-badge {
+    right: 20px;
+  }
 }
 
 .name {
-    color: rgb(255, 255, 255);
-    margin: 0 0 0 15px;
+  color: rgb(255, 255, 255);
+  margin: 0 0 0 15px;
 }
 
 .main-content {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .sidebar {
-    left: 0;
-    top: 0;
-    height: 95vh;
-    width: 300px;
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    position: relative;
-    z-index: 11;
+  left: 0;
+  top: 0;
+  height: 95vh;
+  width: 300px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+  z-index: 11;
 }
 
 .sidebar .nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .sidebar .nav-links li {
-    padding: 15px;
-    margin: 0 0 0 35px;
-    text-align: left;
+  padding: 15px;
+  margin: 0 0 0 35px;
+  text-align: left;
 }
 
 .sidebar .nav-links li a {
-    text-decoration: none;
-    font-size: 18px;
-    color: rgb(17, 17, 17);
-
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(17, 17, 17);
 }
 
 .sidebar .nav-links li a:hover {
-    text-decoration: underline;
-
+  text-decoration: underline;
 }
 
 .sidebar .nav-links li a.active {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .burger-menu {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2em;
-    padding: 10px;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    z-index: 12;
-    
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2em;
+  padding: 10px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  z-index: 12;
 }
 
 @media (max-width: 768px) {
-    .sidebar {
-        position: absolute;
-        width: 0;
-        overflow: hidden;
-        transition: 0.3s;
-    }
+  .sidebar {
+    position: absolute;
+    width: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
 
-    .sidebar.open {
-        width: 200px;
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-    }
+  .sidebar.open {
+    width: 200px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  }
 
-    .burger-menu {
-        display: block;
-        left: 10px;
-    }
+  .burger-menu {
+    display: block;
+    left: 10px;
+  }
 }
 
-.students-content{
-    padding: 78px 35px 25px 50px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow-x: auto;
+.students-content {
+  padding: 78px 35px 25px 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
 }
 
-.students-content h1{
-    margin: 0;
-    padding: 0;
-    justify-self: start;
-    display: flex;
+.students-content h1 {
+  margin: 0;
+  padding: 0;
+  justify-self: start;
+  display: flex;
 }
 
 @media (max-width: 768px) {
-    .students-content{
-        padding: 50px 35px 0 50px;
-    }
+  .students-content {
+    padding: 50px 35px 0 50px;
+  }
 }
 
 @media (max-width: 480px) {
-    .students-content{
-        padding: 50px 35px 0 30px;
-    }
+  .students-content {
+    padding: 50px 35px 0 30px;
+  }
 }
 
 .students-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background: white;
-    margin: auto;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  margin: auto;
 }
 
-.students-table th, .students-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+.students-table th,
+.students-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
 }
 
 .students-table th {
-    background-color: #f4f4f4;
+  background-color: #f4f4f4;
 }
 
 @media (max-width: 768px) {
-    .students-table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
+  .students-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }
 
 .add-student-btn {
-    margin: 10px;
-    width: 35px;
-    height: 35px;
-    border: none;
-    cursor: pointer;
-    font-size: 2em;
-    margin-left: auto;
-    background-color: transparent;
+  margin: 10px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  font-size: 2em;
+  margin-left: auto;
+  background-color: transparent;
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 13;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 13;
 }
 
 .modal-content {
-    background: rgb(255, 255, 255);
-    padding: 20px;
-    width: 300px;
-    border-radius: 5px;
-    text-align: start;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  width: 300px;
+  border-radius: 5px;
+  text-align: start;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-content * {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .modal-content h2 {
-    margin-bottom: 35px;
+  margin-bottom: 35px;
 }
 
 .online-checkbox-wrap {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .online-checkbox-wrap input {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .close-btn {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-    font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 .modal-buttons {
-    margin-top: 10px;
-    margin-left: auto;
+  margin-top: 10px;
+  margin-left: auto;
 }
 
 .close-delete-btn {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-    font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 .button-styles {
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .button-styles:hover {
-    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.2);
 }
 
 .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .page-btn {
-    border: none;
-    padding: 8px 12px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    color: rgb(17, 17, 17) !important;
+  border: none;
+  padding: 8px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  color: rgb(17, 17, 17) !important;
 }
 
 .error {
-    border: 2px solid red;
-    background-color: #ffe6e6;
-    transition: all 0.3s ease;
+  border: 2px solid red;
+  background-color: #ffe6e6;
+  transition: all 0.3s ease;
 }
 
 .error + .error-message {
-    color: red;
-    font-size: 12px;
-    display: block;
-    margin-top: 5px;
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
 }
