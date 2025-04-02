@@ -113,10 +113,14 @@
                         <option>ПЗ-13</option>
                     </select>
 
-                    <label for="name-input">Ім'я:</label>
-                    <input type="text" id="name-input" required
-                        pattern="^[А-ЯІЇЄҐ][а-яіїєґ']+(\s[А-ЯІЇЄҐ][а-яіїєґ']+)*$"
-                        title="Введіть коректне ім'я (тільки українські літери)" class="validate-input">
+                    <label for="first-name-input">Ім'я:</label>
+                    <input type="text" id="first-name-input" required pattern="^[А-ЯІЇЄҐ][а-яіїєґ']+"
+                        title="Введіть коректне ім'я" class="validate-input">
+                    <span class="error-message"></span>
+
+                    <label for="last-name-input">Прізвище:</label>
+                    <input type="text" id="last-name-input" required pattern="^[А-ЯІЇЄҐ][а-яіїєґ']+"
+                        title="Введіть коректне прізвище" class="validate-input">
                     <span class="error-message"></span>
 
                     <label for="gender-select">Стать:</label>

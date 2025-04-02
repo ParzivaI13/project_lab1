@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
       row.innerHTML = `
                 <td><input type="checkbox" class="select-row" aria-label="Обрати рядок"></td>
                 <td>${student.group}</td>
-                <td>${student.name}</td>
+                <td>${student.firstName} ${student.lastName}</td>
                 <td>${student.gender}</td>
                 <td>${student.dob}</td>
                 <td>${student.onlineStatus}</td>
@@ -98,35 +98,36 @@ document.addEventListener("DOMContentLoaded", function () {
   saveButton.addEventListener("click", function () {
     let id = editingRow ? editingRow.dataset.id : Date.now().toString();
     let group = document.getElementById("group-select").value;
-    let name = document.getElementById("name-input").value;
+    let firstName = document.getElementById("first-name-input").value.trim();
+    let lastName = document.getElementById("last-name-input").value.trim();
     let gender = document.getElementById("gender-select").value;
     let dob = document.getElementById("dob-input").value;
     let onlineStatus = document.getElementById("online-status").checked
-        ? '<i class="fa-solid fa-check" style="color: green;"></i>'
-        : '<i class="fa-solid fa-xmark" style="color: red;"></i>';
+      ? '<i class="fa-solid fa-check" style="color: green;"></i>'
+      : '<i class="fa-solid fa-xmark" style="color: red;"></i>';
 
-    if (!name || !dob) {
-        alert("Будь ласка, заповніть всі поля.");
-        return;
+    if (!firstName || !lastName || !dob) {
+      alert("Будь ласка, заповніть всі поля.");
+      return;
     }
 
-    let student = { id, group, name, gender, dob, onlineStatus };
+    let student = { id, group, firstName, lastName, gender, dob, onlineStatus };
 
     console.log("Змінений/доданий студент:", JSON.stringify(student, null, 2));
 
     if (editingRow) {
-        let index = students.findIndex(s => s.id === id);
-        if (index !== -1) {
-            students[index] = student;
-        }
+      let index = students.findIndex((s) => s.id === id);
+      if (index !== -1) {
+        students[index] = student;
+      }
     } else {
-        students.push(student);
+      students.push(student);
     }
 
     saveStudentsToCache();
     renderStudents();
     modal.style.display = "none";
-});
+  });
 
   function updateCheckboxListeners() {
     const checkboxes = document.querySelectorAll(".select-row");
@@ -148,14 +149,15 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".edit-btn").forEach((button) => {
       button.onclick = function () {
         let row = this.closest("tr");
-        let id = row.dataset.id; // Отримуємо ID
+        let id = row.dataset.id;
         let student = students.find((s) => s.id === id);
 
         if (!student) return;
 
         editingRow = row;
         document.getElementById("group-select").value = student.group;
-        document.getElementById("name-input").value = student.name;
+        document.getElementById("first-name-input").value = student.firstName;
+        document.getElementById("last-name-input").value = student.lastName;
         document.getElementById("gender-select").value = student.gender;
         document.getElementById("dob-input").value = student.dob;
         document.getElementById("online-status").checked =
@@ -180,10 +182,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         selectedRows.forEach((checkbox) => {
           let row = checkbox.closest("tr");
-          studentIds.push(row.dataset.id); // Отримуємо ID
+          studentIds.push(row.dataset.id);
           let student = students.find((s) => s.id === row.dataset.id);
           if (student) {
-            studentNames.push(student.name); // Отримуємо ім'я студента
+            studentNames.push(student.firstName + " " + student.lastName);
           }
         });
 
@@ -232,16 +234,19 @@ function clearError(input) {
 
 function validateInput(event) {
   let input = event.target;
-  let namePattern = /^[А-ЯІЇЄҐ][а-яіїєґ']+(\s[А-ЯІЇЄҐ][а-яіїєґ']+)*$/;
-  let dobMaxDate = new Date("2024-01-01");
+  let namePattern = /^[А-ЯІЇЄҐ][а-яіїєґ']+([-'][А-ЯІЇЄҐ][а-яіїєґ']+)?(\s[А-ЯІЇЄҐ][а-яіїєґ']+([-'][А-ЯІЇЄҐ][а-яіїєґ']+)*)*$/;
+  let dobMaxDate = new Date("2025-01-01");
   let dobValue = new Date(input.value);
 
   clearError(input);
 
-  if (input.id === "name-input" && !namePattern.test(input.value.trim())) {
+  if (
+    (input.id === "first-name-input" || input.id === "last-name-input") &&
+    !namePattern.test(input.value.trim())
+  ) {
     showError(
       input,
-      "Ім'я має містити лише українські літери та починатися з великої."
+      "Ім'я та прізвище можуть містити лише українські літери, починатися з великої, а також містити дефіс або апостроф."
     );
   }
 
@@ -253,15 +258,15 @@ function validateInput(event) {
   }
 }
 
-document.getElementById("name-input").addEventListener("input", validateInput);
+document.getElementById("first-name-input").addEventListener("input", validateInput);
+document.getElementById("last-name-input").addEventListener("input", validateInput);
 document.getElementById("dob-input").addEventListener("input", validateInput);
 
-document
-  .getElementById("saveButton")
-  .addEventListener("click", function (event) {
-    if (!document.querySelector(".error")) {
-      modal.style.display = "none";
-    } else {
-      event.preventDefault();
-    }
-  });
+document.getElementById("saveButton").addEventListener("click", function (event) {
+  if (document.querySelector(".error")) {
+    event.preventDefault();
+    alert("Будь ласка, виправте помилки у формі.");
+  } else {
+    modal.style.display = "none";
+  }
+});
