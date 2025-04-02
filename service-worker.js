@@ -1,5 +1,6 @@
 const CACHE_NAME = "student-manager-cache-v1";
-const FILES_TO_CACHE = [
+const ASSETS = [
+    "/",
     "/project_lab1/",
     "/project_lab1/index.html",
     "/project_lab1/style.css",
@@ -7,40 +8,54 @@ const FILES_TO_CACHE = [
     "/project_lab1/manifest.json",
     "/project_lab1/resources/avatar.jpg",
     "/project_lab1/resources/icon-192x192.png",
-    "/project_lab1/resources/icon-512x512.png"
+    "/project_lab1/resources/icon-512x512.png",
+    "/project_lab1/resources/icon-192x192.ico"
 ];
 
-// Інсталяція Service Worker
+// Подія встановлення Service Worker
+// Відбувається при першому запуску або коли SW оновлюється
 self.addEventListener("install", (event) => {
-    console.log("Service Worker installing...");
     event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then((cache) => {
-                console.log("Caching files:", FILES_TO_CACHE);
-                return cache.addAll(FILES_TO_CACHE);
-            })
-            .catch((error) => console.error("Cache addAll failed:", error))
+      caches.open(CACHE_NAME).then((cache) => {
+        console.log("Кешування ресурсів...");// логування не обовязкове
+        // Додаємо файли до кешу, якщо якийсь файл не вдасться завантажити, обробляємо помилку
+        return cache.addAll(ASSETS).catch(console.error);
+      })
     );
-});
-
-// Перехоплення запитів
-self.addEventListener("fetch", (event) => {
-    console.log("Fetching:", event.request.url);
+  });
+  
+  // Подія обробки запитів від клієнта (браузера)
+  // Якщо файл є в кеші – повертаємо його, інакше робимо запит до мережі
+  self.addEventListener("fetch", (event) => {
     event.respondWith(
-        caches.match(event.request).then((response) => {
-            return response || fetch(event.request);
-        })
+      caches.open(CACHE_NAME).then((cache) => {
+        return cache.match(event.request).then((cachedResponse) => {
+          // Запит до мережі, якщо ресурсу немає в кеші
+        
+          // Повертаємо кешовану версію, якщо вона є, інакше робимо запит до мережі
+          return cachedResponse || fetch(event.request).then((networkResponse) => {
+            // Зберігаємо отриманий файл у кеш для майбутніх запитів
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          });;
+        });
+      })
     );
-});
-
-// Оновлення Service Worker
-self.addEventListener("activate", (event) => {
-    console.log("Activating new Service Worker...");
+  });
+  
+  // Подія активації Service Worker
+  // Видаляє старі кеші, які більше не використовуються
+  self.addEventListener("activate", (event) => {
     event.waitUntil(
-        caches.keys().then((keyList) => {
-            return Promise.all(
-                keyList.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
-            );
-        })
+      caches.keys().then((keys) => {
+        return Promise.all(
+          keys
+            .filter((key) => key !== CACHE_NAME) // Знаходимо старі кеші
+            .map((key) => caches.delete(key))   // Видаляємо їх
+        );
+      }).then(() => {
+        console.log("Новий Service Worker активовано.");
+        return self.clients.claim(); // Переключаємо новий SW для всіх вкладок
+      })
     );
-});
+  });
