@@ -44,18 +44,3 @@ self.addEventListener("activate", (event) => {
         })
     );
 });
-
-self.addEventListener("activate", (event) => {
-    event.waitUntil(
-      caches.keys().then((keys) => {
-        return Promise.all(
-          keys
-            .filter((key) => key !== CACHE_NAME) // Знаходимо старі кеші
-            .map((key) => caches.delete(key))   // Видаляємо їх
-        );
-      }).then(() => {
-        console.log("Новий Service Worker активовано.");
-        return self.clients.claim(); // Переключаємо новий SW для всіх вкладок
-      })
-    );
-  });

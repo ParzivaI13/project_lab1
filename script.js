@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     tableBody.innerHTML = "";
     students.forEach((student) => {
       let row = document.createElement("tr");
-      row.dataset.id = student.id; // Зберігаємо ID в атрибуті data-id
+      row.dataset.id = student.id;
       row.innerHTML = `
                 <td><input type="checkbox" class="select-row" aria-label="Обрати рядок"></td>
                 <td>${student.group}</td>

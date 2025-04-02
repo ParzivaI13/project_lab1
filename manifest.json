@@ -5,7 +5,7 @@
     "start_url": "/project_lab1/index.html",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#007bff",
+    "theme_color": "#f4f4f4",
     "icons": [
       {
         "src": "/project_lab1/resources/icon-192x192.png",
