@@ -235,19 +235,33 @@ function clearError(input) {
 function validateInput(event) {
   let input = event.target;
   let namePattern = /^[А-ЯІЇЄҐ][а-яіїєґ']+([-'][А-ЯІЇЄҐ][а-яіїєґ']+)?(\s[А-ЯІЇЄҐ][а-яіїєґ']+([-'][А-ЯІЇЄҐ][а-яіїєґ']+)*)*$/;
+  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let nulpPattern = /^[^@\s]+@nulp\.ua$/;
   let dobMaxDate = new Date("2025-01-01");
   let dobValue = new Date(input.value);
 
   clearError(input);
 
-  if (
-    (input.id === "first-name-input" || input.id === "last-name-input") &&
-    !namePattern.test(input.value.trim())
-  ) {
-    showError(
-      input,
-      "Ім'я та прізвище можуть містити лише українські літери, починатися з великої, а також містити дефіс або апостроф."
-    );
+  if (input.id === "first-name-input" || input.id === "last-name-input") {
+    let value = input.value.trim();
+
+    if (nulpPattern.test(value)) {
+      showError(input, "Вітаю, друже політехнік, ти ввів невірні дані");
+      return;
+    }
+
+    else if (emailPattern.test(value)) {
+      showError(input, "Здається, ви ввели email замість імені.");
+      return;
+    }
+
+    if (!namePattern.test(value)) {
+      showError(
+        input,
+        "Ім'я та прізвище можуть містити лише українські літери, починатися з великої, а також містити дефіс або апостроф."
+      );
+      return;
+    }
   }
 
   if (
@@ -257,6 +271,7 @@ function validateInput(event) {
     showError(input, "Дата народження має бути до 2025 року.");
   }
 }
+
 
 document.getElementById("first-name-input").addEventListener("input", validateInput);
 document.getElementById("last-name-input").addEventListener("input", validateInput);
