@@ -1,0 +1,350 @@
+[2025-05-06 14:46:38] Запит до students.php "GET"
+[2025-05-06 14:46:38] Отримано студентів: 2
+[2025-05-06 14:46:38] Відповідь: [{"id":1,"group":"ПЗ-11","firstName":"Віва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":""},{"id":2,"group":"ПЗ-11","firstName":"Аіва","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":""}]
+[2025-05-06 14:53:54] Запит до students.php "POST"
+[2025-05-06 14:53:54] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Вфів\",\"lastName\":\"Аіва\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-05-06 14:53:54] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Вфів","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-05-06 14:53:54] Відповідь: {"success":true,"message":"Студента додано успішно","id":"3"}
+[2025-05-06 14:55:11] Запит до students.php "POST"
+[2025-05-06 14:55:11] Вхідні дані: "{\"action\":\"delete_multiple\",\"ids\":[\"1\",\"2\",\"3\"]}"
+[2025-05-06 14:55:11] Видалення кількох студентів: ["1","2","3"]
+[2025-05-06 14:55:11] Відповідь: {"success":true,"message":"Студентів успішно видалено"}
+[2025-05-06 14:55:24] Запит до students.php "POST"
+[2025-05-06 14:55:24] Вхідні дані: "{\"action\":\"delete_multiple\",\"ids\":[\"1\"]}"
+[2025-05-06 14:55:24] Видалення кількох студентів: ["1"]
+[2025-05-06 14:55:24] Відповідь: {"success":true,"message":"Студентів успішно видалено"}
+[2025-05-06 17:23:55] Запит до students.php "GET"
+[2025-05-06 17:23:55] Отримано студентів: 0
+[2025-05-06 17:23:55] Відповідь: []
+[2025-05-06 17:23:56] Запит до students.php "GET"
+[2025-05-06 17:23:56] Отримано студентів: 0
+[2025-05-06 17:23:56] Відповідь: []
+[2025-05-06 17:24:05] Запит до students.php "POST"
+[2025-05-06 17:24:05] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Аіваі\",\"lastName\":\"Аіваі\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-05-06 17:24:05] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-05-06 17:24:05] Відповідь: {"success":true,"message":"Студента додано успішно","id":"4"}
+[2025-05-06 17:24:12] Запит до students.php "GET"
+[2025-05-06 17:24:12] Отримано студентів: 1
+[2025-05-06 17:24:12] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 17:24:12] Запит до students.php "GET"
+[2025-05-06 17:24:12] Отримано студентів: 1
+[2025-05-06 17:24:12] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 17:24:12] Запит до students.php "GET"
+[2025-05-06 17:24:12] Отримано студентів: 1
+[2025-05-06 17:24:12] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 17:24:33] Запит до students.php "GET"
+[2025-05-06 17:24:33] Отримано студентів: 1
+[2025-05-06 17:24:33] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 17:25:37] Запит до students.php "GET"
+[2025-05-06 17:25:37] Отримано студентів: 1
+[2025-05-06 17:25:37] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 17:25:37] Запит до students.php "GET"
+[2025-05-06 17:25:37] Отримано студентів: 1
+[2025-05-06 17:25:37] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 17:25:37] Запит до students.php "GET"
+[2025-05-06 17:25:37] Отримано студентів: 1
+[2025-05-06 17:25:37] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 17:25:45] Запит до students.php "GET"
+[2025-05-06 17:25:45] Отримано студентів: 1
+[2025-05-06 17:25:45] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 17:27:01] Запит до students.php "GET"
+[2025-05-06 17:27:01] Отримано студентів: 1
+[2025-05-06 17:27:01] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 17:27:01] Запит до students.php "GET"
+[2025-05-06 17:27:01] Отримано студентів: 1
+[2025-05-06 17:27:01] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 17:27:07] Запит до students.php "GET"
+[2025-05-06 17:27:07] Отримано студентів: 1
+[2025-05-06 17:27:07] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 17:27:07] Запит до students.php "GET"
+[2025-05-06 17:27:07] Отримано студентів: 1
+[2025-05-06 17:27:07] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 17:27:07] Запит до students.php "GET"
+[2025-05-06 17:27:07] Отримано студентів: 1
+[2025-05-06 17:27:07] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 17:27:08] Запит до students.php "GET"
+[2025-05-06 17:27:08] Отримано студентів: 1
+[2025-05-06 17:27:08] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 17:27:08] Запит до students.php "GET"
+[2025-05-06 17:27:08] Отримано студентів: 1
+[2025-05-06 17:27:08] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 17:27:23] Запит до students.php "POST"
+[2025-05-06 17:27:23] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Аіваів\",\"lastName\":\"Аіваіва\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-05-06 17:27:23] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Аіваів","lastName":"Аіваіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-05-06 17:27:23] Відповідь: {"success":true,"message":"Студента додано успішно","id":"5"}
+[2025-05-06 17:27:45] Запит до students.php "GET"
+[2025-05-06 17:27:45] Отримано студентів: 2
+[2025-05-06 17:27:45] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":5,"group":"ПЗ-11","firstName":"Аіваів","lastName":"Аіваіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-06 17:33:03] Запит до students.php "GET"
+[2025-05-06 17:33:03] Отримано студентів: 2
+[2025-05-06 17:33:03] Відповідь: [{"id":4,"group":"ПЗ-11","firstName":"Аіваі","lastName":"Аіваі","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":5,"group":"ПЗ-11","firstName":"Аіваів","lastName":"Аіваіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-06 17:33:19] Запит до students.php "POST"
+[2025-05-06 17:33:19] Вхідні дані: "{\"action\":\"delete_multiple\",\"ids\":[\"4\"]}"
+[2025-05-06 17:33:19] Видалення кількох студентів: ["4"]
+[2025-05-06 17:33:20] Відповідь: {"success":true,"message":"Студентів успішно видалено"}
+[2025-05-06 17:33:25] Запит до students.php "GET"
+[2025-05-06 17:33:25] Отримано студентів: 1
+[2025-05-06 17:33:25] Відповідь: [{"id":5,"group":"ПЗ-11","firstName":"Аіваів","lastName":"Аіваіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-06 17:33:26] Запит до students.php "GET"
+[2025-05-06 17:33:26] Отримано студентів: 1
+[2025-05-06 17:33:26] Відповідь: [{"id":5,"group":"ПЗ-11","firstName":"Аіваів","lastName":"Аіваіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-06 17:40:39] Запит до students.php "GET"
+[2025-05-06 17:40:39] Отримано студентів: 1
+[2025-05-06 17:40:39] Відповідь: [{"id":5,"group":"ПЗ-11","firstName":"Аіваів","lastName":"Аіваіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":0}]
+[2025-05-06 17:40:50] Запит до students.php "GET"
+[2025-05-06 17:40:50] Отримано студентів: 1
+[2025-05-06 17:40:50] Відповідь: [{"id":5,"group":"ПЗ-11","firstName":"Аіваів","lastName":"Аіваіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":0}]
+[2025-05-06 17:41:00] Запит до students.php "GET"
+[2025-05-06 17:41:00] Отримано студентів: 1
+[2025-05-06 17:41:00] Відповідь: [{"id":5,"group":"ПЗ-11","firstName":"Аіваів","lastName":"Аіваіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":0}]
+[2025-05-06 17:41:01] Запит до students.php "GET"
+[2025-05-06 17:41:01] Отримано студентів: 1
+[2025-05-06 17:41:01] Відповідь: [{"id":5,"group":"ПЗ-11","firstName":"Аіваів","lastName":"Аіваіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":0}]
+[2025-05-06 17:41:01] Запит до students.php "GET"
+[2025-05-06 17:41:01] Отримано студентів: 1
+[2025-05-06 17:41:01] Відповідь: [{"id":5,"group":"ПЗ-11","firstName":"Аіваів","lastName":"Аіваіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":0}]
+[2025-05-06 17:41:10] Запит до students.php "POST"
+[2025-05-06 17:41:10] Вхідні дані: "{\"action\":\"delete_multiple\",\"ids\":[\"5\"]}"
+[2025-05-06 17:41:10] Видалення кількох студентів: ["5"]
+[2025-05-06 17:41:10] Відповідь: {"success":true,"message":"Студентів успішно видалено"}
+[2025-05-06 17:41:39] Запит до students.php "GET"
+[2025-05-06 17:41:39] Отримано студентів: 0
+[2025-05-06 17:41:39] Відповідь: []
+[2025-05-06 17:41:40] Запит до students.php "GET"
+[2025-05-06 17:41:40] Отримано студентів: 0
+[2025-05-06 17:41:40] Відповідь: []
+[2025-05-06 17:41:41] Запит до students.php "GET"
+[2025-05-06 17:41:41] Отримано студентів: 0
+[2025-05-06 17:41:41] Відповідь: []
+[2025-05-06 17:41:41] Запит до students.php "GET"
+[2025-05-06 17:41:41] Отримано студентів: 0
+[2025-05-06 17:41:41] Відповідь: []
+[2025-05-06 17:41:41] Запит до students.php "GET"
+[2025-05-06 17:41:41] Отримано студентів: 0
+[2025-05-06 17:41:41] Відповідь: []
+[2025-05-06 17:41:41] Запит до students.php "GET"
+[2025-05-06 17:41:41] Отримано студентів: 0
+[2025-05-06 17:41:41] Відповідь: []
+[2025-05-06 17:41:44] Запит до students.php "GET"
+[2025-05-06 17:41:44] Отримано студентів: 0
+[2025-05-06 17:41:44] Відповідь: []
+[2025-05-06 17:41:44] Запит до students.php "GET"
+[2025-05-06 17:41:44] Отримано студентів: 0
+[2025-05-06 17:41:44] Відповідь: []
+[2025-05-06 17:41:44] Запит до students.php "GET"
+[2025-05-06 17:41:44] Отримано студентів: 0
+[2025-05-06 17:41:44] Відповідь: []
+[2025-05-06 17:43:19] Запит до students.php "GET"
+[2025-05-06 17:43:19] Отримано студентів: 0
+[2025-05-06 17:43:19] Відповідь: []
+[2025-05-06 17:43:29] Запит до students.php "POST"
+[2025-05-06 17:43:29] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Аіва\",\"lastName\":\"Аіва\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-05-06 17:43:29] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Аіва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-05-06 17:43:29] Відповідь: {"success":true,"message":"Студента додано успішно","id":"6"}
+[2025-05-06 17:44:19] Запит до students.php "POST"
+[2025-05-06 17:44:19] Вхідні дані: "{\"action\":\"delete_multiple\",\"ids\":[\"6\"]}"
+[2025-05-06 17:44:19] Видалення кількох студентів: ["6"]
+[2025-05-06 17:44:19] Відповідь: {"success":true,"message":"Студентів успішно видалено"}
+[2025-05-06 18:42:04] Запит до students.php "GET"
+[2025-05-06 18:42:04] Отримано студентів: 0
+[2025-05-06 18:42:04] Відповідь: []
+[2025-05-06 18:42:07] Запит до students.php "GET"
+[2025-05-06 18:42:07] Отримано студентів: 0
+[2025-05-06 18:42:07] Відповідь: []
+[2025-05-06 18:42:18] Запит до students.php "POST"
+[2025-05-06 18:42:18] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Віва\",\"lastName\":\"Аіва\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-05-06 18:42:18] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Віва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-05-06 18:42:18] Відповідь: {"success":true,"message":"Студента додано успішно","id":"7"}
+[2025-05-06 18:42:18] Запит до students.php "GET"
+[2025-05-06 18:42:18] Отримано студентів: 1
+[2025-05-06 18:42:18] Відповідь: [{"id":7,"group":"ПЗ-11","firstName":"Віва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 18:42:28] Запит до students.php "GET"
+[2025-05-06 18:42:28] Отримано студентів: 1
+[2025-05-06 18:42:28] Відповідь: [{"id":7,"group":"ПЗ-11","firstName":"Віва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 18:42:46] Запит до students.php "GET"
+[2025-05-06 18:42:46] Отримано студентів: 1
+[2025-05-06 18:42:46] Відповідь: [{"id":7,"group":"ПЗ-11","firstName":"Віва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 18:42:46] Запит до students.php "GET"
+[2025-05-06 18:42:46] Отримано студентів: 1
+[2025-05-06 18:42:46] Відповідь: [{"id":7,"group":"ПЗ-11","firstName":"Віва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 18:42:47] Запит до students.php "GET"
+[2025-05-06 18:42:47] Отримано студентів: 1
+[2025-05-06 18:42:47] Відповідь: [{"id":7,"group":"ПЗ-11","firstName":"Віва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 18:42:53] Запит до students.php "GET"
+[2025-05-06 18:42:53] Отримано студентів: 1
+[2025-05-06 18:42:53] Відповідь: [{"id":7,"group":"ПЗ-11","firstName":"Віва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 18:43:02] Запит до students.php "POST"
+[2025-05-06 18:43:02] Вхідні дані: "{\"action\":\"delete_multiple\",\"ids\":[\"7\"]}"
+[2025-05-06 18:43:02] Видалення кількох студентів: ["7"]
+[2025-05-06 18:43:02] Відповідь: {"success":true,"message":"Студентів успішно видалено"}
+[2025-05-06 18:43:02] Запит до students.php "GET"
+[2025-05-06 18:43:02] Отримано студентів: 0
+[2025-05-06 18:43:02] Відповідь: []
+[2025-05-06 18:43:08] Запит до students.php "POST"
+[2025-05-06 18:43:08] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Аіва\",\"lastName\":\"Аіва\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-05-06 18:43:08] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Аіва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-05-06 18:43:08] Відповідь: {"success":true,"message":"Студента додано успішно","id":"8"}
+[2025-05-06 18:43:08] Запит до students.php "GET"
+[2025-05-06 18:43:08] Отримано студентів: 1
+[2025-05-06 18:43:08] Відповідь: [{"id":8,"group":"ПЗ-11","firstName":"Аіва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-06 18:43:19] Запит до students.php "GET"
+[2025-05-06 18:43:19] Отримано студентів: 1
+[2025-05-06 18:43:19] Відповідь: [{"id":8,"group":"ПЗ-11","firstName":"Аіва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-06 18:43:19] Запит до students.php "GET"
+[2025-05-06 18:43:19] Отримано студентів: 1
+[2025-05-06 18:43:19] Відповідь: [{"id":8,"group":"ПЗ-11","firstName":"Аіва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-06 18:43:22] Запит до students.php "POST"
+[2025-05-06 18:43:22] Вхідні дані: "{\"action\":\"delete_multiple\",\"ids\":[\"8\"]}"
+[2025-05-06 18:43:22] Видалення кількох студентів: ["8"]
+[2025-05-06 18:43:22] Відповідь: {"success":true,"message":"Студентів успішно видалено"}
+[2025-05-06 18:43:22] Запит до students.php "GET"
+[2025-05-06 18:43:22] Отримано студентів: 0
+[2025-05-06 18:43:22] Відповідь: []
+[2025-05-06 18:43:23] Запит до students.php "GET"
+[2025-05-06 18:43:23] Отримано студентів: 0
+[2025-05-06 18:43:23] Відповідь: []
+[2025-05-06 18:43:23] Запит до students.php "GET"
+[2025-05-06 18:43:23] Отримано студентів: 0
+[2025-05-06 18:43:23] Відповідь: []
+[2025-05-06 18:43:29] Запит до students.php "POST"
+[2025-05-06 18:43:29] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Вфів\",\"lastName\":\"Аіва\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-05-06 18:43:29] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Вфів","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-05-06 18:43:29] Відповідь: {"success":true,"message":"Студента додано успішно","id":"9"}
+[2025-05-06 18:43:29] Запит до students.php "GET"
+[2025-05-06 18:43:29] Отримано студентів: 1
+[2025-05-06 18:43:29] Відповідь: [{"id":9,"group":"ПЗ-11","firstName":"Вфів","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-06 18:43:35] Запит до students.php "GET"
+[2025-05-06 18:43:35] Отримано студентів: 1
+[2025-05-06 18:43:35] Відповідь: [{"id":9,"group":"ПЗ-11","firstName":"Вфів","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-06 18:56:10] Запит до students.php "GET"
+[2025-05-06 18:56:10] Отримано студентів: 1
+[2025-05-06 18:56:10] Відповідь: [{"id":9,"group":"ПЗ-11","firstName":"Вфів","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-06 18:56:14] Запит до students.php "GET"
+[2025-05-06 18:56:14] Отримано студентів: 1
+[2025-05-06 18:56:14] Відповідь: [{"id":9,"group":"ПЗ-11","firstName":"Вфів","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-06 18:56:35] Запит до students.php "POST"
+[2025-05-06 18:56:35] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Аіва\",\"lastName\":\"Аіва\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-05-06 18:56:35] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Аіва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-05-06 18:56:35] Відповідь: {"success":true,"message":"Студента додано успішно","id":"10"}
+[2025-05-06 18:56:35] Запит до students.php "GET"
+[2025-05-06 18:56:35] Отримано студентів: 2
+[2025-05-06 18:56:35] Відповідь: [{"id":9,"group":"ПЗ-11","firstName":"Вфів","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":10,"group":"ПЗ-11","firstName":"Аіва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 18:56:44] Запит до students.php "POST"
+[2025-05-06 18:56:44] Вхідні дані: "{\"action\":\"delete_multiple\",\"ids\":[\"9\",\"10\"]}"
+[2025-05-06 18:56:44] Видалення кількох студентів: ["9","10"]
+[2025-05-06 18:56:44] Відповідь: {"success":true,"message":"Студентів успішно видалено"}
+[2025-05-06 18:56:44] Запит до students.php "GET"
+[2025-05-06 18:56:44] Отримано студентів: 0
+[2025-05-06 18:56:44] Відповідь: []
+[2025-05-06 18:56:47] Запит до students.php "GET"
+[2025-05-06 18:56:47] Отримано студентів: 0
+[2025-05-06 18:56:47] Відповідь: []
+[2025-05-06 18:56:47] Запит до students.php "GET"
+[2025-05-06 18:56:47] Отримано студентів: 0
+[2025-05-06 18:56:47] Відповідь: []
+[2025-05-06 18:56:48] Запит до students.php "GET"
+[2025-05-06 18:56:48] Отримано студентів: 0
+[2025-05-06 18:56:48] Відповідь: []
+[2025-05-06 19:12:45] Запит до students.php "GET"
+[2025-05-06 19:12:45] Отримано студентів: 0
+[2025-05-06 19:12:45] Відповідь: []
+[2025-05-06 19:12:45] Запит до students.php "GET"
+[2025-05-06 19:12:45] Отримано студентів: 0
+[2025-05-06 19:12:45] Відповідь: []
+[2025-05-06 19:12:45] Запит до students.php "GET"
+[2025-05-06 19:12:45] Отримано студентів: 0
+[2025-05-06 19:12:45] Відповідь: []
+[2025-05-06 19:12:45] Запит до students.php "GET"
+[2025-05-06 19:12:45] Отримано студентів: 0
+[2025-05-06 19:12:45] Відповідь: []
+[2025-05-06 19:12:54] Запит до students.php "POST"
+[2025-05-06 19:12:54] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Аіва\",\"lastName\":\"Аіваів\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-05-06 19:12:54] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Аіва","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-05-06 19:12:54] Відповідь: {"success":true,"message":"Студента додано успішно","id":"11"}
+[2025-05-06 19:12:54] Запит до students.php "GET"
+[2025-05-06 19:12:54] Отримано студентів: 1
+[2025-05-06 19:12:54] Відповідь: [{"id":11,"group":"ПЗ-11","firstName":"Аіва","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 19:13:00] Запит до students.php "GET"
+[2025-05-06 19:13:00] Отримано студентів: 1
+[2025-05-06 19:13:00] Відповідь: [{"id":11,"group":"ПЗ-11","firstName":"Аіва","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 19:13:08] Запит до students.php "POST"
+[2025-05-06 19:13:08] Вхідні дані: "{\"action\":\"delete_multiple\",\"ids\":[\"11\"]}"
+[2025-05-06 19:13:08] Видалення кількох студентів: ["11"]
+[2025-05-06 19:13:08] Відповідь: {"success":true,"message":"Студентів успішно видалено"}
+[2025-05-06 19:13:08] Запит до students.php "GET"
+[2025-05-06 19:13:08] Отримано студентів: 0
+[2025-05-06 19:13:08] Відповідь: []
+[2025-05-06 19:13:23] Запит до students.php "GET"
+[2025-05-06 19:13:23] Отримано студентів: 0
+[2025-05-06 19:13:23] Відповідь: []
+[2025-05-06 19:13:29] Запит до students.php "POST"
+[2025-05-06 19:13:29] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Вфів\",\"lastName\":\"Аіваів\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-05-06 19:13:29] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Вфів","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-05-06 19:13:29] Відповідь: {"success":true,"message":"Студента додано успішно","id":"12"}
+[2025-05-06 19:13:29] Запит до students.php "GET"
+[2025-05-06 19:13:29] Отримано студентів: 1
+[2025-05-06 19:13:29] Відповідь: [{"id":12,"group":"ПЗ-11","firstName":"Вфів","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 19:19:45] Запит до students.php "GET"
+[2025-05-06 19:19:45] Отримано студентів: 1
+[2025-05-06 19:19:45] Відповідь: [{"id":12,"group":"ПЗ-11","firstName":"Вфів","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 19:19:59] Запит до students.php "PUT"
+[2025-05-06 19:19:59] Вхідні дані: "{\"id\":\"12\",\"group\":\"ПЗ-11\",\"firstName\":\"Апівів\",\"lastName\":\"Аіваів\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-05-06 19:19:59] Оновлення студента: {"id":"12","group":"ПЗ-11","firstName":"Апівів","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-05-06 19:19:59] Відповідь: {"success":true,"message":"Студента оновлено успішно"}
+[2025-05-06 19:20:01] Запит до students.php "GET"
+[2025-05-06 19:20:01] Отримано студентів: 1
+[2025-05-06 19:20:01] Відповідь: [{"id":12,"group":"ПЗ-11","firstName":"Апівів","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 19:29:37] Запит до students.php "GET"
+[2025-05-06 19:29:37] Отримано студентів: 1
+[2025-05-06 19:29:37] Відповідь: [{"id":12,"group":"ПЗ-11","firstName":"Апівів","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 19:30:36] Запит до students.php "POST"
+[2025-05-06 19:30:36] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Аіваіва\",\"lastName\":\"Аіваіа\",\"gender\":\"Чоловіча\",\"dob\":\"1212-02-22\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-05-06 19:30:36] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Аіваіва","lastName":"Аіваіа","gender":"Чоловіча","dob":"1212-02-22","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-05-06 19:30:36] Відповідь: {"success":true,"message":"Студента додано успішно","id":"13"}
+[2025-05-06 19:30:36] Запит до students.php "GET"
+[2025-05-06 19:30:36] Отримано студентів: 2
+[2025-05-06 19:30:36] Відповідь: [{"id":12,"group":"ПЗ-11","firstName":"Апівів","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":13,"group":"ПЗ-11","firstName":"Аіваіва","lastName":"Аіваіа","gender":"Чоловіча","dob":"1212-02-22","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 19:30:52] Запит до students.php "POST"
+[2025-05-06 19:30:52] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Пмвів\",\"lastName\":\"Рвіа\",\"gender\":\"Чоловіча\",\"dob\":\"1211-02-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-05-06 19:30:52] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Пмвів","lastName":"Рвіа","gender":"Чоловіча","dob":"1211-02-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-05-06 19:30:52] Відповідь: {"success":true,"message":"Студента додано успішно","id":"14"}
+[2025-05-06 19:30:52] Запит до students.php "GET"
+[2025-05-06 19:30:52] Отримано студентів: 3
+[2025-05-06 19:30:52] Відповідь: [{"id":12,"group":"ПЗ-11","firstName":"Апівів","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":13,"group":"ПЗ-11","firstName":"Аіваіва","lastName":"Аіваіа","gender":"Чоловіча","dob":"1212-02-22","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":14,"group":"ПЗ-11","firstName":"Пмвів","lastName":"Рвіа","gender":"Чоловіча","dob":"1211-02-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 19:31:00] Запит до students.php "POST"
+[2025-05-06 19:31:00] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Пвпар\",\"lastName\":\"Паііва\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-05-06 19:31:00] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Пвпар","lastName":"Паііва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-05-06 19:31:00] Відповідь: {"success":true,"message":"Студента додано успішно","id":"15"}
+[2025-05-06 19:31:00] Запит до students.php "GET"
+[2025-05-06 19:31:00] Отримано студентів: 4
+[2025-05-06 19:31:00] Відповідь: [{"id":12,"group":"ПЗ-11","firstName":"Апівів","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":13,"group":"ПЗ-11","firstName":"Аіваіва","lastName":"Аіваіа","gender":"Чоловіча","dob":"1212-02-22","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":14,"group":"ПЗ-11","firstName":"Пмвів","lastName":"Рвіа","gender":"Чоловіча","dob":"1211-02-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":15,"group":"ПЗ-11","firstName":"Пвпар","lastName":"Паііва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-06 19:31:07] Запит до students.php "POST"
+[2025-05-06 19:31:07] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Аівап\",\"lastName\":\"Піва\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-05-06 19:31:07] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Аівап","lastName":"Піва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-05-06 19:31:07] Відповідь: {"success":true,"message":"Студента додано успішно","id":"16"}
+[2025-05-06 19:31:07] Запит до students.php "GET"
+[2025-05-06 19:31:07] Отримано студентів: 5
+[2025-05-06 19:31:07] Відповідь: [{"id":12,"group":"ПЗ-11","firstName":"Апівів","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":13,"group":"ПЗ-11","firstName":"Аіваіва","lastName":"Аіваіа","gender":"Чоловіча","dob":"1212-02-22","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":14,"group":"ПЗ-11","firstName":"Пмвів","lastName":"Рвіа","gender":"Чоловіча","dob":"1211-02-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":15,"group":"ПЗ-11","firstName":"Пвпар","lastName":"Паііва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":16,"group":"ПЗ-11","firstName":"Аівап","lastName":"Піва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-06 19:31:14] Запит до students.php "POST"
+[2025-05-06 19:31:14] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Півап\",\"lastName\":\"Піва\",\"gender\":\"Чоловіча\",\"dob\":\"0111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-05-06 19:31:14] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Півап","lastName":"Піва","gender":"Чоловіча","dob":"0111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-05-06 19:31:14] Відповідь: {"success":true,"message":"Студента додано успішно","id":"17"}
+[2025-05-06 19:31:14] Запит до students.php "GET"
+[2025-05-06 19:31:14] Отримано студентів: 6
+[2025-05-06 19:31:14] Відповідь: [{"id":12,"group":"ПЗ-11","firstName":"Апівів","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":13,"group":"ПЗ-11","firstName":"Аіваіва","lastName":"Аіваіа","gender":"Чоловіча","dob":"1212-02-22","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":14,"group":"ПЗ-11","firstName":"Пмвів","lastName":"Рвіа","gender":"Чоловіча","dob":"1211-02-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":15,"group":"ПЗ-11","firstName":"Пвпар","lastName":"Паііва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":16,"group":"ПЗ-11","firstName":"Аівап","lastName":"Піва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":17,"group":"ПЗ-11","firstName":"Півап","lastName":"Піва","gender":"Чоловіча","dob":"0111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-06 19:31:25] Запит до students.php "POST"
+[2025-05-06 19:31:25] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Піва\",\"lastName\":\"Аіва\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-05-06 19:31:25] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Піва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-05-06 19:31:25] Відповідь: {"success":true,"message":"Студента додано успішно","id":"18"}
+[2025-05-06 19:31:25] Запит до students.php "GET"
+[2025-05-06 19:31:25] Отримано студентів: 7
+[2025-05-06 19:31:25] Відповідь: [{"id":12,"group":"ПЗ-11","firstName":"Апівів","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":13,"group":"ПЗ-11","firstName":"Аіваіва","lastName":"Аіваіа","gender":"Чоловіча","dob":"1212-02-22","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":14,"group":"ПЗ-11","firstName":"Пмвів","lastName":"Рвіа","gender":"Чоловіча","dob":"1211-02-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":15,"group":"ПЗ-11","firstName":"Пвпар","lastName":"Паііва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":16,"group":"ПЗ-11","firstName":"Аівап","lastName":"Піва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":17,"group":"ПЗ-11","firstName":"Півап","lastName":"Піва","gender":"Чоловіча","dob":"0111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":18,"group":"ПЗ-11","firstName":"Піва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 19:31:29] Запит до students.php "GET"
+[2025-05-06 19:31:29] Отримано студентів: 7
+[2025-05-06 19:31:29] Відповідь: [{"id":12,"group":"ПЗ-11","firstName":"Апівів","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":13,"group":"ПЗ-11","firstName":"Аіваіва","lastName":"Аіваіа","gender":"Чоловіча","dob":"1212-02-22","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":14,"group":"ПЗ-11","firstName":"Пмвів","lastName":"Рвіа","gender":"Чоловіча","dob":"1211-02-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":15,"group":"ПЗ-11","firstName":"Пвпар","lastName":"Паііва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":16,"group":"ПЗ-11","firstName":"Аівап","lastName":"Піва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":17,"group":"ПЗ-11","firstName":"Півап","lastName":"Піва","gender":"Чоловіча","dob":"0111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":18,"group":"ПЗ-11","firstName":"Піва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 19:31:29] Запит до students.php "GET"
+[2025-05-06 19:31:29] Отримано студентів: 7
+[2025-05-06 19:31:29] Відповідь: [{"id":12,"group":"ПЗ-11","firstName":"Апівів","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":13,"group":"ПЗ-11","firstName":"Аіваіва","lastName":"Аіваіа","gender":"Чоловіча","dob":"1212-02-22","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":14,"group":"ПЗ-11","firstName":"Пмвів","lastName":"Рвіа","gender":"Чоловіча","dob":"1211-02-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":15,"group":"ПЗ-11","firstName":"Пвпар","lastName":"Паііва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":16,"group":"ПЗ-11","firstName":"Аівап","lastName":"Піва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":17,"group":"ПЗ-11","firstName":"Півап","lastName":"Піва","gender":"Чоловіча","dob":"0111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":18,"group":"ПЗ-11","firstName":"Піва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-05-06 19:38:03] Запит до students.php "GET"
+[2025-05-06 19:38:03] Отримано студентів: 7
+[2025-05-06 19:38:03] Відповідь: [{"id":12,"group":"ПЗ-11","firstName":"Апівів","lastName":"Аіваів","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":13,"group":"ПЗ-11","firstName":"Аіваіва","lastName":"Аіваіа","gender":"Чоловіча","dob":"1212-02-22","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":14,"group":"ПЗ-11","firstName":"Пмвів","lastName":"Рвіа","gender":"Чоловіча","dob":"1211-02-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":15,"group":"ПЗ-11","firstName":"Пвпар","lastName":"Паііва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":16,"group":"ПЗ-11","firstName":"Аівап","lastName":"Піва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":17,"group":"ПЗ-11","firstName":"Півап","lastName":"Піва","gender":"Чоловіча","dob":"0111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":18,"group":"ПЗ-11","firstName":"Піва","lastName":"Аіва","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]

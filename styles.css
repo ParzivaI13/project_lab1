@@ -441,3 +441,13 @@ header {
   display: block;
   margin-top: 5px;
 }
+
+.page-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
