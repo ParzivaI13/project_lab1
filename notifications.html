@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/25aa6942e8.js" crossorigin="anonymous"></script>
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" type="image/x-icon" href="/resources/icon-192x192.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
 </head>
 
 <body>
@@ -16,27 +16,92 @@
         <div class="logo">
             <a href="index.html">CMS</a>
         </div>
-        
+
         <div class="header-buttons-wrap">
             <div class="bell-container">
                 <a href="#" id="bell-link">
                     <i class="fa-regular fa-bell bell"></i>
-                    <span class="notification-badge" id="notification-badge"></span>
+                    <span class="notification-badge" style="display: none;"></span>
                 </a>
             </div>
+
             <div class="personal">
-                <img src="resources/avatar.jpg" alt="" class="avatar">
-                <p class="name">Максим Побігач</p>
-                <div class="dropdown-menu">
-                    <button class="dropdown-item">Профіль</button>
-                    <button class="dropdown-item">Вихід</button>
-                </div>
             </div>
         </div>
     </header>
+
+    <div class="notification-dropdown" id="notification-dropdown">
+        <div class="notification-dropdown-header">
+            <h4>Нові повідомлення</h4>
+        </div>
+        <div id="notification-list"></div>
+    </div>
+
     <main>
-        <p style="text-align: center; margin-top: 50px; color: #777;">Тут будуть ваші повідомлення...</p>
+        <div class="notifications-content">
+            <div class="chat-main-container">
+                <div class="chat-sidebar">
+                    <div class="chat-sidebar-header">
+                        <h3>Чат зі студентами</h3>
+                        <select id="chat-recipient" class="recipient-select">
+                            <option value="">Обери співрозмовника</option>
+                        </select>
+                    </div>
+                    <div class="chat-users-list" id="chat-users-list"></div>
+                </div>
+
+                <div class="chat-content">
+                    <div class="chat-header">
+                        <h2 id="chat-title">Оберіть співрозмовника</h2>
+                        <div class="connection-status" id="connection-status">🔴 Підключення...</div>
+                    </div>
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="chat-empty-state">
+                            <i class="fa-regular fa-comments"></i>
+                            <h3>Почніть розмову</h3>
+                            <p>Оберіть співрозмовника зі списку щоб почати чат</p>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <textarea id="chat-input" class="chat-input" placeholder="Введіть повідомлення..."
+                            rows="1"></textarea>
+                        <button id="send-btn" class="send-btn" disabled>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="login-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-login-btn" aria-label="Закрити"><i class="fa-solid fa-xmark"></i></span>
+                    <h2>Авторизація</h2>
+
+                    <form id="login-form">
+                        <label for="login-firstname">Ім'я:</label>
+                        <input type="text" id="login-firstname" required>
+
+                        <label for="login-lastname">Прізвище:</label>
+                        <input type="text" id="login-lastname" required>
+
+                        <label for="login-dob">Дата народження (ддммрррр):</label>
+                        <input type="text" id="login-dob" required pattern="[0-9]{8}" maxlength="8"
+                            title="Введіть дату народження у форматі ДДММРРРР">
+                        <p id="login-error" class="error-message"></p>
+
+                        <div class="modal-buttons color-primary">
+                            <button type="button" class="cancel-login-btn button-styles">Скасувати</button>
+                            <button type="submit" class="color-primary login-btn button-styles">Увійти</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
+
     <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="chat.js"></script>
 </body>
+
 </html>

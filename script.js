@@ -1,865 +1,669 @@
-// Fix for student editing - ID type mismatch correction
-document.addEventListener("DOMContentLoaded", function () {
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker
-      .register("/project_lab1/service-worker.js")
-      .then(() => console.log("Service Worker registered"))
-      .catch((error) =>
-        console.error("Service Worker registration failed:", error)
-      );
+// Student Management System - Refactored
+class StudentManager {
+  constructor() {
+    this.students = [];
+    this.serverConnected = false;
+    this.editingRow = null;
+    this.currentPage = 1;
+    this.itemsPerPage = 5;
+    this.totalPages = 1;
+    
+    this.initializeElements();
+    this.bindEvents();
+    this.initializeSystem();
   }
 
-  let badge = document.querySelector(".notification-badge");
-  let bell = document.querySelector(".bell");
+  // Initialize DOM elements
+  initializeElements() {
+    this.elements = {
+      modal: document.getElementById("student-modal"),
+      deleteModal: document.getElementById("delete-modal"),
+      tableBody: document.querySelector(".students-table tbody"),
+      selectAllCheckbox: document.getElementById("select-all"),
+      deleteStudentList: document.getElementById("delete-student-list"),
+      addButton: document.querySelector(".add-student-btn"),
+      saveButton: document.querySelector(".save-btn"),
+      cancelButton: document.querySelector(".cancel-btn"),
+      closeButton: document.querySelector(".close-btn"),
+      closeDeleteButton: document.querySelector(".close-delete-btn"),
+      deleteConfirmButton: document.querySelector(".confirm-delete-btn"),
+      cancelDeleteButton: document.querySelector(".cancel-delete-btn")
+    };
 
-  function updateBadgeVisibility() {
-    if (localStorage.getItem("notifications") === "hidden") {
-      badge.style.display = "none";
-    } else {
-      badge.style.display = "block";
+    this.inputs = {
+      group: document.getElementById("group-select"),
+      firstName: document.getElementById("first-name-input"),
+      lastName: document.getElementById("last-name-input"),
+      gender: document.getElementById("gender-select"),
+      dob: document.getElementById("dob-input"),
+      onlineStatus: document.getElementById("online-status")
+    };
+  }
+
+  // Bind all event listeners
+  bindEvents() {
+    const { elements } = this;
+    
+    if (elements.addButton) elements.addButton.onclick = () => this.openModal();
+    if (elements.closeButton) elements.closeButton.onclick = () => this.closeModal();
+    if (elements.cancelButton) elements.cancelButton.onclick = () => this.closeModal();
+    if (elements.saveButton) elements.saveButton.onclick = () => this.saveStudent();
+    
+    // Delete modal events
+    if (elements.closeDeleteButton) elements.closeDeleteButton.onclick = () => this.closeDeleteModal();
+    if (elements.cancelDeleteButton) elements.cancelDeleteButton.onclick = () => this.closeDeleteModal();
+    if (elements.deleteConfirmButton) elements.deleteConfirmButton.onclick = () => this.confirmDelete();
+    
+    // Select all checkbox
+    if (elements.selectAllCheckbox) {
+      elements.selectAllCheckbox.onchange = () => this.toggleSelectAll();
+    }
+
+    // Form validation
+    ['firstName', 'lastName', 'dob'].forEach(field => {
+      if (this.inputs[field]) {
+        this.inputs[field].addEventListener("input", this.validateInput.bind(this));
+      }
+    });
+  }
+
+  // Initialize system
+  async initializeSystem() {
+    this.logDebug("Початок завантаження даних");
+    const isConnected = await this.checkServerConnection();
+    this.logDebug("Результат перевірки з'єднання:", isConnected);
+    if (isConnected) {
+      await this.loadStudents();
     }
   }
 
-  updateBadgeVisibility();
-
-  if (document.getElementById("bell-link")) {
-    document.getElementById("bell-link").addEventListener("click", function () {
-      badge.style.display = "none";
-      localStorage.setItem("notifications", "hidden");
-    });
-  }
-
-  if (bell) {
-    bell.addEventListener("dblclick", function () {
-      bell.style.transition = "transform 0.5s ease";
-      bell.style.transform = "rotate(360deg)";
-
-      setTimeout(() => {
-        badge.style.display = "block";
-        localStorage.setItem("notifications", "visible");
-      }, 500);
-    });
-  }
-});
-
-function toggleMenu() {
-  document.querySelector(".sidebar").classList.toggle("open");
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Перевіряємо чи на сторінці студентів
-  if (!document.querySelector(".students-table")) {
-    return; // Виходимо з функції, якщо не на сторінці студентів
-  }
-
-  const addButton = document.querySelector(".add-student-btn");
-  const modal = document.getElementById("student-modal");
-  const deleteModal = document.getElementById("delete-modal");
-  const closeButton = document.querySelector(".close-btn");
-  const closeDeleteButton = document.querySelector(".close-delete-btn");
-  const deleteConfirmButton = document.querySelector(".confirm-delete-btn");
-  const cancelDeleteButton = document.querySelector(".cancel-delete-btn");
-  const saveButton = document.querySelector(".save-btn");
-  const cancelButton = document.querySelector(".cancel-btn");
-  const tableBody = document.querySelector(".students-table tbody");
-  const selectAllCheckbox = document.getElementById("select-all");
-  const deleteStudentList = document.getElementById("delete-student-list");
-
-  let editingRow = null;
-  let students = [];
-  let serverConnected = false;
-
-  function saveStudentsToCache() {
-    localStorage.setItem("students", JSON.stringify(students));
-  }
-
-  function displayErrorMessage(message) {
-    alert(`Помилка: ${message}`);
-    console.error(message);
-  }
-
-  // Enhanced logging and debugging functions
-  function logDebug(message, data) {
+  // Logging utility
+  logDebug(message, data) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-
-    // For better inspection of objects and arrays
+    
     if (data !== undefined) {
-      if (typeof data === "object" && data !== null) {
-        try {
-          // Clone the data to avoid circular references
-          const clonedData = JSON.parse(JSON.stringify(data));
-          console.log(logMessage, clonedData);
-        } catch (e) {
-          console.log(logMessage, "Unable to stringify object:", data);
-        }
-      } else {
-        console.log(logMessage, data);
+      try {
+        const clonedData = typeof data === "object" && data !== null 
+          ? JSON.parse(JSON.stringify(data)) 
+          : data;
+        console.log(logMessage, clonedData);
+      } catch (e) {
+        console.log(logMessage, "Unable to stringify object:", data);
       }
     } else {
       console.log(logMessage);
     }
   }
 
-  // Improved loading and caching
-  function checkServerConnection() {
-    logDebug("Перевірка з'єднання з сервером...");
-
-    return fetch("check_connection.php")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        logDebug("Відповідь від сервера:", data);
-
-        if (data.status === "success") {
-          serverConnected = true;
-          logDebug("З'єднання з сервером успішне");
-          return true;
-        } else {
-          throw new Error(data.message || "З'єднання невдале");
-        }
-      })
-      .catch((error) => {
-        serverConnected = false;
-        logDebug("Помилка з'єднання з сервером:", error);
-
-        // Покращена послідовність завантаження - спочатку спробуємо використати кеш
-        const cachedData = localStorage.getItem("students");
-        if (cachedData) {
-          logDebug("Знайдено початковий кеш, відображаємо його");
-          students = JSON.parse(cachedData) || [];
-          renderStudents();
-        }
-
-        // Потім перевіряємо з'єднання і оновлюємо дані з сервера
-        checkServerConnection().then((isConnected) => {
-          logDebug("Результат перевірки з'єднання:", isConnected);
-          if (isConnected) {
-            loadStudents();
-          }
-        });
-      });
-  }
-
-  // Fixed student data normalization
-  function normalizeOnlineStatus(status) {
-    logDebug("Normalizing status value:", status);
-
-    // Convert any truthy representation to green check icon
-    if (
-      status === "1" ||
-      status === 1 ||
-      status === true ||
-      (typeof status === "string" &&
-        (status.includes("fa-check") || status.toLowerCase() === "true"))
-    ) {
-      return '<i class="fa-solid fa-check" style="color: green;"></i>';
-    } else {
-      return '<i class="fa-solid fa-xmark" style="color: red;"></i>';
-    }
-  }
-
-  /// Improved helper function to determine online status boolean value
-  function getStatusAsBool(status) {
-    // Add more detailed logging for debugging
-    logDebug("Checking status value:", status);
-
-    // Handle all possible representations of "true" status
-    if (
-      status === "1" ||
-      status === 1 ||
-      status === true ||
-      (typeof status === "string" &&
-        (status.includes("fa-check") || status.toLowerCase() === "true"))
-    ) {
-      logDebug("Status evaluated as TRUE");
-      return true;
-    } else {
-      logDebug("Status evaluated as FALSE");
+  // Server connection check
+  async checkServerConnection() {
+    this.logDebug("Перевірка з'єднання з сервером...");
+    
+    try {
+      const response = await fetch("check_connection.php");
+      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+      
+      const data = await response.json();
+      this.logDebug("Відповідь від сервера:", data);
+      
+      if (data.status === "success") {
+        this.serverConnected = true;
+        this.logDebug("З'єднання з сервером успішне");
+        return true;
+      } else {
+        throw new Error(data.message || "З'єднання невдале");
+      }
+    } catch (error) {
+      this.serverConnected = false;
+      this.logDebug("Помилка з'єднання з сервером:", error);
+      this.loadFromCache();
       return false;
     }
   }
 
-  // Додавання студента
-  function addStudent(student) {
-    if (!serverConnected) {
-      // Використовуємо локальний режим, якщо сервер недоступний
-      student.id = Date.now().toString(); // Генеруємо ID на клієнті
-      students.push(student);
-      saveStudentsToCache();
-      renderStudents();
-      return Promise.resolve({ success: true, id: student.id });
+  // Load students from cache
+  loadFromCache() {
+    const cachedData = localStorage.getItem("students");
+    if (cachedData) {
+      this.logDebug("Знайдено початковий кеш, відображаємо його");
+      this.students = JSON.parse(cachedData) || [];
+      this.renderStudents();
     }
-
-    // Нормалізуємо дані для серверу
-    const studentData = { ...student };
-    logDebug("Додавання студента на сервер:", studentData);
-
-    return fetch("students.php", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(studentData),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((response) => {
-        logDebug("Відповідь від сервера при додаванні:", response);
-        // Оновлюємо локальні дані
-        if (response.success && response.id) {
-          loadStudents(); // Перезавантажуємо студентів для отримання коректних ID
-        }
-        return response;
-      })
-      .catch((error) => {
-        logDebug("Помилка при додаванні студента:", error);
-        displayErrorMessage(`Помилка додавання студента: ${error.message}`);
-        throw error;
-      });
   }
 
-  // Fix for the updateStudent function
-  function updateStudent(student) {
-    if (!serverConnected) {
-      // Локальний режим
-      let index = students.findIndex(
-        (s) => String(s.id) === String(student.id)
-      );
+  // Data normalization utilities
+  normalizeOnlineStatus(status) {
+    this.logDebug("Normalizing status value:", status);
+    
+    const isTruthy = status === "1" || status === 1 || status === true ||
+      (typeof status === "string" && (status.includes("fa-check") || status.toLowerCase() === "true"));
+    
+    return isTruthy 
+      ? '<i class="fa-solid fa-check" style="color: green;"></i>'
+      : '<i class="fa-solid fa-xmark" style="color: red;"></i>';
+  }
+
+  getStatusAsBool(status) {
+    this.logDebug("Checking status value:", status);
+    
+    const result = status === "1" || status === 1 || status === true ||
+      (typeof status === "string" && (status.includes("fa-check") || status.toLowerCase() === "true"));
+    
+    this.logDebug("Status evaluated as:", result);
+    return result;
+  }
+
+  // Cache operations
+  saveStudentsToCache() {
+    localStorage.setItem("students", JSON.stringify(this.students));
+  }
+
+  // Error handling
+  displayErrorMessage(message) {
+    alert(`Помилка: ${message}`);
+    console.error(message);
+  }
+
+  // Student CRUD operations
+  async addStudent(student) {
+    if (!this.serverConnected) {
+      student.id = Date.now().toString();
+      this.students.push(student);
+      this.saveStudentsToCache();
+      this.renderStudents();
+      return { success: true, id: student.id };
+    }
+
+    return this.sendRequest("POST", student);
+  }
+
+  async updateStudent(student) {
+    if (!this.serverConnected) {
+      const index = this.students.findIndex(s => String(s.id) === String(student.id));
       if (index !== -1) {
-        students[index] = student;
+        this.students[index] = student;
+        this.saveStudentsToCache();
+        this.renderStudents();
       }
-      saveStudentsToCache();
-      renderStudents();
-      return Promise.resolve({ success: true });
+      return { success: true };
     }
 
-    // Нормалізуємо дані для серверу
-    const studentData = { ...student };
-    logDebug("Оновлення студента на сервері:", studentData);
-
-    return fetch("students.php", {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(studentData),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((response) => {
-        logDebug("Відповідь від сервера при оновленні:", response);
-        if (response.success) {
-          // Оновлюємо локально без перезавантаження для кращої швидкодії
-          const index = students.findIndex(
-            (s) => String(s.id) === String(student.id)
-          );
-          if (index !== -1) {
-            students[index] = student;
-            saveStudentsToCache();
-            renderStudents();
-          } else {
-            // Якщо студента не знайдено локально, завантажуємо всіх
-            loadStudents();
-          }
-        }
-        return response;
-      })
-      .catch((error) => {
-        logDebug("Помилка при оновленні студента:", error);
-        displayErrorMessage(`Помилка оновлення студента: ${error.message}`);
-        throw error;
-      });
-  }
-
-  // Видалення студентів
-  function deleteStudents(ids) {
-    if (!serverConnected) {
-      // Локальний режим
-      students = students.filter(
-        (student) => !ids.includes(String(student.id))
-      );
-      saveStudentsToCache();
-      renderStudents();
-      return Promise.resolve({ success: true });
-    }
-
-    logDebug("Видалення студентів на сервері:", ids);
-
-    return fetch("students.php", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        action: "delete_multiple",
-        ids: ids,
-      }),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((response) => {
-        logDebug("Відповідь від сервера при видаленні:", response);
-        if (response.success) {
-          loadStudents(); // Перезавантажуємо для оновлення даних
-        }
-        return response;
-      })
-      .catch((error) => {
-        logDebug("Помилка при видаленні студентів:", error);
-        displayErrorMessage(`Помилка видалення студентів: ${error.message}`);
-        throw error;
-      });
-  }
-
-  // Improved loadStudents function with better normalization
-  function loadStudents() {
-    logDebug("Loading students from server...");
-
-    return fetch("students.php")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        logDebug("Raw student data from server:", data);
-
-        // Ensure consistent data format for each student
-        students = data.map((student) => {
-          // Ensure the student object has all expected fields
-          const normalizedStudent = {
-            id: String(student.id), // Ensure ID is always a string
-            group: student.group || "",
-            firstName: student.firstName || "",
-            lastName: student.lastName || "",
-            gender: student.gender || "",
-            dob: student.dob || "",
-            // Normalize onlineStatus for consistent rendering
-            onlineStatus: normalizeOnlineStatus(student.onlineStatus),
-          };
-
-          return normalizedStudent;
-        });
-
-        logDebug("Normalized students array:", students);
-
-        // Save to local storage
-        saveStudentsToCache();
-
-        // Update the UI
-        renderStudents();
-
-        return students;
-      })
-      .catch((error) => {
-        logDebug("Error loading students:", error);
-
-        // Use cached students if available
-        const cachedData = localStorage.getItem("students");
-        if (cachedData) {
-          try {
-            students = JSON.parse(cachedData) || [];
-            // Ensure all student IDs are strings
-            students = students.map((student) => ({
-              ...student,
-              id: String(student.id),
-            }));
-            logDebug("Using cached students:", students);
-          } catch (parseError) {
-            logDebug("Error parsing cached students:", parseError);
-            students = [];
-          }
-        } else {
-          students = [];
-          logDebug("Cache empty, using empty array");
-        }
-
-        renderStudents();
-        return students;
-      });
-  }
-
-  // Оновлюємо функцію renderStudents для коректного відображення
-  function renderStudents() {
-    tableBody.innerHTML = "";
-    logDebug("Відображення студентів:", students);
-
-    // Обчислюємо загальну кількість сторінок
-    totalPages = Math.ceil(students.length / itemsPerPage);
-
-    // Обмежуємо поточну сторінку до валідного діапазону
-    if (currentPage > totalPages) {
-      currentPage = totalPages;
-    }
-    if (currentPage < 1) {
-      currentPage = 1;
-    }
-
-    // Визначаємо індекси студентів для відображення на поточній сторінці
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = Math.min(startIndex + itemsPerPage, students.length);
-
-    // Відображаємо тільки студентів для поточної сторінки
-    for (let i = startIndex; i < endIndex; i++) {
-      const student = students[i];
-      // Зараз onlineStatus вже нормалізований у loadStudents, але перевіряємо на всяк випадок
-      const statusIcon = normalizeOnlineStatus(student.onlineStatus);
-
-      let row = document.createElement("tr");
-      row.dataset.id = String(student.id); // Ensure ID is always a string in the DOM
-      row.innerHTML = `
-              <td><input type="checkbox" class="select-row" aria-label="Обрати рядок"></td>
-              <td>${student.group || ""}</td>
-              <td>${student.firstName || ""} ${student.lastName || ""}</td>
-              <td>${student.gender || ""}</td>
-              <td>${student.dob || ""}</td>
-              <td>${statusIcon}</td>
-              <td>
-                  <button class="edit-btn" aria-label="Редагувати студента"><i class="fa-solid fa-pen"></i></button>
-                  <button class="delete-btn" aria-label="Видалити студента"><i class="fa-solid fa-eraser"></i></button>
-              </td>
-          `;
-      tableBody.appendChild(row);
-    }
-
-    updateCheckboxListeners();
-    updateEventListeners();
-    updatePagination();
-  }
-
-  if (addButton) {
-    addButton.addEventListener("click", function () {
-      editingRow = null;
-      document.getElementById("modal-title").textContent = "Додати студента";
-
-      // Очищення полів форми
-      document.getElementById("first-name-input").value = "";
-      document.getElementById("last-name-input").value = "";
-      document.getElementById("dob-input").value = "";
-      document.getElementById("online-status").checked = false;
-
-      modal.style.display = "flex";
-    });
-  }
-
-  if (closeButton) {
-    closeButton.addEventListener("click", () => (modal.style.display = "none"));
-  }
-
-  if (cancelButton) {
-    cancelButton.addEventListener(
-      "click",
-      () => (modal.style.display = "none")
-    );
-  }
-
-  if (saveButton) {
-    saveButton.addEventListener("click", function () {
-      // Використовуємо null для нового студента (сервер надасть ID)
-      let id = editingRow ? editingRow.dataset.id : null;
-      let group = document.getElementById("group-select").value;
-      let firstName = document.getElementById("first-name-input").value.trim();
-      let lastName = document.getElementById("last-name-input").value.trim();
-      let gender = document.getElementById("gender-select").value;
-      let dob = document.getElementById("dob-input").value;
-      let onlineStatus = document.getElementById("online-status").checked
-        ? '<i class="fa-solid fa-check" style="color: green;"></i>'
-        : '<i class="fa-solid fa-xmark" style="color: red;"></i>';
-
-      if (!firstName || !lastName || !dob) {
-        alert("Будь ласка, заповніть всі поля.");
-        return;
-      }
-
-      let student = {
-        id,
-        group,
-        firstName,
-        lastName,
-        gender,
-        dob,
-        onlineStatus,
-      };
-      logDebug("Збереження студента:", student);
-
-      if (editingRow) {
-        // Оновлення студента
-        updateStudent(student)
-          .then((response) => {
-            if (response.success) {
-              modal.style.display = "none";
-              // loadStudents() вже викликається в updateStudent
-            } else {
-              displayErrorMessage(
-                response.message || "Невідома помилка при оновленні"
-              );
-            }
-          })
-          .catch((error) => {
-            logDebug("Помилка при оновленні студента:", error);
-          });
+    const response = await this.sendRequest("PUT", student);
+    if (response.success) {
+      const index = this.students.findIndex(s => String(s.id) === String(student.id));
+      if (index !== -1) {
+        this.students[index] = student;
+        this.saveStudentsToCache();
+        this.renderStudents();
       } else {
-        // Додавання нового студента
-        addStudent(student)
-          .then((response) => {
-            if (response.success) {
-              modal.style.display = "none";
-              // loadStudents() вже викликається в addStudent
-            } else {
-              displayErrorMessage(
-                response.message || "Невідома помилка при додаванні"
-              );
-            }
-          })
-          .catch((error) => {
-            logDebug("Помилка при додаванні студента:", error);
-          });
+        await this.loadStudents();
       }
-    });
+    }
+    return response;
   }
 
-  function updateCheckboxListeners() {
-    const checkboxes = document.querySelectorAll(".select-row");
-    checkboxes.forEach((checkbox) => {
-      checkbox.addEventListener("change", function () {
-        if (selectAllCheckbox) {
-          selectAllCheckbox.checked = [...checkboxes].every((cb) => cb.checked);
-        }
+  async deleteStudents(ids) {
+    if (!this.serverConnected) {
+      this.students = this.students.filter(student => !ids.includes(String(student.id)));
+      this.saveStudentsToCache();
+      this.renderStudents();
+      return { success: true };
+    }
+
+    const response = await this.sendRequest("POST", { action: "delete_multiple", ids });
+    if (response.success) {
+      await this.loadStudents();
+    }
+    return response;
+  }
+
+  // Generic server request handler
+  async sendRequest(method, data) {
+    this.logDebug(`${method} запит на сервер:`, data);
+    
+    try {
+      const response = await fetch("students.php", {
+        method,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
       });
-    });
+
+      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+      
+      const result = await response.json();
+      this.logDebug(`Відповідь від сервера (${method}):`, result);
+      
+      if (method === "POST" && result.success && result.id) {
+        await this.loadStudents();
+      }
+      
+      return result;
+    } catch (error) {
+      this.logDebug(`Помилка ${method} запиту:`, error);
+      this.displayErrorMessage(`Помилка ${method === 'POST' ? 'додавання/видалення' : 'оновлення'}: ${error.message}`);
+      throw error;
+    }
   }
 
-  if (selectAllCheckbox) {
-    selectAllCheckbox.addEventListener("change", function () {
-      const checkboxes = document.querySelectorAll(".select-row");
-      checkboxes.forEach((checkbox) => {
-        checkbox.checked = selectAllCheckbox.checked;
-      });
-    });
+  // Load students from server
+  async loadStudents() {
+    this.logDebug("Loading students from server...");
+    
+    try {
+      const response = await fetch("students.php");
+      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+      
+      const data = await response.json();
+      this.logDebug("Raw student data from server:", data);
+
+      this.students = data.map(student => ({
+        id: String(student.id),
+        group: student.group || "",
+        firstName: student.firstName || "",
+        lastName: student.lastName || "",
+        gender: student.gender || "",
+        dob: student.dob || "",
+        onlineStatus: this.normalizeOnlineStatus(student.onlineStatus)
+      }));
+
+      this.logDebug("Normalized students array:", this.students);
+      this.saveStudentsToCache();
+      this.renderStudents();
+      return this.students;
+    } catch (error) {
+      this.logDebug("Error loading students:", error);
+      this.loadFromCache();
+      return this.students;
+    }
   }
 
-  function updateEventListeners() {
-    document.querySelectorAll(".edit-btn").forEach((button) => {
-      button.onclick = function () {
-        let row = this.closest("tr");
-        let id = String(row.dataset.id); // Convert to string explicitly
+  // Render students table
+  renderStudents() {
+    if (!this.elements.tableBody) return;
+    
+    this.elements.tableBody.innerHTML = "";
+    this.logDebug("Відображення студентів:", this.students);
 
-        // Improved debugging for student lookup
-        logDebug("Editing student with ID:", id);
-        logDebug("Current students array:", students);
+    this.calculatePagination();
+    const { startIndex, endIndex } = this.getPaginationRange();
 
-        // Find student by ID in the array - ensure both are strings
-        let student = students.find((s) => String(s.id) === id);
+    for (let i = startIndex; i < endIndex; i++) {
+      const student = this.students[i];
+      const statusIcon = this.normalizeOnlineStatus(student.onlineStatus);
+      
+      const row = this.createStudentRow(student, statusIcon);
+      this.elements.tableBody.appendChild(row);
+    }
 
-        if (!student) {
-          logDebug("Error: Student not found for editing with ID:", id);
-          // Additional debug info
-          logDebug(
-            "Student IDs in array:",
-            students.map((s) => String(s.id))
-          );
-          logDebug("Type of row ID:", typeof id);
-          logDebug(
-            "Types of student IDs:",
-            students.map((s) => typeof s.id)
-          );
+    this.updateEventListeners();
+    this.updatePagination();
+  }
 
-          alert("Не вдалося знайти студента для редагування.");
-          return;
-        }
+  // Create student table row
+  createStudentRow(student, statusIcon) {
+    const row = document.createElement("tr");
+    row.dataset.id = String(student.id);
+    row.innerHTML = `
+      <td><input type="checkbox" class="select-row" aria-label="Обрати рядок"></td>
+      <td>${student.group || ""}</td>
+      <td>${student.firstName || ""} ${student.lastName || ""}</td>
+      <td>${student.gender || ""}</td>
+      <td>${student.dob || ""}</td>
+      <td>${statusIcon}</td>
+      <td>
+        <button class="edit-btn" aria-label="Редагувати студента"><i class="fa-solid fa-pen"></i></button>
+        <button class="delete-btn" aria-label="Видалити студента"><i class="fa-solid fa-eraser"></i></button>
+      </td>
+    `;
+    return row;
+  }
 
-        logDebug("Found student for editing:", student);
+  // Pagination utilities
+  calculatePagination() {
+    this.totalPages = Math.ceil(this.students.length / this.itemsPerPage);
+    if (this.currentPage > this.totalPages) this.currentPage = this.totalPages;
+    if (this.currentPage < 1) this.currentPage = 1;
+  }
 
-        // Save reference to the row being edited
-        editingRow = row;
+  getPaginationRange() {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const endIndex = Math.min(startIndex + this.itemsPerPage, this.students.length);
+    return { startIndex, endIndex };
+  }
 
-        // Fill the form with student data
-        document.getElementById("group-select").value =
-          student.group || "ПЗ-11";
-        document.getElementById("first-name-input").value =
-          student.firstName || "";
-        document.getElementById("last-name-input").value =
-          student.lastName || "";
-        document.getElementById("gender-select").value =
-          student.gender || "Чоловіча";
-        document.getElementById("dob-input").value = student.dob || "";
+  updatePagination() {
+    // Pagination button updates would go here
+    // Implementation depends on your HTML structure
+  }
 
-        // Set the online status checkbox using the helper function
-        logDebug(
-          "Setting online status checkbox with value:",
-          student.onlineStatus
-        );
-        document.getElementById("online-status").checked = getStatusAsBool(
-          student.onlineStatus
-        );
+  // Event handlers
+  updateEventListeners() {
+    // Edit buttons
+    document.querySelectorAll(".edit-btn").forEach(button => {
+      button.onclick = () => this.editStudent(button);
+    });
 
-        document.getElementById("modal-title").textContent =
-          "Редагувати студента";
-        modal.style.display = "flex";
+    // Delete buttons
+    document.querySelectorAll(".delete-btn").forEach(button => {
+      button.onclick = () => this.deleteStudent(button);
+    });
+
+    // Checkbox listeners
+    document.querySelectorAll(".select-row").forEach(checkbox => {
+      checkbox.onchange = () => this.updateSelectAllState();
+    });
+
+    // Pagination buttons
+    this.bindPaginationEvents();
+  }
+
+  bindPaginationEvents() {
+    document.querySelectorAll(".page-btn:not(.prev-btn):not(.next-btn)").forEach(button => {
+      button.onclick = () => {
+        this.currentPage = parseInt(button.textContent);
+        this.renderStudents();
       };
     });
 
-    // Rest of the event listeners remain the same
-    document.querySelectorAll(".delete-btn").forEach((button) => {
-      button.onclick = function () {
-        let row = this.closest("tr");
-        let checkbox = row.querySelector(".select-row");
-        checkbox.checked = true;
-
-        showDeleteConfirmation();
-      };
-    });
-
-    // Оновлення прослуховувачів для кнопок пагінації
-    document
-      .querySelectorAll(".page-btn:not(.prev-btn):not(.next-btn)")
-      .forEach((button) => {
-        button.onclick = function () {
-          currentPage = parseInt(this.textContent);
-          renderStudents();
-        };
-      });
-
-    // Кнопки "Попередня" та "Наступна"
     const prevButton = document.querySelector(".prev-btn");
     const nextButton = document.querySelector(".next-btn");
 
     if (prevButton) {
-      prevButton.onclick = function () {
-        if (currentPage > 1) {
-          currentPage--;
-          renderStudents();
+      prevButton.onclick = () => {
+        if (this.currentPage > 1) {
+          this.currentPage--;
+          this.renderStudents();
         }
       };
     }
 
     if (nextButton) {
-      nextButton.onclick = function () {
-        if (currentPage < totalPages) {
-          currentPage++;
-          renderStudents();
+      nextButton.onclick = () => {
+        if (this.currentPage < this.totalPages) {
+          this.currentPage++;
+          this.renderStudents();
         }
       };
     }
   }
 
-  // Виносимо показ вікна підтвердження видалення в окрему функцію
-  function showDeleteConfirmation() {
-    let selectedRows = document.querySelectorAll(".select-row:checked");
+  // Modal operations
+  openModal() {
+    if (!checkAuth()) return;
+    
+    this.editingRow = null;
+    document.getElementById("modal-title").textContent = "Додати студента";
+    this.clearForm();
+    this.elements.modal.style.display = "flex";
+  }
+
+  closeModal() {
+    this.elements.modal.style.display = "none";
+  }
+
+  closeDeleteModal() {
+    this.elements.deleteModal.style.display = "none";
+  }
+
+  clearForm() {
+    Object.values(this.inputs).forEach(input => {
+      if (input) {
+        if (input.type === "checkbox") {
+          input.checked = false;
+        } else {
+          input.value = input.type === "select-one" ? (input.options[0]?.value || "") : "";
+        }
+      }
+    });
+  }
+
+  // Student operations
+  editStudent(button) {
+    if (!checkAuth()) return;
+    
+    const row = button.closest("tr");
+    const id = String(row.dataset.id);
+    const student = this.students.find(s => String(s.id) === id);
+
+    if (!student) {
+      this.logDebug("Error: Student not found for editing with ID:", id);
+      alert("Не вдалося знайти студента для редагування.");
+      return;
+    }
+
+    this.logDebug("Found student for editing:", student);
+    this.editingRow = row;
+    this.populateForm(student);
+    document.getElementById("modal-title").textContent = "Редагувати студента";
+    this.elements.modal.style.display = "flex";
+  }
+
+  populateForm(student) {
+    this.inputs.group.value = student.group || "ПЗ-11";
+    this.inputs.firstName.value = student.firstName || "";
+    this.inputs.lastName.value = student.lastName || "";
+    this.inputs.gender.value = student.gender || "Чоловіча";
+    this.inputs.dob.value = student.dob || "";
+    this.inputs.onlineStatus.checked = this.getStatusAsBool(student.onlineStatus);
+  }
+
+  deleteStudent(button) {
+    if (!checkAuth()) return;
+    
+    const row = button.closest("tr");
+    const checkbox = row.querySelector(".select-row");
+    checkbox.checked = true;
+    this.showDeleteConfirmation();
+  }
+
+  async saveStudent() {
+    const studentData = this.getFormData();
+    if (!this.validateFormData(studentData)) return;
+
+    if (this.checkDuplicateStudent(studentData)) {
+      this.displayErrorMessage("Студент з таким іменем, прізвищем та датою народження вже існує.");
+      return;
+    }
+
+    try {
+      const response = this.editingRow 
+        ? await this.updateStudent(studentData)
+        : await this.addStudent(studentData);
+
+      if (response.success) {
+        this.closeModal();
+      } else {
+        const message = response.error_code === "duplicate_student"
+          ? "Дублікат: Студент з таким іменем, прізвищем та датою народження вже існує"
+          : response.message || "Невідома помилка";
+        this.displayErrorMessage(message);
+      }
+    } catch (error) {
+      this.logDebug("Помилка при збереженні студента:", error);
+    }
+  }
+
+  getFormData() {
+    return {
+      id: this.editingRow ? this.editingRow.dataset.id : null,
+      group: this.inputs.group.value,
+      firstName: this.inputs.firstName.value.trim(),
+      lastName: this.inputs.lastName.value.trim(),
+      gender: this.inputs.gender.value,
+      dob: this.inputs.dob.value,
+      onlineStatus: this.inputs.onlineStatus.checked
+        ? '<i class="fa-solid fa-check" style="color: green;"></i>'
+        : '<i class="fa-solid fa-xmark" style="color: red;"></i>'
+    };
+  }
+
+  validateFormData(data) {
+    if (!data.firstName || !data.lastName || !data.dob) {
+      alert("Будь ласка, заповніть всі поля.");
+      return false;
+    }
+    return true;
+  }
+
+  checkDuplicateStudent({ id, firstName, lastName, dob }) {
+    return this.students.some(student =>
+      student.firstName.toLowerCase() === firstName.toLowerCase() &&
+      student.lastName.toLowerCase() === lastName.toLowerCase() &&
+      student.dob === dob &&
+      String(student.id) !== String(id)
+    );
+  }
+
+  // Selection operations
+  toggleSelectAll() {
+    const checkboxes = document.querySelectorAll(".select-row");
+    checkboxes.forEach(checkbox => {
+      checkbox.checked = this.elements.selectAllCheckbox.checked;
+    });
+  }
+
+  updateSelectAllState() {
+    const checkboxes = document.querySelectorAll(".select-row");
+    if (this.elements.selectAllCheckbox) {
+      this.elements.selectAllCheckbox.checked = [...checkboxes].every(cb => cb.checked);
+    }
+  }
+
+  // Delete confirmation
+  showDeleteConfirmation() {
+    if (!checkAuth()) return;
+    
+    const selectedRows = document.querySelectorAll(".select-row:checked");
     if (selectedRows.length === 0) {
       alert("Оберіть хоча б одного студента для видалення!");
       return;
     }
 
-    let studentNames = [];
-    let studentIds = [];
+    const { studentNames } = this.getSelectedStudentInfo(selectedRows);
+    this.elements.deleteStudentList.innerHTML = 
+      `Ви впевнені, що хочете видалити студентів: <br><b>${studentNames.join(", ")}</b>?`;
+    this.elements.deleteModal.style.display = "flex";
+  }
 
-    selectedRows.forEach((checkbox) => {
-      let row = checkbox.closest("tr");
-      let id = String(row.dataset.id);
+  getSelectedStudentInfo(selectedRows) {
+    const studentNames = [];
+    const studentIds = [];
+
+    selectedRows.forEach(checkbox => {
+      const row = checkbox.closest("tr");
+      const id = String(row.dataset.id);
       studentIds.push(id);
 
-      // Знаходимо студента за id - ensure both are strings
-      let student = students.find((s) => String(s.id) === id);
-      if (student) {
-        studentNames.push(`${student.firstName} ${student.lastName}`);
+      const student = this.students.find(s => String(s.id) === id);
+      const name = student 
+        ? `${student.firstName} ${student.lastName}`
+        : row.cells[2].textContent.trim();
+      studentNames.push(name);
+    });
+
+    return { studentNames, studentIds };
+  }
+
+  async confirmDelete() {
+    const selectedRows = document.querySelectorAll(".select-row:checked");
+    const { studentIds } = this.getSelectedStudentInfo(selectedRows);
+
+    try {
+      const response = await this.deleteStudents(studentIds);
+      if (response.success) {
+        this.closeDeleteModal();
       } else {
-        // Якщо студента не знайдено в масиві, використовуємо текст з рядка
-        let nameCell = row.cells[2].textContent.trim();
-        studentNames.push(nameCell);
+        this.displayErrorMessage(response.message || "Невідома помилка при видаленні");
       }
-    });
-
-    deleteStudentList.innerHTML = `Ви впевнені, що хочете видалити студентів: <br><b>${studentNames.join(
-      ", "
-    )}</b>?`;
-    deleteModal.style.display = "flex";
-  }
-
-  if (deleteConfirmButton) {
-    deleteConfirmButton.addEventListener("click", function () {
-      let selectedRows = document.querySelectorAll(".select-row:checked");
-      let idsToDelete = [...selectedRows].map((checkbox) =>
-        String(checkbox.closest("tr").dataset.id)
-      );
-
-      deleteStudents(idsToDelete)
-        .then((response) => {
-          if (response.success) {
-            deleteModal.style.display = "none";
-            // Після успішного видалення на сервері оновлення списку студентів
-            // відбувається в deleteStudents
-          } else {
-            displayErrorMessage(
-              response.message || "Невідома помилка при видаленні"
-            );
-          }
-        })
-        .catch((error) => {
-          logDebug("Помилка при видаленні студентів:", error);
-        });
-    });
-  }
-
-  if (cancelDeleteButton) {
-    cancelDeleteButton.addEventListener("click", function () {
-      deleteModal.style.display = "none";
-    });
-  }
-
-  if (closeDeleteButton) {
-    closeDeleteButton.addEventListener("click", function () {
-      deleteModal.style.display = "none";
-    });
-  }
-
-  // Перевіряємо з'єднання і завантажуємо дані
-  logDebug("Початок завантаження даних");
-  checkServerConnection().then((isConnected) => {
-    logDebug("Результат перевірки з'єднання:", isConnected);
-    if (isConnected) {
-      loadStudents();
-    }
-  });
-});
-
-// Валідація форми
-function showError(input, message) {
-  input.classList.add("error");
-  let errorElement = input.nextElementSibling;
-  if (errorElement && errorElement.classList.contains("error-message")) {
-    errorElement.textContent = message;
-  }
-  input.setCustomValidity(message);
-}
-
-function clearError(input) {
-  input.classList.remove("error");
-  let errorElement = input.nextElementSibling;
-  if (errorElement && errorElement.classList.contains("error-message")) {
-    errorElement.textContent = "";
-  }
-  input.setCustomValidity("");
-}
-
-function validateInput(event) {
-  let input = event.target;
-  let namePattern =
-    /^[А-ЯІЇЄҐ][а-яіїєґ']+([-'][А-ЯІЇЄҐ][а-яіїєґ']+)?(\s[А-ЯІЇЄҐ][а-яіїєґ']+([-'][А-ЯІЇЄҐ][а-яіїєґ']+)*)*$/;
-  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  let nulpPattern = /^[^@\s]+@nulp\.ua$/;
-  let dobMaxDate = new Date("2025-01-01");
-  let dobValue = new Date(input.value);
-
-  clearError(input);
-
-  if (input.id === "first-name-input" || input.id === "last-name-input") {
-    let value = input.value.trim();
-
-    if (nulpPattern.test(value)) {
-      showError(input, "Вітаю, друже політехнік, ти ввів невірні дані");
-      return;
-    } else if (emailPattern.test(value)) {
-      showError(input, "Здається, ви ввели email замість імені.");
-      return;
-    }
-
-    if (!namePattern.test(value) && value.length > 0) {
-      showError(
-        input,
-        "Ім'я та прізвище можуть містити лише українські літери, починатися з великої, а також містити дефіс або апостроф."
-      );
-      return;
+    } catch (error) {
+      this.logDebug("Помилка при видаленні студентів:", error);
     }
   }
 
-  if (
-    input.id === "dob-input" &&
-    (dobValue >= dobMaxDate || isNaN(dobValue.getTime())) &&
-    input.value
-  ) {
-    showError(input, "Дата народження має бути до 2025 року.");
+  // Form validation
+  validateInput(event) {
+    const input = event.target;
+    const namePattern = /^[А-ЯІЇЄҐ][а-яіїєґ']+([-'][А-ЯІЇЄҐ][а-яіїєґ']+)?(\s[А-ЯІЇЄҐ][а-яіїєґ']+([-'][А-ЯІЇЄҐ][а-яіїєґ']+)*)*$/;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const nulpPattern = /^[^@\s]+@nulp\.ua$/;
+    
+    this.clearError(input);
+
+    if (input.id === "first-name-input" || input.id === "last-name-input") {
+      const value = input.value.trim();
+      
+      if (nulpPattern.test(value)) {
+        this.showError(input, "Вітаю, друже політехнік, ти ввів невірні дані");
+        return;
+      }
+      
+      if (emailPattern.test(value)) {
+        this.showError(input, "Здається, ви ввели email замість імені.");
+        return;
+      }
+
+      if (!namePattern.test(value) && value.length > 0) {
+        this.showError(input, "Ім'я та прізвище можуть містити лише українські літери, починатися з великої, а також містити дефіс або апостроф.");
+        return;
+      }
+    }
+
+    if (input.id === "dob-input" && input.value) {
+      const dobValue = new Date(input.value);
+      const dobMaxDate = new Date("2025-01-01");
+      
+      if (dobValue >= dobMaxDate || isNaN(dobValue.getTime())) {
+        this.showError(input, "Дата народження має бути до 2025 року.");
+      }
+    }
+  }
+
+  showError(input, message) {
+    input.classList.add("error");
+    const errorElement = input.nextElementSibling;
+    if (errorElement?.classList.contains("error-message")) {
+      errorElement.textContent = message;
+    }
+    input.setCustomValidity(message);
+  }
+
+  clearError(input) {
+    input.classList.remove("error");
+    const errorElement = input.nextElementSibling;
+    if (errorElement?.classList.contains("error-message")) {
+      errorElement.textContent = "";
+    }
+    input.setCustomValidity("");
   }
 }
 
-// Додаємо слухачі подій на поля введення, якщо вони існують на сторінці
-document.addEventListener("DOMContentLoaded", function () {
-  const firstNameInput = document.getElementById("first-name-input");
-  const lastNameInput = document.getElementById("last-name-input");
-  const dobInput = document.getElementById("dob-input");
-
-  if (firstNameInput) {
-    firstNameInput.addEventListener("input", validateInput);
-  }
-
-  if (lastNameInput) {
-    lastNameInput.addEventListener("input", validateInput);
-  }
-
-  if (dobInput) {
-    dobInput.addEventListener("input", validateInput);
-  }
-});
-
-// Add this function to validate the students array integrity
-function validateStudentsArray() {
-  logDebug("Validating students array...");
-
-  if (!Array.isArray(students)) {
-    logDebug("Error: students is not an array!", typeof students);
-    students = [];
+// Authentication check function (kept separate as it's used globally)
+function checkAuth() {
+  if (!localStorage.getItem("isLoggedIn")) {
+    document.getElementById("login-modal").style.display = "flex";
     return false;
   }
-
-  // Validate each student object structure
-  const validationIssues = students.filter((student) => {
-    if (!student.id) {
-      logDebug("Student missing ID:", student);
-      return true;
-    }
-
-    // Convert ID to string if it's not already
-    student.id = String(student.id);
-
-    // Check if onlineStatus is in expected format
-    if (
-      typeof student.onlineStatus !== "string" ||
-      (!student.onlineStatus.includes("fa-check") &&
-        !student.onlineStatus.includes("fa-xmark"))
-    ) {
-      logDebug("Student has invalid onlineStatus:", student);
-      // Fix the status format
-      student.onlineStatus = normalizeOnlineStatus(student.onlineStatus);
-      return true;
-    }
-
-    return false;
-  });
-
-  if (validationIssues.length > 0) {
-    logDebug(`Found ${validationIssues.length} student records with issues`);
-    // Save the fixed array
-    saveStudentsToCache();
-    return false;
-  }
-
-  logDebug("Students array validated successfully");
   return true;
 }
 
-// Змінні для пагінації
-let currentPage = 1;
-const itemsPerPage = 5;
-let totalPages = 1;
+// Menu toggle
+function toggleMenu() {
+  document.querySelector(".sidebar").classList.toggle("open");
+}
+
+// Initialize everything when DOM is loaded
+document.addEventListener("DOMContentLoaded", function () {
+  // Service Worker registration
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("/project_lab1/service-worker.js")
+      .then(() => console.log("Service Worker registered"))
+      .catch((error) => console.error("Service Worker registration failed:", error));
+  }
+
+  // Initialize student management only if on students page
+  if (document.querySelector(".students-table")) {
+    window.studentManager = new StudentManager();
+  }
+});

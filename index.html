@@ -2,13 +2,13 @@
 <html lang="uk">
 
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Головна</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://kit.fontawesome.com/25aa6942e8.js" crossorigin="anonymous"></script>
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" type="image/x-icon" href="/resources/icon-192x192.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
 </head>
 
 <body>
@@ -21,43 +21,21 @@
             <div class="bell-container">
                 <a href="notifications.html" id="bell-link">
                     <i class="fa-regular fa-bell bell"></i>
-                    <span class="notification-badge"></span>
-                    <div class="notification-menu">
-                        <div class="notification-item">
-                            <img src="resources/avatar.jpg" alt="" class="notification-avatar" />
-                            <div class="notification-item-text">
-                                <h4>Швецова Єлизавета</h4>
-                                <p>Lorem ipsum dolor sit amet...</p>
-                            </div>
-                        </div>
-                        <div class="notification-item">
-                            <img src="resources/avatar.jpg" alt="" class="notification-avatar" />
-                            <div class="notification-item-text">
-                                <h4>Оксана Грицай</h4>
-                                <p>Lorem ipsum dolor sit amet...</p>
-                            </div>
-                        </div>
-                        <div class="notification-item">
-                            <img src="resources/avatar.jpg" alt="" class="notification-avatar" />
-                            <div class="notification-item-text">
-                                <h4>Костюк Богдан</h4>
-                                <p>Lorem ipsum dolor sit amet...</p>
-                            </div>
-                        </div>
-                    </div>
+                    <span class="notification-badge" style="display: none;"></span>
                 </a>
             </div>
 
             <div class="personal">
-                <img src="resources/avatar.jpg" alt="" class="avatar" />
-                <p class="name">Максим Побігач</p>
-                <div class="dropdown-menu">
-                    <button class="dropdown-item">Профіль</button>
-                    <button class="dropdown-item">Вихід</button>
-                </div>
             </div>
         </div>
     </header>
+
+    <div class="notification-dropdown" id="notification-dropdown">
+        <div class="notification-dropdown-header">
+            <h4>Нові повідомлення</h4>
+        </div>
+        <div id="notification-list"></div>
+    </div>
 
     <main>
         <div class="main-content">
@@ -133,10 +111,14 @@
                     <input type="date" id="dob-input" required max="2025-01-01"
                         title="Дата народження має бути до 2025 року" class="validate-input">
                     <span class="error-message"></span>
+
                     <div class="online-checkbox-wrap">
                         <label for="online-status">Статус онлайн:</label>
                         <input type="checkbox" id="online-status">
                     </div>
+
+                    <!-- Add error message container -->
+                    <p id="modal-error" class="error-message" style="color: red; margin-top: 10px;"></p>
 
                     <div class="modal-buttons color-primary">
                         <button class="cancel-btn button-styles">Скасувати</button>
@@ -157,12 +139,39 @@
                 </div>
             </div>
 
+            <div id="login-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-login-btn" aria-label="Закрити"><i class="fa-solid fa-xmark"></i></span>
+                    <h2>Авторизація</h2>
+
+                    <form id="login-form">
+                        <label for="login-firstname">Ім'я:</label>
+                        <input type="text" id="login-firstname" required>
+
+                        <label for="login-lastname">Прізвище:</label>
+                        <input type="text" id="login-lastname" required>
+
+                        <label for="login-dob">Дата народження (ддммрррр):</label>
+                        <input type="text" id="login-dob" required pattern="[0-9]{8}" maxlength="8"
+                            title="Введіть дату народження у форматі ДДММРРРР">
+                        <p id="login-error" class="error-message"></p>
+
+                        <div class="modal-buttons color-primary">
+                            <button type="button" class="cancel-login-btn button-styles">Скасувати</button>
+                            <button type="submit" class="color-primary login-btn button-styles">Увійти</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
             <button class="burger-menu color-primary" aria-label="Меню навігації" onclick="toggleMenu()"><i
                     class="fa-solid fa-bars"></i></button>
         </div>
     </main>
 
     <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="chat.js"></script>
 </body>
 
 </html>
