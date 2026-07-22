@@ -959,7 +959,7 @@ body {
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   display: none;
   overflow: hidden;
@@ -1057,4 +1057,119 @@ body {
 .notification-empty p {
   margin: 0;
   font-size: 14px;
+}
+
+/* Стилі для модального вікна створення групи */
+#create-group-modal .modal-content {
+  max-width: 500px;
+  padding: 30px;
+}
+
+#create-group-modal h3 {
+  margin: 0 0 25px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#create-group-modal label {
+  display: block;
+  margin: 20px 0 8px 0;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+#create-group-modal #group-name {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+#student-checkboxes {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 15px 0 25px 0;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  background: var(--background-light);
+}
+
+#student-checkboxes .checkbox-item {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  padding: 8px;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+#student-checkboxes .checkbox-item:hover {
+  background: var(--background-white);
+}
+
+#student-checkboxes input[type="checkbox"] {
+  width: auto;
+  margin-right: 12px;
+}
+
+#student-checkboxes label {
+  margin: 0;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.create-group-btn {
+  margin: 15px 0 0 0;
+  padding: 12px 16px;
+  width: 100%;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.create-group-btn:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+#create-group-modal .modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+#create-group-modal .modal-buttons button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+#create-group-modal .modal-buttons button[type="button"] {
+  background: var(--background-light);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+#create-group-modal .modal-buttons button[type="submit"] {
+  background: var(--accent-color);
+  color: white;
+}
+
+#create-group-modal .modal-buttons button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
 }

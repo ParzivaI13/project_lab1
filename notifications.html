@@ -47,19 +47,57 @@
                             <option value="">Обери співрозмовника</option>
                         </select>
                     </div>
+                    <div id="create-group-modal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <span class="close"
+                                onclick="document.getElementById('create-group-modal').style.display='none'">&times;</span>
+                            <h3>Створити групу</h3>
+                            <form id="create-group-form">
+                                <label for="group-name">Назва групи:</label>
+                                <input type="text" id="group-name" required>
+
+                                <label>Учасники:</label>
+                                <div id="student-checkboxes"
+                                    style="max-height: 300px; overflow-y: auto; margin: 10px 0;">
+                                </div>
+
+                                <div class="modal-buttons">
+                                    <button type="button"
+                                        onclick="document.getElementById('create-group-modal').style.display='none'">Скасувати</button>
+                                    <button type="submit">Створити групу</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <button class="create-group-btn" onclick="showCreateGroupModal()"
+                        style="margin-top: 10px; width: 100%;">
+                        👥 Створити групу
+                    </button>
                     <div class="chat-users-list" id="chat-users-list"></div>
                 </div>
 
                 <div class="chat-content">
                     <div class="chat-header">
                         <h2 id="chat-title">Оберіть співрозмовника</h2>
-                        <div class="connection-status" id="connection-status">🔴 Підключення...</div>
                     </div>
                     <div class="chat-messages" id="chat-messages">
                         <div class="chat-empty-state">
                             <i class="fa-regular fa-comments"></i>
                             <h3>Почніть розмову</h3>
                             <p>Оберіть співрозмовника зі списку щоб почати чат</p>
+                        </div>
+                    </div>
+
+                    <div class="chat-error" id="chat-error" style="display: none;"></div>
+
+                    <div class="auth-message" id="auth-message" style="display: none;">
+                        <div style="text-align: center; padding: 50px; color: #666;">
+                            <h3>Для використання чату необхідно авторизуватися</h3>
+                            <button onclick="document.getElementById('login-modal').style.display = 'flex'"
+                                class="button-styles color-primary">
+                                Увійти
+                            </button>
                         </div>
                     </div>
                     <div class="chat-input-container">

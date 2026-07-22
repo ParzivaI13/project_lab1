@@ -89,17 +89,25 @@ try {
             }
             break;
             
+        // В switch case 'PUT' додай перевірку:
         case 'PUT':
-            // Оновити існуючого студента
             $data = getRequestData();
             
             if(!$data) {
                 throw new Exception("Помилка при розборі JSON даних");
             }
             
-            logDebug("Оновлення студента:", $data);
-            $result = $controller->update($data);
-            sendResponse($result);
+            // ДОДАЙ ЦЮ ПЕРЕВІРКУ:
+            if(isset($data['onlineStatus']) && count($data) === 2) { // тільки id та onlineStatus
+                logDebug("Оновлення онлайн статусу:", $data);
+                $result = $controller->updateOnlineStatus($data['id'], $data['onlineStatus']);
+                sendResponse($result);
+            } else {
+                // Існуючий код для повного оновлення студента
+                logDebug("Оновлення студента:", $data);
+                $result = $controller->update($data);
+                sendResponse($result);
+            }
             break;
             
         case 'DELETE':

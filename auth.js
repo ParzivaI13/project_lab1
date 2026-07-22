@@ -42,6 +42,8 @@ function login(firstName, lastName, dob) {
         // ДОДАНО: Зберігаємо дані для чату в правильному форматі
         setUserDataForChat(student);
 
+        updateOnlineStatus(true);
+
         // ДОДАНО: Повторно ініціалізуємо чат після авторизації
         if (typeof window.reinitializeChat === "function") {
           setTimeout(() => window.reinitializeChat(), 100);
@@ -111,6 +113,7 @@ function formatDateForComparison(dateString) {
 
 // Log out user
 function logout() {
+  updateOnlineStatus(false);
   localStorage.removeItem("isLoggedIn");
   localStorage.removeItem("currentUser");
   // ДОДАНО: Очищуємо дані чату при виході
@@ -317,3 +320,25 @@ function setUserDataForChat(student) {
     lastName: student.lastName,
   });
 }
+
+function updateOnlineStatus(isOnline) {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
+  if (!currentUser.id) return;
+
+  fetch("students.php", {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      id: currentUser.id,
+      onlineStatus: isOnline
+        ? '<i class="fa-solid fa-check" style="color: green;"></i>'
+        : '<i class="fa-solid fa-xmark" style="color: red;"></i>',
+    }),
+  }).catch(console.error);
+}
+
+window.addEventListener('beforeunload', () => {
+  if (isLoggedIn()) {
+    updateOnlineStatus(false);
+  }
+});

@@ -149,4 +149,21 @@ class StudentController {
             ];
         }
     }
+
+    // Додай цей метод в StudentController.php
+    public function updateOnlineStatus($id, $status) {
+        $query = "UPDATE students SET onlineStatus = :status WHERE id = :id";
+        $stmt = $this->db->prepare($query);
+        
+        $onlineStatus = ($status === '<i class="fa-solid fa-check" style="color: green;"></i>') ? '1' : '0';
+        
+        $stmt->bindParam(":id", $id);
+        $stmt->bindParam(":status", $onlineStatus);
+        
+        if($stmt->execute()) {
+            return ['success' => true, 'message' => 'Статус оновлено'];
+        } else {
+            return ['success' => false, 'message' => 'Помилка оновлення статусу'];
+    }
+}
 }

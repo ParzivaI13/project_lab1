@@ -1,4 +1,3 @@
-// Утилітарні функції
 const Utils = {
   getCurrentUser() {
     try {
@@ -51,22 +50,16 @@ const Utils = {
       .slice(0, 2);
   },
 
-  showError(message, container = ".chat-container") {
+  showError(message, containerId = "chat-error") {
     console.error("❌", message);
-    const containerEl = document.querySelector(container);
-    if (!containerEl) return;
-
-    let errorDiv = containerEl.querySelector(".chat-error");
-    if (!errorDiv) {
-      errorDiv = document.createElement("div");
-      errorDiv.className = "chat-error";
-      errorDiv.style.cssText =
-        "background: #ff6b6b; color: white; padding: 10px; margin: 10px 0; border-radius: 5px; text-align: center;";
-      containerEl.appendChild(errorDiv);
+    const errorDiv = document.getElementById(containerId);
+    if (errorDiv) {
+      errorDiv.textContent = message;
+      errorDiv.style.display = "block";
+      setTimeout(() => {
+        errorDiv.style.display = "none";
+      }, 5000);
     }
-
-    errorDiv.textContent = message;
-    setTimeout(() => errorDiv?.remove(), 5000);
   },
 };
 
@@ -188,6 +181,121 @@ class SocketManager {
   }
 }
 
+function addGroupChatButton() {
+  const button = document.querySelector(".create-group-btn");
+  if (button) {
+    button.style.display = "block";
+  }
+}
+
+// Функція створення групового чату
+async function createGroupChat(name, participantIds) {
+  const currentUser = Utils.getCurrentUser();
+  if (!currentUser) return;
+
+  try {
+    const response = await fetch("http://localhost:3001/api/group-chats", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: name,
+        participants: [currentUser.id, ...participantIds],
+        created_by: currentUser.id,
+      }),
+    });
+
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+    const newGroup = await response.json();
+    console.log("✅ Створено групу:", newGroup);
+
+    // Перезавантажити список чатів
+    if (window.chatManager) {
+      window.chatManager.loadGroupChats();
+    }
+
+    return newGroup;
+  } catch (error) {
+    console.error("❌ Помилка створення групи:", error);
+    Utils.showError("Не вдалося створити групу");
+  }
+}
+
+function showCreateGroupModal() {
+  const modal = document.getElementById("create-group-modal");
+  const form = document.getElementById("create-group-form");
+
+  if (modal) {
+    loadStudentsForGroupModal();
+    modal.style.display = "flex";
+
+    form.onsubmit = (e) => {
+      e.preventDefault();
+      const groupName = document.getElementById("group-name").value.trim();
+      const checkboxes = document.querySelectorAll(
+        '#student-checkboxes input[type="checkbox"]:checked'
+      );
+      const selectedIds = Array.from(checkboxes).map((cb) => cb.value);
+
+      if (selectedIds.length === 0) {
+        alert("Оберіть хоча б одного учасника");
+        return;
+      }
+
+      createGroupChat(groupName, selectedIds);
+      modal.style.display = "none";
+      form.reset();
+    };
+  }
+}
+
+async function loadStudentsForGroupModal() {
+  const container = document.getElementById("student-checkboxes");
+  const currentUser = Utils.getCurrentUser();
+
+  if (!container) return;
+
+  try {
+    let students = [];
+    if (window.studentManager?.students) {
+      students = window.studentManager.students;
+    } else {
+      const response = await fetch("students.php");
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      students = await response.json();
+    }
+
+    // Фільтруємо поточного користувача
+    const filteredStudents = students.filter(
+      (student) => String(student.id) !== String(currentUser.id)
+    );
+
+    container.innerHTML = filteredStudents
+      .map(
+        (student) => `
+      <label style="display: block; padding: 5px 0; cursor: pointer;">
+        <input type="checkbox" value="${student.id}" style="margin-right: 8px;">
+        ${student.firstName} ${student.lastName}
+      </label>
+    `
+      )
+      .join("");
+  } catch (error) {
+    console.error("❌ Помилка завантаження студентів:", error);
+    container.innerHTML =
+      '<p style="color: red;">Помилка завантаження списку студентів</p>';
+  }
+}
+
+// Додати виклик після ініціалізації чату
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    if (document.getElementById("chat-messages")) {
+      addGroupChatButton();
+    }
+  }, 1000);
+});
+
 // Менеджер UI компонентів
 class UIManager {
   static updateButton(button, enabled, tooltip = "") {
@@ -218,19 +326,25 @@ class UIManager {
     }
   }
 
-  static showConnectionStatus(container, connected) {
-    let statusElement = container.querySelector(".connection-status");
+  static showAuthMessage() {
+    const authMessage = document.getElementById("auth-message");
+    const chatContainer = document.querySelector(".chat-container");
 
-    if (!statusElement) {
-      statusElement = document.createElement("div");
-      statusElement.className = "connection-status";
-      statusElement.style.cssText =
-        "padding: 5px; text-align: center; font-size: 12px;";
-      container.appendChild(statusElement);
+    if (authMessage) {
+      authMessage.style.display = "block";
     }
+    if (chatContainer) {
+      chatContainer.style.display = "none";
+    }
+  }
 
-    statusElement.textContent = connected ? "🟢 Підключено" : "🔴 Відключено";
-    statusElement.style.color = connected ? "green" : "red";
+  // Замінити метод showConnectionStatus в UIManager
+  static showConnectionStatus(container, connected) {
+    const statusElement = document.getElementById("connection-status");
+    if (statusElement) {
+      statusElement.textContent = connected ? "🟢 Підключено" : "🔴 Відключено";
+      statusElement.style.color = connected ? "green" : "red";
+    }
   }
 
   static showAuthMessage(container) {
@@ -264,6 +378,77 @@ class ChatManager {
     this.initializeChat();
   }
 
+  async loadGroupChats() {
+    try {
+      let response = await fetch(
+        `http://localhost:3001/api/group-chats/user/${this.currentUser.id}`
+      );
+
+      if (!response.ok) {
+        response = await fetch(
+          `http://localhost:3001/api/group-chats/${this.currentUser.id}`
+        );
+      }
+
+      if (!response.ok) {
+        response = await fetch(`http://localhost:3001/api/group-chats`);
+
+        if (response.ok) {
+          const allGroups = await response.json();
+          const userGroups = allGroups.filter(
+            (group) =>
+              group.participants &&
+              group.participants.some(
+                (p) =>
+                  String(p) === String(this.currentUser.id) ||
+                  String(p.id) === String(this.currentUser.id)
+              )
+          );
+          console.log(`👥 Завантажено групових чатів: ${userGroups.length}`);
+          this.populateGroupChats(userGroups);
+          return;
+        }
+      }
+
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+      const groupChats = await response.json();
+      console.log(`👥 Завантажено групових чатів: ${groupChats.length}`);
+      this.populateGroupChats(groupChats);
+    } catch (error) {
+      console.error("❌ Помилка завантаження групових чатів:", error);
+      this.populateGroupChats([]);
+    }
+  }
+
+  populateGroupChats(groupChats) {
+    const select = document.getElementById("chat-recipient");
+    if (!select) return;
+
+    // Видаляємо старі групи перед додаванням нових
+    const existingGroups = select.querySelector(
+      'optgroup[label="Групові чати"]'
+    );
+    if (existingGroups) {
+      existingGroups.remove();
+    }
+
+    // Додаємо групові чати після індивідуальних
+    if (groupChats.length > 0) {
+      const groupHeader = document.createElement("optgroup");
+      groupHeader.label = "Групові чати";
+
+      groupChats.forEach((group) => {
+        const option = document.createElement("option");
+        option.value = `group_${group._id}`;
+        option.textContent = `👥 ${group.name} (${group.participants.length})`;
+        groupHeader.appendChild(option);
+      });
+
+      select.appendChild(groupHeader);
+    }
+  }
+
   initializeUser() {
     if (!Utils.checkAuth()) {
       console.log("❌ Чат недоступний: користувач не авторизований");
@@ -289,6 +474,9 @@ class ChatManager {
       this.bindEvents();
       this.loadStudents();
 
+      // ВАЖЛИВО: чекаємо поки групи завантажаться
+      await this.loadGroupChats();
+
       UIManager.showConnectionStatus(
         document.querySelector(".chat-header"),
         this.socketManager.isConnected
@@ -299,16 +487,24 @@ class ChatManager {
       Utils.showError("Не вдалося підключитися до чат-сервера");
     }
 
+    // Обробка openChatWith після завантаження всіх даних
     const openChatWith = localStorage.getItem("openChatWith");
     if (openChatWith) {
       localStorage.removeItem("openChatWith");
       const recipientSelect = document.getElementById("chat-recipient");
       if (recipientSelect) {
-        // Чекаємо поки студенти завантажаться
         setTimeout(() => {
-          recipientSelect.value = openChatWith;
-          recipientSelect.dispatchEvent(new Event("change"));
-        }, 500);
+          const option = recipientSelect.querySelector(
+            `option[value="${openChatWith}"]`
+          );
+          if (option) {
+            recipientSelect.value = openChatWith;
+            recipientSelect.dispatchEvent(new Event("change"));
+            console.log("✅ Автоматично відкрито чат:", openChatWith);
+          } else {
+            console.warn("⚠️ Не знайдено опцію для:", openChatWith);
+          }
+        }, 1000);
       }
     }
   }
@@ -393,7 +589,16 @@ class ChatManager {
     const container = document.getElementById("chat-messages");
 
     if (this.selectedRecipient) {
-      this.loadConversation();
+      if (this.selectedRecipient.startsWith("group_")) {
+        // Груповий чат
+        this.currentGroupId = this.selectedRecipient.replace("group_", "");
+        this.loadGroupConversation();
+      } else {
+        // Приватний чат
+        this.currentGroupId = null;
+        this.loadConversation();
+      }
+
       if (chatTitle) chatTitle.textContent = this.selectedRecipientName;
     } else {
       if (container) {
@@ -401,6 +606,22 @@ class ChatManager {
           '<div style="text-align: center; color: #666; padding: 20px;">Оберіть співрозмовника для початку чату</div>';
       }
       if (chatTitle) chatTitle.textContent = "Оберіть співрозмовника";
+    }
+  }
+
+  async loadGroupConversation() {
+    if (!this.currentGroupId) return;
+
+    try {
+      const response = await fetch(
+        `http://localhost:3001/api/group-messages/${this.currentGroupId}`
+      );
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+      const messages = await response.json();
+      this.displayMessages(messages);
+    } catch (error) {
+      console.error("❌ Помилка завантаження групової розмови:", error);
     }
   }
 
@@ -520,26 +741,28 @@ class ChatManager {
     const chatInput = document.getElementById("chat-input");
     const message = chatInput.value.trim();
 
-    const validationChecks = {
-      hasMessage: !!message,
-      hasRecipient: !!this.selectedRecipient,
-      hasUser: !!this.currentUser,
-      isConnected: this.socketManager.isConnected,
-    };
-
-    if (!Object.values(validationChecks).every(Boolean)) {
-      console.log("❌ Неможливо відправити повідомлення:", validationChecks);
+    if (
+      !message ||
+      !this.selectedRecipient ||
+      !this.currentUser ||
+      !this.socketManager.isConnected
+    ) {
       return;
     }
 
     const messageData = {
       sender_id: String(this.currentUser.id),
       sender_name: this.currentUser.fullName,
-      recipient_id: String(this.selectedRecipient),
       message: message,
     };
 
-    console.log("📤 Відправляємо повідомлення:", messageData);
+    if (this.selectedRecipient.startsWith("group_")) {
+      // Групове повідомлення
+      messageData.group_id = this.selectedRecipient.replace("group_", "");
+    } else {
+      // Приватне повідомлення
+      messageData.recipient_id = String(this.selectedRecipient);
+    }
 
     const messageObj = {
       ...messageData,
@@ -556,20 +779,35 @@ class ChatManager {
   handleIncomingMessage(message) {
     console.log("📨 Обробка вхідного повідомлення:", message);
 
-    if (
-      this.selectedRecipient &&
-      String(message.sender_id) === String(this.selectedRecipient)
-    ) {
+    const isCurrentConversation = this.isMessageForCurrentConversation(message);
+
+    if (isCurrentConversation) {
       console.log("👀 Показуємо повідомлення в поточній розмові");
       this.displayMessage(message, false);
     } else {
       console.log(
-        "🔔 Повідомлення від іншого користувача, показуємо сповіщення"
+        "🔔 Повідомлення від іншого користувача/групи, показуємо сповіщення"
       );
     }
 
     this.messageManager.addUnreadMessage(message);
     UIManager.updateBellIndicator(this.messageManager.getUnreadCount());
+  }
+
+  isMessageForCurrentConversation(message) {
+    if (!this.selectedRecipient) return false;
+
+    // Якщо поточна розмова - групова
+    if (this.selectedRecipient.startsWith("group_")) {
+      const currentGroupId = this.selectedRecipient.replace("group_", "");
+      return message.group_id === currentGroupId;
+    } else {
+      // Якщо поточна розмова - приватна
+      return (
+        String(message.sender_id) === String(this.selectedRecipient) &&
+        !message.group_id
+      );
+    }
   }
 
   displayMessages(messages) {
@@ -635,14 +873,14 @@ class GlobalNotificationManager {
     this.messageManager = new MessageManager();
     this.socketManager = new SocketManager();
     this.isDropdownOpen = false;
-    this.isHoveringDropdown = false; // Додайте цю лінію
+    this.isHoveringDropdown = false;
 
     this.initialize();
   }
 
   async initialize() {
     this.initializeBell();
-    this.ensureDropdownExists(); // Додайте цю лінію тут
+    this.ensureDropdownExists();
 
     const currentUser = Utils.getCurrentUser();
     if (!currentUser) return;
@@ -653,7 +891,7 @@ class GlobalNotificationManager {
       this.socketManager.on("receive_message", (message) =>
         this.handleGlobalMessage(message)
       );
-      this.bindGlobalEvents(); // Перенесено після ensureDropdownExists
+      this.bindGlobalEvents();
     } catch (error) {
       console.error("❌ Помилка ініціалізації глобального сокета:", error);
     }
@@ -691,10 +929,23 @@ class GlobalNotificationManager {
   handleGlobalMessage(message) {
     console.log("🔔 Глобальне повідомлення:", message);
 
+    // Перевіряємо чи користувач зараз у відповідній розмові
+    const isOnChatPage =
+      window.location.pathname.includes("notifications.html");
+    let shouldShowNotification = true;
+
+    if (isOnChatPage && window.chatManager) {
+      shouldShowNotification =
+        !window.chatManager.isMessageForCurrentConversation(message);
+    }
+
     this.messageManager.addUnreadMessage(message);
     UIManager.updateBellIndicator(this.messageManager.getUnreadCount());
     this.updateNotificationDropdown();
-    this.showNativeNotification(message);
+
+    if (shouldShowNotification) {
+      this.showNativeNotification(message);
+    }
   }
 
   bindGlobalEvents() {
@@ -720,7 +971,6 @@ class GlobalNotificationManager {
       });
     }
 
-    // Додаємо hover events для dropdown (використовуємо делегування)
     document.addEventListener(
       "mouseenter",
       (e) => {
@@ -751,7 +1001,7 @@ class GlobalNotificationManager {
       bellLink.addEventListener("click", (e) => {
         if (!window.location.pathname.includes("notifications.html")) {
           // Якщо не на сторінці чату - переходимо туди
-          return; // дозволяємо стандартну поведінку href
+          return;
         } else {
           // Якщо вже на сторінці чату - просто закриваємо dropdown
           e.preventDefault();
@@ -833,22 +1083,25 @@ class GlobalNotificationManager {
     );
     const initials = Utils.getInitials(message.sender_name);
 
+    // Додаємо індикатор для групових повідомлень
+    const isGroup = !!message.group_id;
+    const groupIndicator = isGroup ? "👥 " : "";
+    const senderName = `${groupIndicator}${message.sender_name}`;
+
     return `
-      <div class="notification-item ${
-        !message.isRead ? "unread" : ""
-      }" data-message-id="${message._id || ""}">
-        <div class="notification-avatar">${initials}</div>
-        <div class="notification-content">
-          <div class="notification-sender">${Utils.escapeHtml(
-            message.sender_name
-          )}</div>
-          <div class="notification-message">${Utils.escapeHtml(
-            message.message
-          )}</div>
-          <div class="notification-time">${timeAgo}</div>
-        </div>
+    <div class="notification-item ${
+      !message.isRead ? "unread" : ""
+    }" data-message-id="${message._id || ""}">
+      <div class="notification-avatar">${initials}</div>
+      <div class="notification-content">
+        <div class="notification-sender">${Utils.escapeHtml(senderName)}</div>
+        <div class="notification-message">${Utils.escapeHtml(
+          message.message
+        )}</div>
+        <div class="notification-time">${timeAgo}</div>
       </div>
-    `;
+    </div>
+  `;
   }
 
   handleNotificationClick(message) {
@@ -857,28 +1110,24 @@ class GlobalNotificationManager {
 
     const currentPage = window.location.pathname;
     if (!currentPage.includes("notifications.html")) {
-      // Зберігаємо ID відправника для подальшого відкриття чату
-      localStorage.setItem("openChatWith", message.sender_id);
+      // Визначаємо що зберігати для відкриття чату
+      const chatTarget = message.group_id
+        ? `group_${message.group_id}`
+        : message.sender_id;
+      localStorage.setItem("openChatWith", chatTarget);
       window.location.href = "notifications.html";
     } else if (window.chatManager) {
       const recipientSelect = document.getElementById("chat-recipient");
       if (recipientSelect) {
-        recipientSelect.value = message.sender_id;
+        const chatTarget = message.group_id
+          ? `group_${message.group_id}`
+          : message.sender_id;
+        recipientSelect.value = chatTarget;
         recipientSelect.dispatchEvent(new Event("change"));
       }
     }
 
     this.closeNotificationDropdown();
-  }
-
-  showNativeNotification(message) {
-    if (Notification && Notification.permission === "granted") {
-      new Notification(`Нове повідомлення від ${message.sender_name}`, {
-        body: message.message,
-        icon: "/resources/icon-192x192.ico",
-        tag: "chat-message",
-      });
-    }
   }
 
   initializeBell() {
@@ -910,7 +1159,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Додайте цю нову функцію для переініціалізації після авторизації:
+// для переініціалізації після авторизації:
 window.reinitializeGlobalNotifications = function () {
   if (Utils.checkAuth() && !window.globalNotificationManager) {
     console.log("🔄 Ініціалізація глобальних сповіщень після авторизації...");
@@ -918,7 +1167,6 @@ window.reinitializeGlobalNotifications = function () {
   }
 };
 
-// Оновлена функція reinitializeChat залишається без змін
 window.reinitializeChat = function () {
   if (document.getElementById("chat-messages")) {
     console.log("🔄 Повторна ініціалізація чату після авторизації...");
@@ -928,7 +1176,6 @@ window.reinitializeChat = function () {
     window.chatManager = new ChatManager();
   }
 
-  // Також переініціалізуємо глобальні сповіщення
   window.reinitializeGlobalNotifications();
 };
 

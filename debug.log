@@ -1542,3 +1542,1207 @@
 [2025-05-27 22:30:19] Запит до students.php "GET"
 [2025-05-27 22:30:19] Отримано студентів: 2
 [2025-05-27 22:30:19] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-27 22:42:48] Запит до students.php "GET"
+[2025-05-27 22:42:48] Отримано студентів: 2
+[2025-05-27 22:42:48] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-27 22:42:50] Запит до students.php "PUT"
+[2025-05-27 22:42:50] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-05-27 22:42:50] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-05-27 22:42:50] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-05-27 22:42:50] Запит до students.php "GET"
+[2025-05-27 22:42:50] Отримано студентів: 2
+[2025-05-27 22:42:50] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-27 22:42:52] Запит до students.php "GET"
+[2025-05-27 22:42:52] Отримано студентів: 2
+[2025-05-27 22:42:52] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-27 22:42:56] Запит до students.php "GET"
+[2025-05-27 22:42:56] Отримано студентів: 2
+[2025-05-27 22:42:56] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-27 22:42:58] Запит до students.php "GET"
+[2025-05-27 22:42:58] Отримано студентів: 2
+[2025-05-27 22:42:58] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-27 22:42:58] Запит до students.php "PUT"
+[2025-05-27 22:42:59] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-05-27 22:42:59] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-05-27 22:42:59] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-05-27 22:42:59] Запит до students.php "GET"
+[2025-05-27 22:42:59] Отримано студентів: 2
+[2025-05-27 22:42:59] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-05-27 22:52:38] Запит до students.php "PUT"
+[2025-05-27 22:52:38] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-05-27 22:52:38] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-05-27 22:52:38] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-05-27 22:52:50] Запит до students.php "PUT"
+[2025-05-27 22:52:50] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-05-27 22:52:50] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-05-27 22:52:50] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 20:50:58] Запит до students.php "GET"
+[2025-06-02 20:50:58] Отримано студентів: 2
+[2025-06-02 20:50:58] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 20:51:10] Запит до students.php "GET"
+[2025-06-02 20:51:10] Отримано студентів: 2
+[2025-06-02 20:51:10] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 20:52:11] Запит до students.php "GET"
+[2025-06-02 20:52:11] Отримано студентів: 2
+[2025-06-02 20:52:11] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 20:52:17] Запит до students.php "GET"
+[2025-06-02 20:52:17] Отримано студентів: 2
+[2025-06-02 20:52:17] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 20:52:17] Запит до students.php "PUT"
+[2025-06-02 20:52:17] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 20:52:17] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 20:52:17] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 20:52:52] Запит до students.php "GET"
+[2025-06-02 20:52:52] Отримано студентів: 2
+[2025-06-02 20:52:52] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 20:53:22] Запит до students.php "PUT"
+[2025-06-02 20:53:22] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 20:53:22] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 20:53:22] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 20:53:40] Запит до students.php "PUT"
+[2025-06-02 20:53:40] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 20:53:40] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 20:53:40] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 20:53:40] Запит до students.php "GET"
+[2025-06-02 20:53:40] Отримано студентів: 2
+[2025-06-02 20:53:40] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 20:53:45] Запит до students.php "GET"
+[2025-06-02 20:53:45] Отримано студентів: 2
+[2025-06-02 20:53:45] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 20:53:47] Запит до students.php "PUT"
+[2025-06-02 20:53:47] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 20:53:47] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 20:53:47] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 20:53:47] Запит до students.php "GET"
+[2025-06-02 20:53:47] Отримано студентів: 2
+[2025-06-02 20:53:47] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 20:53:49] Запит до students.php "GET"
+[2025-06-02 20:53:49] Отримано студентів: 2
+[2025-06-02 20:53:49] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 20:53:51] Запит до students.php "PUT"
+[2025-06-02 20:53:51] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 20:53:51] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 20:53:51] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 20:53:51] Запит до students.php "GET"
+[2025-06-02 20:53:51] Отримано студентів: 2
+[2025-06-02 20:53:51] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 20:53:55] Запит до students.php "PUT"
+[2025-06-02 20:53:55] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 20:53:55] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 20:53:55] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 20:53:55] Запит до students.php "GET"
+[2025-06-02 20:53:55] Отримано студентів: 2
+[2025-06-02 20:53:55] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 20:54:06] Запит до students.php "GET"
+[2025-06-02 20:54:06] Отримано студентів: 2
+[2025-06-02 20:54:06] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 20:54:08] Запит до students.php "PUT"
+[2025-06-02 20:54:08] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 20:54:08] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 20:54:08] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 20:54:08] Запит до students.php "GET"
+[2025-06-02 20:54:08] Отримано студентів: 2
+[2025-06-02 20:54:08] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 20:56:06] Запит до students.php "GET"
+[2025-06-02 20:56:06] Отримано студентів: 2
+[2025-06-02 20:56:06] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 20:56:06] Запит до students.php "PUT"
+[2025-06-02 20:56:06] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 20:56:06] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 20:56:06] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 20:56:06] Запит до students.php "GET"
+[2025-06-02 20:56:06] Отримано студентів: 2
+[2025-06-02 20:56:06] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 20:56:08] Запит до students.php "PUT"
+[2025-06-02 20:56:08] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 20:56:08] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 20:56:08] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 20:56:08] Запит до students.php "GET"
+[2025-06-02 20:56:09] Отримано студентів: 2
+[2025-06-02 20:56:09] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 20:56:16] Запит до students.php "PUT"
+[2025-06-02 20:56:16] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 20:56:16] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 20:56:16] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 20:56:16] Запит до students.php "GET"
+[2025-06-02 20:56:16] Отримано студентів: 2
+[2025-06-02 20:56:16] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:09:17] Запит до students.php "PUT"
+[2025-06-02 21:09:17] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:09:17] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:09:17] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:09:19] Запит до students.php "PUT"
+[2025-06-02 21:09:19] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:09:19] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:09:19] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:09:22] Запит до students.php "GET"
+[2025-06-02 21:09:22] Отримано студентів: 2
+[2025-06-02 21:09:22] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:09:26] Запит до students.php "PUT"
+[2025-06-02 21:09:26] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:09:26] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:09:26] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:09:26] Запит до students.php "GET"
+[2025-06-02 21:09:26] Отримано студентів: 2
+[2025-06-02 21:09:26] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:09:28] Запит до students.php "PUT"
+[2025-06-02 21:09:28] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:09:28] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:09:28] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:09:28] Запит до students.php "GET"
+[2025-06-02 21:09:28] Отримано студентів: 2
+[2025-06-02 21:09:28] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:15:26] Запит до students.php "PUT"
+[2025-06-02 21:15:26] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:15:26] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:15:26] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:15:26] Запит до students.php "GET"
+[2025-06-02 21:15:26] Отримано студентів: 2
+[2025-06-02 21:15:26] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:15:30] Запит до students.php "PUT"
+[2025-06-02 21:15:30] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:15:30] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:15:30] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:15:30] Запит до students.php "GET"
+[2025-06-02 21:15:30] Отримано студентів: 2
+[2025-06-02 21:15:30] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:15:37] Запит до students.php "GET"
+[2025-06-02 21:15:37] Отримано студентів: 2
+[2025-06-02 21:15:37] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:15:45] Запит до students.php "PUT"
+[2025-06-02 21:15:45] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:15:45] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:15:45] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:15:46] Запит до students.php "GET"
+[2025-06-02 21:15:46] Отримано студентів: 2
+[2025-06-02 21:15:46] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:16:23] Запит до students.php "POST"
+[2025-06-02 21:16:23] Вхідні дані: "{\"id\":null,\"group\":\"ПЗ-11\",\"firstName\":\"Богдан\",\"lastName\":\"Два\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 21:16:23] Додавання нового студента: {"id":null,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 21:16:23] Відповідь: {"success":true,"message":"Студента додано успішно","id":"36"}
+[2025-06-02 21:16:23] Запит до students.php "GET"
+[2025-06-02 21:16:23] Отримано студентів: 3
+[2025-06-02 21:16:23] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:16:28] Запит до students.php "PUT"
+[2025-06-02 21:16:28] Вхідні дані: "{\"id\":\"34\",\"group\":\"ПЗ-11\",\"firstName\":\"Богдан\",\"lastName\":\"Богдан\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 21:16:28] Оновлення студента: {"id":"34","group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 21:16:28] Відповідь: {"success":true,"message":"Студента оновлено успішно"}
+[2025-06-02 21:16:30] Запит до students.php "PUT"
+[2025-06-02 21:16:30] Вхідні дані: "{\"id\":\"27\",\"group\":\"ПЗ-11\",\"firstName\":\"Максим\",\"lastName\":\"Побігач\",\"gender\":\"Чоловіча\",\"dob\":\"2006-01-27\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 21:16:30] Оновлення студента: {"id":"27","group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 21:16:30] Відповідь: {"success":true,"message":"Студента оновлено успішно"}
+[2025-06-02 21:16:43] Запит до students.php "PUT"
+[2025-06-02 21:16:43] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:16:43] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:16:43] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:16:43] Запит до students.php "GET"
+[2025-06-02 21:16:43] Отримано студентів: 3
+[2025-06-02 21:16:43] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:17:08] Запит до students.php "GET"
+[2025-06-02 21:17:08] Отримано студентів: 3
+[2025-06-02 21:17:08] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:17:15] Запит до students.php "GET"
+[2025-06-02 21:17:15] Отримано студентів: 3
+[2025-06-02 21:17:15] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:17:15] Запит до students.php "PUT"
+[2025-06-02 21:17:15] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 21:17:15] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 21:17:15] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:17:15] Запит до students.php "GET"
+[2025-06-02 21:17:15] Отримано студентів: 3
+[2025-06-02 21:17:15] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:17:26] Запит до students.php "GET"
+[2025-06-02 21:17:26] Отримано студентів: 3
+[2025-06-02 21:17:26] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:17:26] Запит до students.php "PUT"
+[2025-06-02 21:17:27] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 21:17:27] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 21:17:27] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:17:27] Запит до students.php "GET"
+[2025-06-02 21:17:27] Отримано студентів: 3
+[2025-06-02 21:17:27] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:17:33] Запит до students.php "GET"
+[2025-06-02 21:17:33] Отримано студентів: 3
+[2025-06-02 21:17:33] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:17:44] Запит до students.php "PUT"
+[2025-06-02 21:17:44] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:17:44] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:17:44] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:17:44] Запит до students.php "GET"
+[2025-06-02 21:17:44] Отримано студентів: 3
+[2025-06-02 21:17:44] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:17:53] Запит до students.php "PUT"
+[2025-06-02 21:17:53] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:17:53] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:17:53] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:17:53] Запит до students.php "GET"
+[2025-06-02 21:17:53] Отримано студентів: 3
+[2025-06-02 21:17:53] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:25:41] Запит до students.php "PUT"
+[2025-06-02 21:25:41] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:25:41] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:25:41] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:25:41] Запит до students.php "GET"
+[2025-06-02 21:25:41] Отримано студентів: 3
+[2025-06-02 21:25:41] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:25:45] Запит до students.php "PUT"
+[2025-06-02 21:25:45] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:25:45] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:25:45] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:25:45] Запит до students.php "GET"
+[2025-06-02 21:25:45] Отримано студентів: 3
+[2025-06-02 21:25:45] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:25:56] Запит до students.php "PUT"
+[2025-06-02 21:25:56] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:25:56] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:25:56] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:25:57] Запит до students.php "GET"
+[2025-06-02 21:25:57] Отримано студентів: 3
+[2025-06-02 21:25:57] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:26:07] Запит до students.php "PUT"
+[2025-06-02 21:26:07] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:26:07] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:26:07] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:26:07] Запит до students.php "GET"
+[2025-06-02 21:26:07] Отримано студентів: 3
+[2025-06-02 21:26:07] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:26:28] Запит до students.php "GET"
+[2025-06-02 21:26:28] Отримано студентів: 3
+[2025-06-02 21:26:28] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:26:28] Запит до students.php "PUT"
+[2025-06-02 21:26:28] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 21:26:28] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 21:26:28] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:26:28] Запит до students.php "GET"
+[2025-06-02 21:26:28] Отримано студентів: 3
+[2025-06-02 21:26:28] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:26:41] Запит до students.php "GET"
+[2025-06-02 21:26:41] Отримано студентів: 3
+[2025-06-02 21:26:41] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:26:41] Запит до students.php "PUT"
+[2025-06-02 21:26:41] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 21:26:41] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 21:26:41] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:26:41] Запит до students.php "GET"
+[2025-06-02 21:26:41] Отримано студентів: 3
+[2025-06-02 21:26:41] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:34:19] Запит до students.php "PUT"
+[2025-06-02 21:34:19] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:34:19] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:34:19] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:34:20] Запит до students.php "GET"
+[2025-06-02 21:34:20] Отримано студентів: 3
+[2025-06-02 21:34:20] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:34:23] Запит до students.php "PUT"
+[2025-06-02 21:34:23] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:34:23] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:34:23] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:34:23] Запит до students.php "GET"
+[2025-06-02 21:34:23] Отримано студентів: 3
+[2025-06-02 21:34:23] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:34:38] Запит до students.php "GET"
+[2025-06-02 21:34:38] Отримано студентів: 3
+[2025-06-02 21:34:38] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:38:32] Запит до students.php "GET"
+[2025-06-02 21:38:32] Отримано студентів: 3
+[2025-06-02 21:38:32] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:38:32] Запит до students.php "PUT"
+[2025-06-02 21:38:32] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 21:38:32] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 21:38:32] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:38:44] Запит до students.php "PUT"
+[2025-06-02 21:38:44] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:38:44] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:38:44] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:38:44] Запит до students.php "GET"
+[2025-06-02 21:38:44] Отримано студентів: 3
+[2025-06-02 21:38:44] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:39:04] Запит до students.php "GET"
+[2025-06-02 21:39:04] Отримано студентів: 3
+[2025-06-02 21:39:04] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:39:04] Запит до students.php "PUT"
+[2025-06-02 21:39:04] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 21:39:04] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 21:39:04] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:39:04] Запит до students.php "GET"
+[2025-06-02 21:39:04] Отримано студентів: 3
+[2025-06-02 21:39:04] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:39:12] Запит до students.php "PUT"
+[2025-06-02 21:39:12] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:39:12] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:39:12] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:39:13] Запит до students.php "GET"
+[2025-06-02 21:39:13] Отримано студентів: 3
+[2025-06-02 21:39:13] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:39:19] Запит до students.php "PUT"
+[2025-06-02 21:39:19] Вхідні дані: "{\"id\":\"34\",\"group\":\"ПЗ-11\",\"firstName\":\"Богдан\",\"lastName\":\"Богдан\",\"gender\":\"Чоловіча\",\"dob\":\"1111-11-11\",\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 21:39:19] Оновлення студента: {"id":"34","group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 21:39:19] Відповідь: {"success":true,"message":"Студента оновлено успішно"}
+[2025-06-02 21:39:22] Запит до students.php "PUT"
+[2025-06-02 21:39:22] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:39:22] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:39:22] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:39:23] Запит до students.php "GET"
+[2025-06-02 21:39:23] Отримано студентів: 3
+[2025-06-02 21:39:23] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:39:25] Запит до students.php "PUT"
+[2025-06-02 21:39:25] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:39:25] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:39:25] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:39:25] Запит до students.php "GET"
+[2025-06-02 21:39:25] Отримано студентів: 3
+[2025-06-02 21:39:25] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:39:27] Запит до students.php "PUT"
+[2025-06-02 21:39:27] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:39:27] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:39:27] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:39:27] Запит до students.php "GET"
+[2025-06-02 21:39:27] Отримано студентів: 3
+[2025-06-02 21:39:27] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:39:32] Запит до students.php "PUT"
+[2025-06-02 21:39:32] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:39:32] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:39:32] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:39:32] Запит до students.php "GET"
+[2025-06-02 21:39:32] Отримано студентів: 3
+[2025-06-02 21:39:32] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:39:48] Запит до students.php "PUT"
+[2025-06-02 21:39:48] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:39:48] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:39:48] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:39:49] Запит до students.php "GET"
+[2025-06-02 21:39:49] Отримано студентів: 3
+[2025-06-02 21:39:49] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:40:03] Запит до students.php "PUT"
+[2025-06-02 21:40:03] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:40:03] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:40:03] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:40:03] Запит до students.php "GET"
+[2025-06-02 21:40:03] Отримано студентів: 3
+[2025-06-02 21:40:03] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:40:10] Запит до students.php "PUT"
+[2025-06-02 21:40:10] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:40:10] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:40:10] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:40:10] Запит до students.php "GET"
+[2025-06-02 21:40:10] Отримано студентів: 3
+[2025-06-02 21:40:10] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:40:41] Запит до students.php "PUT"
+[2025-06-02 21:40:41] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:40:41] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:40:41] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:40:52] Запит до students.php "GET"
+[2025-06-02 21:40:52] Отримано студентів: 3
+[2025-06-02 21:40:52] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:40:52] Запит до students.php "PUT"
+[2025-06-02 21:40:52] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 21:40:52] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 21:40:52] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:40:52] Запит до students.php "GET"
+[2025-06-02 21:40:52] Отримано студентів: 3
+[2025-06-02 21:40:52] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-02 21:41:03] Запит до students.php "PUT"
+[2025-06-02 21:41:03] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:41:03] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:41:03] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:41:03] Запит до students.php "GET"
+[2025-06-02 21:41:03] Отримано студентів: 3
+[2025-06-02 21:41:03] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:41:12] Запит до students.php "PUT"
+[2025-06-02 21:41:12] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:41:12] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:41:12] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:41:12] Запит до students.php "GET"
+[2025-06-02 21:41:12] Отримано студентів: 3
+[2025-06-02 21:41:12] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:41:13] Запит до students.php "PUT"
+[2025-06-02 21:41:13] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:41:13] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:41:13] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:41:13] Запит до students.php "GET"
+[2025-06-02 21:41:13] Отримано студентів: 3
+[2025-06-02 21:41:13] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:42:09] Запит до students.php "PUT"
+[2025-06-02 21:42:09] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:42:09] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:42:09] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:42:09] Запит до students.php "GET"
+[2025-06-02 21:42:09] Отримано студентів: 3
+[2025-06-02 21:42:09] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:42:25] Запит до students.php "GET"
+[2025-06-02 21:42:25] Отримано студентів: 3
+[2025-06-02 21:42:25] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:42:29] Запит до students.php "GET"
+[2025-06-02 21:42:29] Отримано студентів: 3
+[2025-06-02 21:42:29] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:42:29] Запит до students.php "PUT"
+[2025-06-02 21:42:29] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 21:42:29] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 21:42:29] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:42:42] Запит до students.php "PUT"
+[2025-06-02 21:42:42] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:42:42] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:42:42] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:42:43] Запит до students.php "GET"
+[2025-06-02 21:42:43] Отримано студентів: 3
+[2025-06-02 21:42:43] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:42:43] Запит до students.php "PUT"
+[2025-06-02 21:42:43] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:42:43] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:42:43] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:42:43] Запит до students.php "PUT"
+[2025-06-02 21:42:43] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:42:43] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:42:43] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:42:43] Запит до students.php "GET"
+[2025-06-02 21:42:43] Отримано студентів: 3
+[2025-06-02 21:42:43] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:42:44] Запит до students.php "PUT"
+[2025-06-02 21:42:44] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:42:44] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:42:44] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:42:44] Запит до students.php "GET"
+[2025-06-02 21:42:44] Отримано студентів: 3
+[2025-06-02 21:42:44] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:42:44] Запит до students.php "PUT"
+[2025-06-02 21:42:44] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:42:44] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:42:44] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:42:45] Запит до students.php "GET"
+[2025-06-02 21:42:45] Отримано студентів: 3
+[2025-06-02 21:42:45] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:42:45] Запит до students.php "PUT"
+[2025-06-02 21:42:45] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:42:45] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:42:45] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:42:45] Запит до students.php "GET"
+[2025-06-02 21:42:45] Отримано студентів: 3
+[2025-06-02 21:42:45] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:42:53] Запит до students.php "PUT"
+[2025-06-02 21:42:53] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:42:53] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:42:53] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:42:53] Запит до students.php "GET"
+[2025-06-02 21:42:53] Отримано студентів: 3
+[2025-06-02 21:42:53] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:43:20] Запит до students.php "PUT"
+[2025-06-02 21:43:20] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:43:20] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:43:20] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:43:20] Запит до students.php "GET"
+[2025-06-02 21:43:20] Отримано студентів: 3
+[2025-06-02 21:43:20] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:43:31] Запит до students.php "GET"
+[2025-06-02 21:43:31] Отримано студентів: 3
+[2025-06-02 21:43:31] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:43:47] Запит до students.php "PUT"
+[2025-06-02 21:43:47] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:43:47] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:43:47] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:43:47] Запит до students.php "GET"
+[2025-06-02 21:43:47] Отримано студентів: 3
+[2025-06-02 21:43:47] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:49:45] Запит до students.php "GET"
+[2025-06-02 21:49:45] Отримано студентів: 3
+[2025-06-02 21:49:45] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:49:51] Запит до students.php "GET"
+[2025-06-02 21:49:51] Отримано студентів: 3
+[2025-06-02 21:49:51] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:49:51] Запит до students.php "PUT"
+[2025-06-02 21:49:51] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 21:49:51] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 21:49:51] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:49:51] Запит до students.php "GET"
+[2025-06-02 21:49:51] Отримано студентів: 3
+[2025-06-02 21:49:51] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:49:52] Запит до students.php "PUT"
+[2025-06-02 21:49:52] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:49:52] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:49:52] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:49:52] Запит до students.php "GET"
+[2025-06-02 21:49:52] Отримано студентів: 3
+[2025-06-02 21:49:52] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:50:05] Запит до students.php "GET"
+[2025-06-02 21:50:05] Отримано студентів: 3
+[2025-06-02 21:50:05] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:50:05] Запит до students.php "PUT"
+[2025-06-02 21:50:05] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 21:50:05] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 21:50:05] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:50:11] Запит до students.php "PUT"
+[2025-06-02 21:50:11] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:50:11] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:50:11] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:50:11] Запит до students.php "GET"
+[2025-06-02 21:50:11] Отримано студентів: 3
+[2025-06-02 21:50:11] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:50:25] Запит до students.php "PUT"
+[2025-06-02 21:50:25] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:50:25] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:50:25] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:50:25] Запит до students.php "GET"
+[2025-06-02 21:50:25] Отримано студентів: 3
+[2025-06-02 21:50:25] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:50:58] Запит до students.php "PUT"
+[2025-06-02 21:50:58] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:50:58] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:50:58] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:50:58] Запит до students.php "GET"
+[2025-06-02 21:50:58] Отримано студентів: 3
+[2025-06-02 21:50:58] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:51:05] Запит до students.php "PUT"
+[2025-06-02 21:51:05] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:51:05] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:51:05] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:51:05] Запит до students.php "GET"
+[2025-06-02 21:51:05] Отримано студентів: 3
+[2025-06-02 21:51:05] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:52:22] Запит до students.php "PUT"
+[2025-06-02 21:52:22] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:52:22] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:52:22] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:52:22] Запит до students.php "GET"
+[2025-06-02 21:52:22] Отримано студентів: 3
+[2025-06-02 21:52:22] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:52:23] Запит до students.php "PUT"
+[2025-06-02 21:52:23] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:52:23] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:52:23] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:52:23] Запит до students.php "GET"
+[2025-06-02 21:52:23] Отримано студентів: 3
+[2025-06-02 21:52:23] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:52:25] Запит до students.php "GET"
+[2025-06-02 21:52:25] Отримано студентів: 3
+[2025-06-02 21:52:25] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:52:52] Запит до students.php "GET"
+[2025-06-02 21:52:52] Отримано студентів: 3
+[2025-06-02 21:52:52] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:58:24] Запит до students.php "GET"
+[2025-06-02 21:58:24] Отримано студентів: 3
+[2025-06-02 21:58:24] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:58:27] Запит до students.php "PUT"
+[2025-06-02 21:58:27] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:58:27] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:58:27] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:58:27] Запит до students.php "GET"
+[2025-06-02 21:58:27] Отримано студентів: 3
+[2025-06-02 21:58:27] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:58:27] Запит до students.php "PUT"
+[2025-06-02 21:58:27] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:58:27] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:58:27] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:58:27] Запит до students.php "GET"
+[2025-06-02 21:58:27] Отримано студентів: 3
+[2025-06-02 21:58:27] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:58:29] Запит до students.php "PUT"
+[2025-06-02 21:58:29] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:58:29] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:58:29] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:58:29] Запит до students.php "GET"
+[2025-06-02 21:58:29] Отримано студентів: 3
+[2025-06-02 21:58:29] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:58:46] Запит до students.php "PUT"
+[2025-06-02 21:58:46] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 21:58:46] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 21:58:46] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 21:58:47] Запит до students.php "GET"
+[2025-06-02 21:58:47] Отримано студентів: 3
+[2025-06-02 21:58:47] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:58:51] Запит до students.php "GET"
+[2025-06-02 21:58:51] Отримано студентів: 3
+[2025-06-02 21:58:51] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 21:59:05] Запит до students.php "GET"
+[2025-06-02 21:59:05] Отримано студентів: 3
+[2025-06-02 21:59:05] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:01:35] Запит до students.php "GET"
+[2025-06-02 22:01:35] Отримано студентів: 3
+[2025-06-02 22:01:35] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:01:35] Запит до students.php "PUT"
+[2025-06-02 22:01:35] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 22:01:35] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 22:01:35] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:01:35] Запит до students.php "GET"
+[2025-06-02 22:01:35] Отримано студентів: 3
+[2025-06-02 22:01:35] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:01:48] Запит до students.php "GET"
+[2025-06-02 22:01:48] Отримано студентів: 3
+[2025-06-02 22:01:48] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:01:48] Запит до students.php "PUT"
+[2025-06-02 22:01:48] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 22:01:48] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 22:01:48] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:01:48] Запит до students.php "GET"
+[2025-06-02 22:01:48] Отримано студентів: 3
+[2025-06-02 22:01:48] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:01:53] Запит до students.php "GET"
+[2025-06-02 22:01:53] Отримано студентів: 3
+[2025-06-02 22:01:53] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:09:18] Запит до students.php "PUT"
+[2025-06-02 22:09:18] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:09:18] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:09:18] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:09:18] Запит до students.php "GET"
+[2025-06-02 22:09:18] Отримано студентів: 3
+[2025-06-02 22:09:18] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:09:20] Запит до students.php "PUT"
+[2025-06-02 22:09:20] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:09:20] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:09:20] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:09:21] Запит до students.php "GET"
+[2025-06-02 22:09:21] Отримано студентів: 3
+[2025-06-02 22:09:21] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:09:31] Запит до students.php "PUT"
+[2025-06-02 22:09:31] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:09:31] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:09:31] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:09:31] Запит до students.php "GET"
+[2025-06-02 22:09:31] Отримано студентів: 3
+[2025-06-02 22:09:31] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:09:39] Запит до students.php "PUT"
+[2025-06-02 22:09:39] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:09:39] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:09:39] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:09:39] Запит до students.php "GET"
+[2025-06-02 22:09:39] Отримано студентів: 3
+[2025-06-02 22:09:39] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:09:44] Запит до students.php "PUT"
+[2025-06-02 22:09:44] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:09:44] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:09:44] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:09:44] Запит до students.php "GET"
+[2025-06-02 22:09:44] Отримано студентів: 3
+[2025-06-02 22:09:44] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:10:01] Запит до students.php "GET"
+[2025-06-02 22:10:01] Отримано студентів: 3
+[2025-06-02 22:10:01] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:10:01] Запит до students.php "PUT"
+[2025-06-02 22:10:01] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 22:10:01] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 22:10:01] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:10:01] Запит до students.php "GET"
+[2025-06-02 22:10:01] Отримано студентів: 3
+[2025-06-02 22:10:01] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:10:02] Запит до students.php "PUT"
+[2025-06-02 22:10:02] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:10:02] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:10:02] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:10:02] Запит до students.php "GET"
+[2025-06-02 22:10:02] Отримано студентів: 3
+[2025-06-02 22:10:02] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:10:11] Запит до students.php "GET"
+[2025-06-02 22:10:11] Отримано студентів: 3
+[2025-06-02 22:10:11] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:10:31] Запит до students.php "PUT"
+[2025-06-02 22:10:31] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:10:31] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:10:31] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:10:31] Запит до students.php "GET"
+[2025-06-02 22:10:31] Отримано студентів: 3
+[2025-06-02 22:10:31] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:10:32] Запит до students.php "PUT"
+[2025-06-02 22:10:32] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:10:32] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:10:32] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:10:32] Запит до students.php "GET"
+[2025-06-02 22:10:32] Отримано студентів: 3
+[2025-06-02 22:10:32] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:10:35] Запит до students.php "GET"
+[2025-06-02 22:10:35] Отримано студентів: 3
+[2025-06-02 22:10:35] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:10:36] Запит до students.php "PUT"
+[2025-06-02 22:10:36] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:10:36] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:10:36] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:10:36] Запит до students.php "GET"
+[2025-06-02 22:10:36] Отримано студентів: 3
+[2025-06-02 22:10:36] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:10:41] Запит до students.php "PUT"
+[2025-06-02 22:10:41] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:10:41] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:10:41] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:10:42] Запит до students.php "GET"
+[2025-06-02 22:10:42] Отримано студентів: 3
+[2025-06-02 22:10:42] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:16:09] Запит до students.php "GET"
+[2025-06-02 22:16:09] Отримано студентів: 3
+[2025-06-02 22:16:09] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:16:11] Запит до students.php "PUT"
+[2025-06-02 22:16:11] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:16:11] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:16:11] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:16:11] Запит до students.php "GET"
+[2025-06-02 22:16:11] Отримано студентів: 3
+[2025-06-02 22:16:11] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:16:12] Запит до students.php "GET"
+[2025-06-02 22:16:12] Отримано студентів: 3
+[2025-06-02 22:16:12] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:16:15] Запит до students.php "PUT"
+[2025-06-02 22:16:15] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:16:15] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:16:15] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:16:15] Запит до students.php "GET"
+[2025-06-02 22:16:15] Отримано студентів: 3
+[2025-06-02 22:16:15] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:16:16] Запит до students.php "GET"
+[2025-06-02 22:16:16] Отримано студентів: 3
+[2025-06-02 22:16:16] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:16:22] Запит до students.php "GET"
+[2025-06-02 22:16:22] Отримано студентів: 3
+[2025-06-02 22:16:22] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:17:22] Запит до students.php "PUT"
+[2025-06-02 22:17:22] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:17:22] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:17:22] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:17:23] Запит до students.php "GET"
+[2025-06-02 22:17:23] Отримано студентів: 3
+[2025-06-02 22:17:23] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:17:27] Запит до students.php "GET"
+[2025-06-02 22:17:27] Отримано студентів: 3
+[2025-06-02 22:17:27] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:17:30] Запит до students.php "PUT"
+[2025-06-02 22:17:30] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:17:30] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:17:30] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:17:30] Запит до students.php "GET"
+[2025-06-02 22:17:30] Отримано студентів: 3
+[2025-06-02 22:17:30] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:17:33] Запит до students.php "PUT"
+[2025-06-02 22:17:33] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:17:33] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:17:33] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:17:33] Запит до students.php "GET"
+[2025-06-02 22:17:33] Отримано студентів: 3
+[2025-06-02 22:17:33] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:17:35] Запит до students.php "PUT"
+[2025-06-02 22:17:35] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:17:35] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:17:35] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:17:35] Запит до students.php "GET"
+[2025-06-02 22:17:35] Отримано студентів: 3
+[2025-06-02 22:17:35] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:17:40] Запит до students.php "PUT"
+[2025-06-02 22:17:40] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:17:40] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:17:40] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:17:40] Запит до students.php "GET"
+[2025-06-02 22:17:40] Отримано студентів: 3
+[2025-06-02 22:17:40] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:17:51] Запит до students.php "PUT"
+[2025-06-02 22:17:51] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:17:51] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:17:51] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:17:51] Запит до students.php "GET"
+[2025-06-02 22:17:51] Отримано студентів: 3
+[2025-06-02 22:17:51] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:17:55] Запит до students.php "PUT"
+[2025-06-02 22:17:55] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:17:55] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:17:55] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:17:55] Запит до students.php "GET"
+[2025-06-02 22:17:55] Отримано студентів: 3
+[2025-06-02 22:17:55] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:18:23] Запит до students.php "GET"
+[2025-06-02 22:18:23] Отримано студентів: 3
+[2025-06-02 22:18:23] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:18:23] Запит до students.php "PUT"
+[2025-06-02 22:18:23] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 22:18:23] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 22:18:23] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:18:23] Запит до students.php "GET"
+[2025-06-02 22:18:23] Отримано студентів: 3
+[2025-06-02 22:18:23] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:18:34] Запит до students.php "GET"
+[2025-06-02 22:18:34] Отримано студентів: 3
+[2025-06-02 22:18:34] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:18:34] Запит до students.php "PUT"
+[2025-06-02 22:18:34] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 22:18:34] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 22:18:34] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:18:34] Запит до students.php "GET"
+[2025-06-02 22:18:34] Отримано студентів: 3
+[2025-06-02 22:18:34] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:18:39] Запит до students.php "PUT"
+[2025-06-02 22:18:39] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:18:39] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:18:39] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:18:40] Запит до students.php "GET"
+[2025-06-02 22:18:40] Отримано студентів: 3
+[2025-06-02 22:18:40] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:18:42] Запит до students.php "PUT"
+[2025-06-02 22:18:42] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:18:42] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:18:42] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:18:42] Запит до students.php "GET"
+[2025-06-02 22:18:42] Отримано студентів: 3
+[2025-06-02 22:18:42] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:18:43] Запит до students.php "PUT"
+[2025-06-02 22:18:43] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:18:43] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:18:43] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:18:43] Запит до students.php "GET"
+[2025-06-02 22:18:43] Отримано студентів: 3
+[2025-06-02 22:18:43] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:18:51] Запит до students.php "PUT"
+[2025-06-02 22:18:51] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:18:51] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:18:51] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:18:51] Запит до students.php "GET"
+[2025-06-02 22:18:51] Отримано студентів: 3
+[2025-06-02 22:18:51] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:19:02] Запит до students.php "PUT"
+[2025-06-02 22:19:02] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:19:02] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:19:02] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:19:02] Запит до students.php "GET"
+[2025-06-02 22:19:02] Отримано студентів: 3
+[2025-06-02 22:19:02] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:20:05] Запит до students.php "GET"
+[2025-06-02 22:20:05] Отримано студентів: 3
+[2025-06-02 22:20:05] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:24:51] Запит до students.php "PUT"
+[2025-06-02 22:24:51] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:24:51] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:24:51] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:24:52] Запит до students.php "GET"
+[2025-06-02 22:24:52] Отримано студентів: 3
+[2025-06-02 22:24:52] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:24:53] Запит до students.php "PUT"
+[2025-06-02 22:24:53] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:24:53] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:24:53] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:24:53] Запит до students.php "GET"
+[2025-06-02 22:24:53] Отримано студентів: 3
+[2025-06-02 22:24:53] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:24:54] Запит до students.php "PUT"
+[2025-06-02 22:24:54] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:24:54] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:24:54] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:24:54] Запит до students.php "GET"
+[2025-06-02 22:24:54] Отримано студентів: 3
+[2025-06-02 22:24:54] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:25:07] Запит до students.php "PUT"
+[2025-06-02 22:25:07] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:25:07] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:25:07] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:25:08] Запит до students.php "GET"
+[2025-06-02 22:25:08] Отримано студентів: 3
+[2025-06-02 22:25:08] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:25:24] Запит до students.php "GET"
+[2025-06-02 22:25:24] Отримано студентів: 3
+[2025-06-02 22:25:24] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:25:24] Запит до students.php "PUT"
+[2025-06-02 22:25:24] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-02 22:25:24] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-02 22:25:24] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:25:24] Запит до students.php "GET"
+[2025-06-02 22:25:24] Отримано студентів: 3
+[2025-06-02 22:25:24] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:25:25] Запит до students.php "PUT"
+[2025-06-02 22:25:25] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:25:25] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:25:25] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:25:25] Запит до students.php "GET"
+[2025-06-02 22:25:25] Отримано студентів: 3
+[2025-06-02 22:25:25] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:25:33] Запит до students.php "PUT"
+[2025-06-02 22:25:33] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:25:33] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:25:33] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:25:33] Запит до students.php "GET"
+[2025-06-02 22:25:33] Отримано студентів: 3
+[2025-06-02 22:25:33] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:25:39] Запит до students.php "PUT"
+[2025-06-02 22:25:39] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:25:39] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:25:39] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:25:39] Запит до students.php "GET"
+[2025-06-02 22:25:39] Отримано студентів: 3
+[2025-06-02 22:25:39] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:25:52] Запит до students.php "PUT"
+[2025-06-02 22:25:52] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:25:52] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:25:52] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:25:52] Запит до students.php "GET"
+[2025-06-02 22:25:52] Отримано студентів: 3
+[2025-06-02 22:25:52] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:26:28] Запит до students.php "PUT"
+[2025-06-02 22:26:28] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:26:28] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:26:28] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:26:29] Запит до students.php "GET"
+[2025-06-02 22:26:29] Отримано студентів: 3
+[2025-06-02 22:26:29] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:26:32] Запит до students.php "PUT"
+[2025-06-02 22:26:32] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:26:32] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:26:32] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:26:32] Запит до students.php "GET"
+[2025-06-02 22:26:32] Отримано студентів: 3
+[2025-06-02 22:26:32] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:26:35] Запит до students.php "PUT"
+[2025-06-02 22:26:35] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:26:35] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:26:35] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:26:35] Запит до students.php "GET"
+[2025-06-02 22:26:35] Отримано студентів: 3
+[2025-06-02 22:26:35] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:26:42] Запит до students.php "GET"
+[2025-06-02 22:26:42] Отримано студентів: 3
+[2025-06-02 22:26:42] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:27:05] Запит до students.php "GET"
+[2025-06-02 22:27:05] Отримано студентів: 3
+[2025-06-02 22:27:05] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:28:10] Запит до students.php "PUT"
+[2025-06-02 22:28:10] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:28:10] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:28:10] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:28:11] Запит до students.php "GET"
+[2025-06-02 22:28:11] Отримано студентів: 3
+[2025-06-02 22:28:11] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:28:15] Запит до students.php "GET"
+[2025-06-02 22:28:15] Отримано студентів: 3
+[2025-06-02 22:28:15] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:41:05] Запит до students.php "PUT"
+[2025-06-02 22:41:05] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:41:05] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:41:05] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:41:05] Запит до students.php "GET"
+[2025-06-02 22:41:05] Отримано студентів: 3
+[2025-06-02 22:41:05] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:41:06] Запит до students.php "PUT"
+[2025-06-02 22:41:06] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:41:06] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:41:06] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:41:06] Запит до students.php "GET"
+[2025-06-02 22:41:06] Отримано студентів: 3
+[2025-06-02 22:41:06] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:41:08] Запит до students.php "GET"
+[2025-06-02 22:41:08] Отримано студентів: 3
+[2025-06-02 22:41:08] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:41:23] Запит до students.php "PUT"
+[2025-06-02 22:41:23] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:41:23] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:41:23] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:41:23] Запит до students.php "GET"
+[2025-06-02 22:41:23] Отримано студентів: 3
+[2025-06-02 22:41:23] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:41:41] Запит до students.php "PUT"
+[2025-06-02 22:41:41] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:41:41] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:41:41] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:41:41] Запит до students.php "GET"
+[2025-06-02 22:41:41] Отримано студентів: 3
+[2025-06-02 22:41:41] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:42:45] Запит до students.php "PUT"
+[2025-06-02 22:42:45] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:42:45] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:42:45] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:42:45] Запит до students.php "GET"
+[2025-06-02 22:42:45] Отримано студентів: 3
+[2025-06-02 22:42:45] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:49:34] Запит до students.php "PUT"
+[2025-06-02 22:49:34] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:49:34] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:49:34] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:49:34] Запит до students.php "GET"
+[2025-06-02 22:49:34] Отримано студентів: 3
+[2025-06-02 22:49:34] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:49:42] Запит до students.php "PUT"
+[2025-06-02 22:49:42] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:49:42] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:49:42] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:49:42] Запит до students.php "GET"
+[2025-06-02 22:49:42] Отримано студентів: 3
+[2025-06-02 22:49:42] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-02 22:49:47] Запит до students.php "PUT"
+[2025-06-02 22:49:47] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:49:47] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:49:47] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-02 22:49:51] Запит до students.php "PUT"
+[2025-06-02 22:49:51] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-02 22:49:51] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-02 22:49:51] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-03 19:24:17] Запит до students.php "GET"
+[2025-06-03 19:24:17] Отримано студентів: 3
+[2025-06-03 19:24:17] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-03 19:24:21] Запит до students.php "GET"
+[2025-06-03 19:24:21] Отримано студентів: 3
+[2025-06-03 19:24:21] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-03 19:24:28] Запит до students.php "PUT"
+[2025-06-03 19:24:28] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 19:24:28] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 19:24:28] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-03 19:24:28] Запит до students.php "GET"
+[2025-06-03 19:24:28] Отримано студентів: 3
+[2025-06-03 19:24:28] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-03 19:24:57] Запит до students.php "GET"
+[2025-06-03 19:24:57] Отримано студентів: 3
+[2025-06-03 19:24:57] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-03 19:24:57] Запит до students.php "PUT"
+[2025-06-03 19:24:57] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-03 19:24:57] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-03 19:24:57] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-03 19:39:27] Запит до students.php "PUT"
+[2025-06-03 19:39:27] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 19:39:27] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 19:39:27] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-03 19:39:28] Запит до students.php "GET"
+[2025-06-03 19:39:28] Отримано студентів: 3
+[2025-06-03 19:39:28] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-03 19:39:59] Запит до students.php "PUT"
+[2025-06-03 19:39:59] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 19:39:59] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 19:39:59] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-03 19:39:59] Запит до students.php "GET"
+[2025-06-03 19:39:59] Отримано студентів: 3
+[2025-06-03 19:39:59] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-03 19:40:26] Запит до students.php "PUT"
+[2025-06-03 19:40:26] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 19:40:26] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 19:40:26] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-03 19:40:36] Запит до students.php "GET"
+[2025-06-03 19:40:36] Отримано студентів: 3
+[2025-06-03 19:40:36] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-03 19:40:36] Запит до students.php "PUT"
+[2025-06-03 19:40:36] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-03 19:40:36] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-03 19:40:36] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-03 19:40:36] Запит до students.php "GET"
+[2025-06-03 19:40:36] Отримано студентів: 3
+[2025-06-03 19:40:36] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-03 19:40:38] Запит до students.php "PUT"
+[2025-06-03 19:40:38] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 19:40:38] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 19:40:38] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-03 19:40:39] Запит до students.php "GET"
+[2025-06-03 19:40:39] Отримано студентів: 3
+[2025-06-03 19:40:39] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-03 19:41:44] Запит до students.php "PUT"
+[2025-06-03 19:41:44] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 19:41:44] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 19:41:44] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-03 19:41:45] Запит до students.php "PUT"
+[2025-06-03 19:41:45] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 19:41:45] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 19:41:45] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-03 19:41:45] Запит до students.php "GET"
+[2025-06-03 19:41:45] Отримано студентів: 3
+[2025-06-03 19:41:45] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-03 19:41:50] Запит до students.php "GET"
+[2025-06-03 19:41:50] Отримано студентів: 3
+[2025-06-03 19:41:50] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-03 19:44:41] Запит до students.php "PUT"
+[2025-06-03 19:44:41] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 19:44:41] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 19:44:41] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-03 19:44:47] Запит до students.php "PUT"
+[2025-06-03 19:44:47] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 19:44:47] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 19:44:47] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-03 22:07:25] Запит до students.php "PUT"
+[2025-06-03 22:07:26] Запит до students.php "PUT"
+[2025-06-03 22:07:26] Запит до students.php "PUT"
+[2025-06-03 22:07:26] Запит до students.php "PUT"
+[2025-06-03 22:07:26] Запит до students.php "PUT"
+[2025-06-03 22:07:27] Запит до students.php "PUT"
+[2025-06-03 22:07:27] Запит до students.php "PUT"
+[2025-06-03 22:07:27] Запит до students.php "PUT"
+[2025-06-03 22:07:30] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 22:07:30] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 22:07:30] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 22:07:30] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 22:07:30] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 22:07:30] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 22:07:30] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 22:07:30] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 22:07:31] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 22:07:31] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 22:07:31] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 22:07:31] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 22:07:31] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 22:07:31] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 22:07:31] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-03 22:07:31] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-03 22:07:41] Запит до students.php "GET"
+[2025-06-03 22:07:41] Отримано студентів: 3
+[2025-06-03 22:07:41] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-04 09:18:33] Запит до students.php "GET"
+[2025-06-04 09:18:33] Отримано студентів: 3
+[2025-06-04 09:18:33] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-04 09:18:44] Запит до students.php "GET"
+[2025-06-04 09:18:44] Отримано студентів: 3
+[2025-06-04 09:18:44] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-04 09:19:41] Запит до students.php "GET"
+[2025-06-04 09:19:41] Отримано студентів: 3
+[2025-06-04 09:19:41] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-04 09:19:45] Запит до students.php "GET"
+[2025-06-04 09:19:45] Отримано студентів: 3
+[2025-06-04 09:19:45] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-04 09:37:34] Запит до students.php "GET"
+[2025-06-04 09:37:34] Отримано студентів: 3
+[2025-06-04 09:37:34] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-04 09:37:42] Запит до students.php "GET"
+[2025-06-04 09:37:42] Отримано студентів: 3
+[2025-06-04 09:37:42] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-04 09:37:47] Запит до students.php "GET"
+[2025-06-04 09:37:47] Отримано студентів: 3
+[2025-06-04 09:37:47] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-04 09:37:49] Запит до students.php "GET"
+[2025-06-04 09:37:49] Отримано студентів: 3
+[2025-06-04 09:37:49] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-04 09:37:57] Запит до students.php "GET"
+[2025-06-04 09:37:57] Отримано студентів: 3
+[2025-06-04 09:37:57] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-04 09:37:57] Запит до students.php "PUT"
+[2025-06-04 09:37:57] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-04 09:37:57] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-04 09:37:57] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-04 09:38:10] Запит до students.php "GET"
+[2025-06-04 09:38:10] Отримано студентів: 3
+[2025-06-04 09:38:10] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-04 09:38:10] Запит до students.php "PUT"
+[2025-06-04 09:38:10] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-04 09:38:10] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-04 09:38:10] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-04 09:38:12] Запит до students.php "PUT"
+[2025-06-04 09:38:12] Вхідні дані: "{\"id\":27,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-04 09:38:12] Оновлення онлайн статусу: {"id":27,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-04 09:38:12] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-04 09:38:12] Запит до students.php "GET"
+[2025-06-04 09:38:12] Отримано студентів: 3
+[2025-06-04 09:38:12] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-04 09:38:21] Запит до students.php "PUT"
+[2025-06-04 09:38:21] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-04 09:38:21] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-04 09:38:21] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-04 09:38:21] Запит до students.php "GET"
+[2025-06-04 09:38:21] Отримано студентів: 3
+[2025-06-04 09:38:21] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-04 09:38:36] Запит до students.php "PUT"
+[2025-06-04 09:38:36] Вхідні дані: "{\"id\":34,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-04 09:38:36] Оновлення онлайн статусу: {"id":34,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-04 09:38:36] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-04 09:38:48] Запит до students.php "GET"
+[2025-06-04 09:38:48] Отримано студентів: 3
+[2025-06-04 09:38:48] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-04 09:38:48] Запит до students.php "PUT"
+[2025-06-04 09:38:48] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-check\\\" style=\\\"color: green;\\\"><\/i>\"}"
+[2025-06-04 09:38:48] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}
+[2025-06-04 09:38:48] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-04 09:38:48] Запит до students.php "GET"
+[2025-06-04 09:38:48] Отримано студентів: 3
+[2025-06-04 09:38:48] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-04 09:38:58] Запит до students.php "GET"
+[2025-06-04 09:38:58] Отримано студентів: 3
+[2025-06-04 09:38:58] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-check\" style=\"color: green;\"><\/i>"}]
+[2025-06-04 09:39:21] Запит до students.php "PUT"
+[2025-06-04 09:39:21] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-04 09:39:21] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-04 09:39:21] Відповідь: {"success":true,"message":"Статус оновлено"}
+[2025-06-04 09:39:21] Запит до students.php "GET"
+[2025-06-04 09:39:21] Отримано студентів: 3
+[2025-06-04 09:39:21] Відповідь: [{"id":27,"group":"ПЗ-11","firstName":"Максим","lastName":"Побігач","gender":"Чоловіча","dob":"2006-01-27","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":34,"group":"ПЗ-11","firstName":"Богдан","lastName":"Богдан","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"},{"id":36,"group":"ПЗ-11","firstName":"Богдан","lastName":"Два","gender":"Чоловіча","dob":"1111-11-11","onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}]
+[2025-06-04 09:55:13] Запит до students.php "PUT"
+[2025-06-04 09:55:13] Вхідні дані: "{\"id\":36,\"onlineStatus\":\"<i class=\\\"fa-solid fa-xmark\\\" style=\\\"color: red;\\\"><\/i>\"}"
+[2025-06-04 09:55:13] Оновлення онлайн статусу: {"id":36,"onlineStatus":"<i class=\"fa-solid fa-xmark\" style=\"color: red;\"><\/i>"}
+[2025-06-04 09:55:13] Відповідь: {"success":true,"message":"Статус оновлено"}
